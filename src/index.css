@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @apply box-border;
+  @apply font-poppins;
+  @apply text-sm;
+  @apply whitespace-nowrap;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+
+.text-xxs {
+  font-size: 0.55rem;
+  line-height: 0.39rem;
+}
+
+.text-xms {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+
+.vBtnStyle {
+  @apply cursor-pointer md:text-dGrayTitle text-dGolden hover:underline  hover:underline-offset-8 hover:decoration-dBlack md:hover:decoration-dGolden;
+}

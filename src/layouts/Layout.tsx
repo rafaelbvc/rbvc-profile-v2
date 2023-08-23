@@ -3,7 +3,7 @@ import NavBar from "../components/navbar/NavBar";
 
 const Layout = () => {
   return (
-    <main>
+    <main className="h-full mx-auto overflow-x-hidden lg:overflow-hidden">
       <NavBar />
       <Outlet />
     </main>

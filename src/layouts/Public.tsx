@@ -1,5 +1,5 @@
 const Public = () => {
-  return <div className="flex flex-col h-full w-screen mx-auto"></div>;
+  return <div className="flex flex-col h-full bg-dtBgMainColor"></div>;
 };
 
 export default Public;
