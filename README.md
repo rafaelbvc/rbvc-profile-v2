@@ -34,10 +34,10 @@ The entire application is designed to be responsive, with breakpoints carefully 
 - Create and configure initial project structure [Done]
 - Create global color pattern [Done]
 - Create global fonts pattern [Done]
-- Create global properties for the scope
-- Create NavBar
-- Create Profile menu
-- Create GetStarted menu
+- Create global properties for the scope [Done]
+- Create NavBar [Done]
+- Create Profile menu [Done]
+- Create GetStarted menu [Done]
 - Create Home and AboutMe screen submenu of Profile
 - Create Portifolio screen submenu of Profile
 - Create Contact screen submenu of Profile
