@@ -1,16 +1,16 @@
 interface IDefaultBtn {
-  textBtn?: string;
+  text?: string;
   onClick?: () => void;
-  styleBtn?: string;
-  typeBtn?: "button" | "submit" | "reset" | undefined;
+  className?: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
 const DefaultBtn = (props: IDefaultBtn) => {
-  const { textBtn, onClick, styleBtn, typeBtn } = props;
+  const { text, onClick, className, type } = props;
 
   return (
-    <button type={typeBtn} className={`md:mx-3 xl:mx-6 ${styleBtn}`} onClick={onClick}>
-      <span className="vBtnStyle">{textBtn}</span>
+    <button type={type} className={`px-3 ${className}`} onClick={onClick}>
+      <p className="vBtnStyle">{text}</p>
     </button>
   );
 };

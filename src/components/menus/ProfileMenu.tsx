@@ -2,20 +2,27 @@ import DefaultBtn from "../buttons/DefaultBtn";
 
 type TProfileMenu = {
   className?: string;
+  isVisibleHeader?: string;
 };
 
 const ProfileMenu = (props: TProfileMenu) => {
-  const { className } = props;
+  const { className, isVisibleHeader } = props;
 
   return (
-    <section className={`md:mt-[1.6rem] ${className}`}>
-      <h3 className="hidden">Profile Menu</h3>
+    <section className={className}>
+      <header
+        className={`flex flex-row justify-between px-3 ${isVisibleHeader}`}
+      >
+        <h3 className="smallTitles">PROFILE</h3>
+        <button className="smallTitles">CLOSE</button>
+      </header>
+
       <menu className="flex justify-between">
-        <DefaultBtn textBtn="Home" />
-        <DefaultBtn textBtn="About" onClick={() => null} />
-        <DefaultBtn textBtn="Portifolio" onClick={() => null} />
-        <DefaultBtn textBtn="Contact" onClick={() => null} />
-        <DefaultBtn textBtn="Hire" onClick={() => null} />
+        <DefaultBtn text="Home" />
+        <DefaultBtn text="About" onClick={() => null} />
+        <DefaultBtn text="Portifolio" onClick={() => null} />
+        <DefaultBtn text="Contact" onClick={() => null} />
+        <DefaultBtn text="Hire" onClick={() => null} />
       </menu>
     </section>
   );

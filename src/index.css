@@ -9,11 +9,22 @@ html {
   @apply whitespace-nowrap;
 }
 
-.text-sm {
-  font-size: 0.9rem;
-  line-height: 1.6rem;
+.vBtnStyle {
+  @apply cursor-pointer text-sm md:text-base  md:text-mediumGray text-golden hover:underline  hover:underline-offset-1 hover:decoration-black md:hover:decoration-golden;
 }
 
-.vBtnStyle {
-  @apply cursor-pointer text-sm md:text-base  md:text-mediumGray text-golden hover:underline  hover:underline-offset-8 hover:decoration-black md:hover:decoration-golden;
+.smallTitles {
+  @apply text-xxs py-1  text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
 }
+
+.menusStyle {
+  @apply rounded-md shadow-sm bg-white mx-auto ;
+}
+
+.menuOpenStyle {
+  @apply mt-[4rem] content-center  shadow-sm rounded-md w-[28rem]
+}
+
+/* .bigTitles {
+  @apply 
+} */

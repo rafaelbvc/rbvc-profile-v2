@@ -1,18 +1,33 @@
-import { useState } from "react";
 import ProfileMenu from "../components/menus/ProfileMenu";
+import GetStartedMenu from "../components/menus/GetStartedMenu";
+import { useState } from "react";
+
+type TIsCollapse = {
+  profile: boolean;
+  getStarted: boolean;
+};
 
 const Public = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+  // const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isCollapse, setIsCollapse] = useState<TIsCollapse>({
+    profile: false,
+    getStarted: false,
+  });
+
+  const handleMenuOpen = () => {};
 
   return (
-    <div className="flex flex-col h-full bg-lightGray">
-      <menu className={`${""}`}>
-        <ProfileMenu
-          className={`mt-[4.2rem] mx-4 rounded-md shadow-sm ${
-            isVisible ? " " : " hidden"
-          }`}
-        />
-      </menu>
+    <div className="bg-lightGray">
+      <ProfileMenu
+        className={`fixed  left-2 md:hidden mx-auto max-w-[22rem]  py-1 menuOpenStyle ${
+          isCollapse ? " " : " hidden"
+        }`}
+      />
+      <GetStartedMenu
+        className={`fixed  menuOpenStyle right-2 ${
+          isCollapse.profile ? " " : " top-12 sm:top-0"
+        }`}
+      />
     </div>
   );
 };

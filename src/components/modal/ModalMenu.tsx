@@ -9,9 +9,12 @@ const ModalMenu = (props: TModalMenu) => {
 
   return (
     <dialog className="flex mt-[6rem]">
+      {/* <h3 className="hidden">Modal Container</h3> */}
       <section className="border-2 shadow-sm rounded-md w-[21rem] h-[3rem]">
-        <title className="">{title}</title>
-        <DefaultBtn textBtn="close" styleBtn="text-xxs font-golden" />
+        <header>
+          <title className="">{title}</title>
+          <DefaultBtn text="close" className="text-xxs font-golden" />
+        </header>
       </section>
     </dialog>
   );
