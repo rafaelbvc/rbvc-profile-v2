@@ -37,6 +37,9 @@ The entire application is designed to be responsive, with breakpoints carefully 
 - Create global properties for the scope [Done]
 - Create NavBar [Done]
 - Create Profile menu [Done]
+  1. Create static profile menu [Done]
+  2. Create mobile first responsive to 2xl [Done]
+  3. Create functional scrips
 - Create GetStarted menu [Done]
 - Create Home and AboutMe screen submenu of Profile
 - Create Portifolio screen submenu of Profile

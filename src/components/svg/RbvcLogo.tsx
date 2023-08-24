@@ -1,7 +1,13 @@
-const RbvcLogo = () => {
+type TRbvcLogo = {
+  className?: string;
+};
+
+const RbvcLogo = (props: TRbvcLogo) => {
+  const { className } = props;
+
   return (
     <svg
-    className="self-center"
+      className={`self-center ${className}`}
       version="1.1"
       id="logoRV"
       xmlns="http://www.w3.org/2000/svg"
