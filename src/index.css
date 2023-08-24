@@ -14,20 +14,6 @@ html {
   line-height: 1.6rem;
 }
 
-.text-xxs {
-  font-size: 0.55rem;
-  line-height: 0.39rem;
-}
-
-.text-xms {
-  font-size: 0.7rem;
-  line-height: 0.9rem;
-}
-
-.border-1 {
-  border-width: 1px;
-}
-
 .vBtnStyle {
-  @apply cursor-pointer md:text-dGrayTitle text-dGolden hover:underline  hover:underline-offset-8 hover:decoration-dBlack md:hover:decoration-dGolden;
+  @apply cursor-pointer text-sm md:text-base  md:text-mediumGray text-golden hover:underline  hover:underline-offset-8 hover:decoration-black md:hover:decoration-golden;
 }

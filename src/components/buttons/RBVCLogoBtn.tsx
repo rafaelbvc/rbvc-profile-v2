@@ -1,10 +1,10 @@
 import RbvcLogo from "../svg/RbvcLogo";
 
-interface IRBVCLogoBtn {
+type TRBVCLogoBtn = {
   onClick?: () => void;
-}
+};
 
-const RBVCLogoBtn = ({ onClick }: IRBVCLogoBtn) => {
+const RBVCLogoBtn = ({ onClick }: TRBVCLogoBtn) => {
   return (
     <button id="RBVCLogoBtn" className="flex" onClick={onClick}>
       <RbvcLogo />
@@ -12,9 +12,7 @@ const RBVCLogoBtn = ({ onClick }: IRBVCLogoBtn) => {
         <p className="text-start font-semibold mb-[-0.65rem] tracking-widest">
           RAFAEL VENDRAMINI
         </p>
-        <p className="text-dGolden tracking-tight">
-          RBVC Soluções Tecnológicas
-        </p>
+        <p className="text-golden tracking-tight">RBVC Soluções Tecnológicas</p>
       </div>
     </button>
   );

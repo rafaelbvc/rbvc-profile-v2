@@ -1,8 +1,15 @@
 import DefaultBtn from "../buttons/DefaultBtn";
 
-const ProfileMenu = () => {
+type TProfileMenu = {
+  className?: string;
+};
+
+const ProfileMenu = (props: TProfileMenu) => {
+  const { className } = props;
+
   return (
-    <section className="md:mt-[1.6rem]">
+    <section className={`md:mt-[1.6rem] ${className}`}>
+      <h3 className="hidden">Profile Menu</h3>
       <menu className="flex justify-between">
         <DefaultBtn textBtn="Home" />
         <DefaultBtn textBtn="About" onClick={() => null} />

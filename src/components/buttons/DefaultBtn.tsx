@@ -9,7 +9,7 @@ const DefaultBtn = (props: IDefaultBtn) => {
   const { textBtn, onClick, styleBtn, typeBtn } = props;
 
   return (
-    <button type={typeBtn} className={`mx-3 ${styleBtn}`} onClick={onClick}>
+    <button type={typeBtn} className={`md:mx-3 xl:mx-6 ${styleBtn}`} onClick={onClick}>
       <span className="vBtnStyle">{textBtn}</span>
     </button>
   );
