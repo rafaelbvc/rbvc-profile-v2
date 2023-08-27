@@ -1,16 +1,24 @@
+import { twMerge } from "tailwind-merge";
 import DefaultBtn from "../buttons/DefaultBtn";
+import useIsVisible from "../hooks/useIsVisible";
 
-type TGetStartedMenu = {
-  className?: string;
-};
+const GetStartedMenu = () => {
+  const { isVisibleGetStarted, handleGetStarted } = useIsVisible();
 
-const GetStartedMenu = (props: TGetStartedMenu) => {
-  const { className } = props;
+  console.log(isVisibleGetStarted);
+
   return (
-    <section className={`fixed   max-w-[22rem] py-1 ${className}`}>
-      <header className="flex flex-row justify-between px-3">
+    <section
+      className={twMerge(
+        "fixed   max-w-[22rem] py-1 right-4  menuOpenStyle ",
+        isVisibleGetStarted
+      )}
+    >
+      <header className="flex flex-row  justify-between px-3 ">
         <h3 className="smallTitles">GET STARTED</h3>
-        <button className="smallTitles">CLOSE</button>
+        <button className="smallTitles" onClick={() => handleGetStarted}>
+          CLOSE
+        </button>
       </header>
       <menu className="flex justify-between">
         <DefaultBtn text="Sign In" onClick={() => null} />

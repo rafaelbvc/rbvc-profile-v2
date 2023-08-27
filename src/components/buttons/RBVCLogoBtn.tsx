@@ -1,16 +1,17 @@
+import { ComponentProps } from "react";
 import RbvcLogo from "../svg/RbvcLogo";
 
-type TRBVCLogoBtn = {
-  onClick?: () => void;
+type TRBVCLogoBtn = ComponentProps<"button"> & {
+  isVisible?: boolean;
 };
 
-const RBVCLogoBtn = ({ onClick }: TRBVCLogoBtn) => {
+const RBVCLogoBtn = ({ isVisible, ...props }: TRBVCLogoBtn) => {
   return (
-    <button  className="flex" onClick={onClick}>
+    <button data-success={isVisible} className="flex" {...props}>
       <RbvcLogo />
-      <div className="self-center cursor-pointer">
-        <p className="text-start font-semibold mb-[-0.32rem] tracking-widest">
-          RAFAEL VENDRAMINI
+      <div className="xl:flex xl:flex-wrap self-center cursor-pointer">
+        <p className=" text-start font-semibold mb-[-0.32rem] tracking-wider">
+          RAFAEL VENDRAMINI <span className="text-golden">|&nbsp;</span>
         </p>
         <p className="text-golden tracking-tight">RBVC Soluções Tecnológicas</p>
       </div>
