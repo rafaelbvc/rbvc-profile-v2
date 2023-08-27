@@ -1,4 +1,6 @@
-const NextLogo = ({width}) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const NextLogo = ({width}: TSVGPropsType) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

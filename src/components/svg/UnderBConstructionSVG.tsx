@@ -1,4 +1,6 @@
-const UnderBConstructionSVG = ({widthSVG}) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const UnderBConstructionSVG = ({widthSVG}: TSVGPropsType) => {
   return (
     <svg
       version="1.0"

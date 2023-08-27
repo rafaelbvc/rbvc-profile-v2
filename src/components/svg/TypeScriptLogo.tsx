@@ -1,4 +1,6 @@
-const TypeScriptLogo = ({ width }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const TypeScriptLogo = ({ width }: TSVGPropsType) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width={width}>
       <rect width="36" height="36" x="6" y="6" fill="#1976d2" />

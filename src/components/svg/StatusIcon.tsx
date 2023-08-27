@@ -1,5 +1,6 @@
-const statusIcon = ({ width, fillColor }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
 
+const statusIcon = ({ width, fillColor }: TSVGPropsType) => {
   return (
     <svg
       version="1.1"
