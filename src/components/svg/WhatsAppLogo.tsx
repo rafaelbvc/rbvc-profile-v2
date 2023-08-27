@@ -1,4 +1,6 @@
-const WhatsAppLogo = ({ width, className }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const WhatsAppLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg

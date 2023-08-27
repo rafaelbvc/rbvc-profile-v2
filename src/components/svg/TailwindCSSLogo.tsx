@@ -1,4 +1,6 @@
-const TailwindCSSLogo = ({width}) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const TailwindCSSLogo = ({width}: TSVGPropsType) => {
   return (
     <svg
       viewBox="0 0 248 31"

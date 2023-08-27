@@ -1,4 +1,6 @@
-const YoutubeLogo = ({ width, className }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const YoutubeLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg

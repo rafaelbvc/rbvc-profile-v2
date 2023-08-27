@@ -1,8 +1,6 @@
-type TRbvcLogo = {
-  className?: string;
-};
+import { TSVGPropsType } from "../types/svgPropsType";
 
-const RbvcLogo = (props: TRbvcLogo) => {
+const RbvcLogo = (props: TSVGPropsType) => {
   const { className } = props;
 
   return (

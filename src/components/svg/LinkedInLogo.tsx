@@ -1,4 +1,6 @@
-const LinkedInLogo = ({ width, className }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+const LinkedInLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg

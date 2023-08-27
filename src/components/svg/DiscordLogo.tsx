@@ -1,4 +1,7 @@
-const DiscordLogo = ({ width, className }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+
+const DiscordLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg

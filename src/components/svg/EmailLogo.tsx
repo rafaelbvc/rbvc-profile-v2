@@ -1,4 +1,7 @@
-const EmailLogo = ({ width, className }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+
+const EmailLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg

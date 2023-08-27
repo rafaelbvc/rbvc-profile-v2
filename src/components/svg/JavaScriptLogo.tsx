@@ -1,4 +1,7 @@
-const JavaScriptLogo = ({ width }) => {
+import { TSVGPropsType } from "../types/svgPropsType";
+
+
+const JavaScriptLogo = ({ width }: TSVGPropsType) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width={width}>
       <path fill="#ffd600" d="M6,42V6h36v36H6z" />
