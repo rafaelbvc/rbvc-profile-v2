@@ -18,13 +18,10 @@ html {
 }
 
 .menusStyle {
-  @apply rounded-md shadow-sm bg-white mx-auto ;
+  @apply rounded-md shadow-sm bg-white mx-auto;
 }
 
 .menuOpenStyle {
-  @apply mt-[4rem] content-center  shadow-sm rounded-md w-[28rem]
+  @apply content-center  shadow-sm rounded-md w-[28rem];
 }
 
-/* .bigTitles {
-  @apply 
-} */
