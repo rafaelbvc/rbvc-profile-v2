@@ -1,13 +1,26 @@
+import { handleVisibility } from "../../utils/handleVisible";
 import GetStartedBtn from "../buttons/GetStartedBtn";
 import RBVCLogoBtn from "../buttons/RBVCLogoBtn";
+import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import ProfileMenu from "../menus/ProfileMenu";
 
 const NavBar = () => {
+  const {
+    setGetStartedVisibilityState,
+    isVisibleGetStarted,
+    setProfileVisibilityState,
+    isVisibleProfile,
+  } = UseIsVisibleContext();
+
   return (
-    <nav className="fixed px-1 grid grid-cols-3 w-screen justify-between h-[4rem] z-10 ">
+    <nav className="sitcky top-0 px-1 grid grid-cols-3 w-screen justify-between h-[4rem] z-10 ">
       <h2 className="hidden">NavBar</h2>
       <menu className="self-center">
-        <RBVCLogoBtn />
+        <RBVCLogoBtn
+          onClick={() =>
+            setProfileVisibilityState(handleVisibility(isVisibleProfile))
+          }
+        />
       </menu>
 
       <menu className="self-center">
@@ -20,7 +33,11 @@ const NavBar = () => {
       </menu>
 
       <menu className="flex p-1 pt-2 cursor-pointer justify-end">
-        <GetStartedBtn />
+        <GetStartedBtn
+          onClick={() =>
+            setGetStartedVisibilityState(handleVisibility(isVisibleGetStarted))
+          }
+        />
       </menu>
     </nav>
   );

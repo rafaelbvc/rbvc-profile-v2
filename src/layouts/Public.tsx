@@ -1,18 +1,30 @@
 import ProfileMenu from "../components/menus/ProfileMenu";
 import GetStartedMenu from "../components/menus/GetStartedMenu";
-import useIsVisible from "../components/hooks/useIsVisible";
 import { twMerge } from "tailwind-merge";
+import { UseIsVisibleContext } from "../components/contexts/IsVisibleContext";
 
 const Public = () => {
-  const { isVisibleProfile = " hidden" } = useIsVisible();
+  const { isVisibleGetStarted, isVisibleProfile } = UseIsVisibleContext();
+
+  const handleTopMenuOpen = () => {
+    if (isVisibleProfile === " ") {
+      return " top-[7rem] sm:top-[4rem]";
+    } else return " ";
+  };
 
   return (
     <div className="bg-lightGray">
       <ProfileMenu
-        className={twMerge("fixed  left-2 md:hidden mx-auto max-w-[22rem]  py-1 menuOpenStyle", isVisibleProfile)}
+        className={twMerge(
+          "fixed  left-2 md:hidden mx-auto max-w-[22rem]  py-1 menuOpenStyle",
+
+          isVisibleProfile
+        )}
       />
 
-      <GetStartedMenu />
+      <GetStartedMenu
+        className={twMerge(handleTopMenuOpen(), isVisibleGetStarted)}
+      />
     </div>
   );
 };
