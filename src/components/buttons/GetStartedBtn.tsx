@@ -1,6 +1,7 @@
 import { ComponentProps } from "react";
 
 type TRBVCLogoBtn = ComponentProps<"button">;
+
 const GetStartedBtn = ({ ...props }: TRBVCLogoBtn) => {
   return (
     <button className="flex mt-2" {...props}>
