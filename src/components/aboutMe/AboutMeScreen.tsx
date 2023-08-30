@@ -30,8 +30,8 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   };
 
   return (
-    <section ref={ref}>
-      <div className="flex rounded flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
+    <article ref={ref}>
+      <section className="flex rounded flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
         <MenuHeader
           titleHeader="ABOUT ME"
           onClick={() =>
@@ -57,7 +57,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
               <p className="  font-bold my-5">Skills &</p>
               <p className="  text-golden font-bold my-5">&nbsp; Tools</p>
             </title>
-            <section className="flex justify-center  flex-row flex-wrap gap-4">
+            <div className="flex justify-center  flex-row flex-wrap gap-4">
               <JavaScriptLogo width={"5rem"} />
               <MongoDBLogo width={"5rem"} />
               <NextLogo width={"5rem"} />
@@ -66,9 +66,9 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
               <ReactLogo width={"5rem"} />
               <TailwindCSSLogo width={"5rem"} />
               <TypeScriptLogo width={"5rem"} />
-            </section>
+            </div>
           </div>
-          <div className="p-1 whitespace-normal">
+          <section className="p-1 whitespace-normal">
             <title className="mr-0 flex mb-1 justify-end">
               <p className="  font-bold">Full Stack </p>
               <p className="  text-golden font-bold">&nbsp; Developer</p>
@@ -110,7 +110,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
               </p>
             </section>
             <FooterBar />
-          </div>
+          </section>
         </section>
         <section>
           <p className="text-justify justify-end mt-2 px-1 whitespace-normal">
@@ -138,17 +138,17 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
           </p>
         </section>
         <FooterBar />
-        <div>
+        <section>
           <p className="text-justify justify-end mt-2 px-1 whitespace-normal">
             Autonomous February 2015 - April 2018 (3 years 3 months)
             <br />• Banner design
             <br />• Creation of starter sites and digital banners
             <br />• Flash Action Script (older version)
           </p>
-        </div>
+        </section>
         <FooterBar className="mb-2" />
-      </div>
-    </section>
+      </section>
+    </article>
   );
 };
 
