@@ -40,9 +40,7 @@ const Public = () => {
       </menu>
       <section className="flex flex-wrap mx-auto">
         <span className="h-[3.2rem] w-full" />
-        <AboutMeContainer
-          className={twMerge("mx-auto", isVisibleAboutMe)}
-        />
+        <AboutMeContainer className={twMerge("mx-auto", isVisibleAboutMe)} />
         <PortifolioScreen
           className={twMerge("mx-auto mt-[0.67rem]", isVisiblePortifolio)}
         />

@@ -27,9 +27,9 @@ const HireScreen = ({ className }: IMenuHeader) => {
         <p className="text-right font-poppins text-mediumGray">
           Sorry, this area is under construction... <br /> Soon...
         </p>
-        <UnderConstructionSVG widthSVG="23.5rem"/>
+        <UnderConstructionSVG widthSVG="23rem"/>
       </section>
-      <FooterBar className="mb-[1rem]"/>
+      <FooterBar className="mb-[2rem]"/>
     </article>
   );
 };
