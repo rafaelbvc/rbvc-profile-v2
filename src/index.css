@@ -53,7 +53,7 @@ html {
 }
 
 .menuOpenStyle {
-  @apply content-center  shadow-sm rounded-md w-[28rem];
+  @apply content-center  shadow-sm rounded-md;
 }
 
 .pDescription {

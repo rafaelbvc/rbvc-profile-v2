@@ -4,7 +4,8 @@ import { twMerge } from "tailwind-merge";
 import { UseIsVisibleContext } from "../components/contexts/IsVisibleContext";
 import AboutMeContainer from "../components/aboutMe/AboutMeContainer";
 import PortifolioScreen from "../components/portifolio/PortifolioScreen";
-
+import ContactScreen from "../components/ContactScreen";
+import HireScreen from "../components/HireScreen";
 
 const Public = () => {
   const {
@@ -12,6 +13,8 @@ const Public = () => {
     isVisibleProfile,
     isVisibleAboutMe,
     isVisiblePortifolio,
+    isVisibleContact,
+    isVisibleHireMe,
   } = UseIsVisibleContext();
 
   const handleTopMenuOpen = () => {
@@ -21,11 +24,11 @@ const Public = () => {
   };
 
   return (
-    <section>
+    <article>
       <menu className="flex bg-lightGray">
         <ProfileMenu
           className={twMerge(
-            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle",
+            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-10",
 
             isVisibleProfile
           )}
@@ -35,12 +38,18 @@ const Public = () => {
           className={twMerge(handleTopMenuOpen(), isVisibleGetStarted)}
         />
       </menu>
-      {/* TODO */}
-      <section className="flex mx-auto mt-[3rem]">
-        <AboutMeContainer className={twMerge("mx-auto", isVisibleAboutMe)} />
-        <PortifolioScreen className={twMerge("mx-auto mt-[0.67rem]", isVisiblePortifolio)} />
+      <section className="flex flex-wrap mx-auto">
+        <span className="h-[3.2rem] w-full" />
+        <AboutMeContainer
+          className={twMerge("mx-auto", isVisibleAboutMe)}
+        />
+        <PortifolioScreen
+          className={twMerge("mx-auto mt-[0.67rem]", isVisiblePortifolio)}
+        />
+        <ContactScreen className={twMerge("mx-auto", isVisibleContact)} />
+        <HireScreen className={twMerge("mx-auto", isVisibleHireMe)} />
       </section>
-    </section>
+    </article>
   );
 };
 

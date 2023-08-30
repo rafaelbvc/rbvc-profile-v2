@@ -31,7 +31,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
 
   return (
     <section ref={ref}>
-      <div className="flex rounded flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1">
+      <div className="flex rounded flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
         <MenuHeader
           titleHeader="ABOUT ME"
           onClick={() =>

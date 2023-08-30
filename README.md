@@ -51,7 +51,7 @@ The entire application is designed to be responsive, with breakpoints carefully 
     2.  GetStartedBtn [Done]
     3.  ProfileMenu [Done]
     4.  ProfileBtn [Done]
-    5.  HireScreen
+    5.  HireScreen [Done]
     6.  PortifolioScreen [Done]
     7.  ContacteScreen
     8.  AboutMeScreen [Done]
@@ -64,7 +64,7 @@ The entire application is designed to be responsive, with breakpoints carefully 
 - Create GetStarted menu [Done]
 - Create Home and AboutMe screen submenu of Profile [Done]
 - Create Portifolio screen submenu of Profile [Done]
-- Create Contact screen submenu of Profile
+- Create Contact screen submenu of Profile [Done]
 - Create signUp submenu of GetStarted
 - Create logic for access token request
 - Create logic to release features according to access level

@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-interface IMenuHeader {
+export interface IMenuHeader {
   onClick?: () => void;
   titleHeader?: string;
   className?: string;
@@ -12,7 +12,7 @@ const MenuHeader = (props: IMenuHeader) => {
   return (
     <header
       className={twMerge(
-        "flex   justify-between mt-[-0.9rem] mb-1 px-2",
+        "flex justify-between mt-[-0.9rem] mb-1 px-2",
         className
       )}
     >
