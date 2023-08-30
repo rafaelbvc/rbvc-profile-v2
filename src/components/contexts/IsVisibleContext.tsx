@@ -4,9 +4,11 @@ interface IVisibleContext {
   isVisibleProfile: string;
   isVisibleGetStarted: string;
   isVisibleAboutMe: string;
+  isVisiblePortifolio: string;
   setProfileVisibilityState: (isVisibleProfile: string) => void;
   setGetStartedVisibilityState: (isVisibleGetStated: string) => void;
   setAboutMeVisibilityState: (isVisibleAboutMe: string) => void;
+  setPortifolioVisibilityState: (isVisiblePortifolio: string) => void;
 }
 
 interface IVisibilityProvider {
@@ -19,7 +21,9 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
   const [isVisibleProfile, setIsVisibleProfile] = useState<string>(" hidden");
   const [isVisibleGetStarted, setIsVisibleGetStarted] =
     useState<string>(" hidden");
-  const [isVisibleAboutMe, setIsVisibleAboutMe] = useState<string>(" ");
+  const [isVisibleAboutMe, setIsVisibleAboutMe] = useState<string>(" hidden");
+  const [isVisiblePortifolio, setIsVisiblePortifolio] =
+    useState<string>(" ");
 
   const setProfileVisibilityState = (isVisibleProfile: string) => {
     setIsVisibleProfile(isVisibleProfile);
@@ -33,15 +37,21 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
     setIsVisibleAboutMe(isVisibleAboutMe);
   };
 
+  const setPortifolioVisibilityState = (isVisiblePortifolio: string) => {
+    setIsVisiblePortifolio(isVisiblePortifolio);
+  };
+
   return (
     <VisibilityContext.Provider
       value={{
         isVisibleProfile,
         isVisibleGetStarted,
         isVisibleAboutMe,
+        isVisiblePortifolio,
         setGetStartedVisibilityState,
         setProfileVisibilityState,
         setAboutMeVisibilityState,
+        setPortifolioVisibilityState,
       }}
     >
       {children}

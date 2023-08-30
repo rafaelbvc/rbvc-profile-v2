@@ -7,6 +7,11 @@ html {
   @apply font-poppins;
   @apply text-sm;
   @apply whitespace-nowrap;
+  @apply bg-gradient-to-t from-lightGray  to-mediumGray;
+}
+
+#layoutMain {
+  @apply bg-lightGray;
 }
 
 @keyframes bounce {
@@ -49,4 +54,8 @@ html {
 
 .menuOpenStyle {
   @apply content-center  shadow-sm rounded-md w-[28rem];
+}
+
+.pDescription {
+  @apply text-center text-mediumGray text-sm
 }

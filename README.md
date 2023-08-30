@@ -52,7 +52,7 @@ The entire application is designed to be responsive, with breakpoints carefully 
     3.  ProfileMenu [Done]
     4.  ProfileBtn [Done]
     5.  HireScreen
-    6.  PortifolioScreen
+    6.  PortifolioScreen [Done]
     7.  ContacteScreen
     8.  AboutMeScreen [Done]
     9.  SignInScreen
@@ -63,7 +63,7 @@ The entire application is designed to be responsive, with breakpoints carefully 
   - Test funcionalites with useIsVisible custom hook, all break points
 - Create GetStarted menu [Done]
 - Create Home and AboutMe screen submenu of Profile [Done]
-- Create Portifolio screen submenu of Profile
+- Create Portifolio screen submenu of Profile [Done]
 - Create Contact screen submenu of Profile
 - Create signUp submenu of GetStarted
 - Create logic for access token request
