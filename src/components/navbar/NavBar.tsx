@@ -13,7 +13,7 @@ const NavBar = () => {
   } = UseIsVisibleContext();
 
   return (
-    <nav className="sticky top-0 px-1 shadow-md grid grid-cols-3 justify-between h-[4rem] z-40 rounded-b-sm">
+    <nav className="sticky top-0 px-1 shadow-md grid grid-cols-3 bg-lightGray justify-between h-[4rem] z-40 rounded-b-sm">
       <h2 className="hidden">NavBar</h2>
       <menu className="self-center">
         <RBVCLogoBtn

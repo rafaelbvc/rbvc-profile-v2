@@ -18,13 +18,17 @@ const ProfileMenu = (props: TProfileMenu) => {
     isVisibleAboutMe,
     setPortifolioVisibilityState,
     isVisiblePortifolio,
+    setContactVisibilityState,
+    isVisibleContact,
+    setHireMeVisibilityState,
+    isVisibleHireMe,
   } = UseIsVisibleContext();
 
   return (
     <section className={className}>
       <header
         className={twMerge(
-          "flex flex-row justify-between px-3",
+          "flex flex-row justify-between px-3 max-w-[22rem] bg-lightGray",
           isVisibleHeader
         )}
       >
@@ -39,7 +43,7 @@ const ProfileMenu = (props: TProfileMenu) => {
         </button>
       </header>
 
-      <menu className="flex justify-between">
+      <menu className="flex justify-between bg-lightGray">
         <DefaultBtn text="Home" />
         <DefaultBtn
           text="About Me"
@@ -53,8 +57,18 @@ const ProfileMenu = (props: TProfileMenu) => {
             setPortifolioVisibilityState(handleVisibility(isVisiblePortifolio))
           }
         />
-        <DefaultBtn text="Contact" onClick={() => null} />
-        <DefaultBtn text="Hire" onClick={() => null} />
+        <DefaultBtn
+          text="Contact"
+          onClick={() =>
+            setContactVisibilityState(handleVisibility(isVisibleContact))
+          }
+        />
+        <DefaultBtn
+          text="Hire"
+          onClick={() =>
+            setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
+          }
+        />
       </menu>
     </section>
   );
