@@ -29,7 +29,7 @@ const HireScreen = ({ className }: IMenuHeader) => {
         </p>
         <UnderConstructionSVG widthSVG="23.5rem"/>
       </section>
-      <FooterBar />
+      <FooterBar className="mb-[1rem]"/>
     </article>
   );
 };

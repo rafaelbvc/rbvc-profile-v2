@@ -105,7 +105,7 @@ const ContactScreen = ({ className }: IMenuHeader) => {
           </p>
         </div>
       </section>
-      <FooterBar className="mt-2" />
+      <FooterBar className="mt-2 mb-1" />
     </article>
   );
 };

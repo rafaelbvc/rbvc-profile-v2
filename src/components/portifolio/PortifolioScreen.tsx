@@ -30,7 +30,7 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
         Important: Exclusively this project, for desktops only!
       </p>
       <p className="pDescription">Project for NextJs13 certification</p>
-      <FooterBar />
+      <FooterBar className="mb-[1rem]"/>
     </article>
   );
 };

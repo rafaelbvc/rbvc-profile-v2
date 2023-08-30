@@ -53,13 +53,13 @@ The entire application is designed to be responsive, with breakpoints carefully 
     4.  ProfileBtn [Done]
     5.  HireScreen [Done]
     6.  PortifolioScreen [Done]
-    7.  ContacteScreen
+    7.  ContacteScreen [Done]
     8.  AboutMeScreen [Done]
     9.  SignInScreen
     10. SignUpScreen
     11. ProdileScreen (from GetStartedMenu)
     12. PostScreen
-    13. Home
+    13. Home [Done]
   - Test funcionalites with useIsVisible custom hook, all break points
 - Create GetStarted menu [Done]
 - Create Home and AboutMe screen submenu of Profile [Done]
