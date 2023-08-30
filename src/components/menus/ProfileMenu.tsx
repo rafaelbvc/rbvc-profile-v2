@@ -11,7 +11,12 @@ type TProfileMenu = {
 const ProfileMenu = (props: TProfileMenu) => {
   const { className, isVisibleHeader } = props;
 
-  const { setProfileVisibilityState, isVisibleProfile } = UseIsVisibleContext();
+  const {
+    setProfileVisibilityState,
+    isVisibleProfile,
+    setAboutMeVisibilityState,
+    isVisibleAboutMe,
+  } = UseIsVisibleContext();
 
   return (
     <section className={className}>
@@ -34,7 +39,12 @@ const ProfileMenu = (props: TProfileMenu) => {
 
       <menu className="flex justify-between">
         <DefaultBtn text="Home" />
-        <DefaultBtn text="About" onClick={() => null} />
+        <DefaultBtn
+          text="About Me"
+          onClick={() =>
+            setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
+          }
+        />
         <DefaultBtn text="Portifolio" onClick={() => null} />
         <DefaultBtn text="Contact" onClick={() => null} />
         <DefaultBtn text="Hire" onClick={() => null} />

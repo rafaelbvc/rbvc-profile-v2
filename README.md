@@ -36,27 +36,25 @@ The entire application is designed to be responsive, with breakpoints carefully 
 - Create global fonts pattern [Done]
 - Create global properties for the scope [Done]
 - Create NavBar [Done]
-- !IMPORTANT - Fix NavBar components to fit with more content xl break point and upper
+- !IMPORTANT - Fix NavBar components to fit with more content xl break point and upper [Done]
   1.  Refactor RBVCLogoBtn:
-    - Add resize options 
+    - Add resize options [Done]
   2.  Refactor GetStartedBtn:
-    - Add resize options
-  3. Add more content lg break point and upper
-    - ???? 
+    - Add resize options [Done]
 - Create Profile menu [Done]
   1. Create static profile menu [Done]
   2. Create mobile first responsive to 2xl [Done]
-  3. Create functional scripts
-  - Create custom hook useIsVisible
+  3. Create functional scripts [Done]
+  - Create custom hook useIsVisible [Done]
   - useIsVisible need to control:
-    1.  GetStartedMenu
-    2.  GetStartedBtn
-    3.  ProfileMenu
-    4.  ProfileBtn
+    1.  GetStartedMenu [Done]
+    2.  GetStartedBtn [Done]
+    3.  ProfileMenu [Done]
+    4.  ProfileBtn [Done]
     5.  HireScreen
     6.  PortifolioScreen
     7.  ContacteScreen
-    8.  AboutMeScreen
+    8.  AboutMeScreen [Done]
     9.  SignInScreen
     10. SignUpScreen
     11. ProdileScreen (from GetStartedMenu)
@@ -64,7 +62,7 @@ The entire application is designed to be responsive, with breakpoints carefully 
     13. Home
   - Test funcionalites with useIsVisible custom hook, all break points
 - Create GetStarted menu [Done]
-- Create Home and AboutMe screen submenu of Profile
+- Create Home and AboutMe screen submenu of Profile [Done]
 - Create Portifolio screen submenu of Profile
 - Create Contact screen submenu of Profile
 - Create signUp submenu of GetStarted
