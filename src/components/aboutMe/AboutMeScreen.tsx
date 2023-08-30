@@ -146,7 +146,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             <br />• Flash Action Script (older version)
           </p>
         </section>
-        <FooterBar className="mb-2" />
+        <FooterBar className="mb-[2rem]" />
       </section>
     </article>
   );
