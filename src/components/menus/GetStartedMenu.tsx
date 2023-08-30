@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import DefaultBtn from "../buttons/DefaultBtn";
-import { TBTNPropsType } from "../types/btnPropsType";
+import { TBTNPropsType } from "../../types/btnPropsType";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 

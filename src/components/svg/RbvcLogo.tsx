@@ -1,4 +1,4 @@
-import { TSVGPropsType } from "../types/svgPropsType";
+import { TSVGPropsType } from "../../types/svgPropsType";
 
 const RbvcLogo = (props: TSVGPropsType) => {
   const { className } = props;

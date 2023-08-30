@@ -8,16 +8,13 @@ import TailwindCSSLogo from "../svg/TailwindCSSLogo";
 import TypeScriptLogo from "../svg/TypeScriptLogo";
 import PrismaLogo from "../svg/PrismaLogo";
 import FooterBar from "../FooterBar";
-import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
-import { handleVisibility } from "../../utils/handleVisible";
 import PhotoMyProfileA from "./PhotoMyProfileA.jpg";
 
 const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   props,
   ref
 ) => {
-  const { setAboutMeVisibilityState, isVisibleAboutMe } = UseIsVisibleContext();
+  
 
   const [bigIMG, setBigIMG] = useState<boolean>(false);
 
@@ -31,14 +28,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
 
   return (
     <article ref={ref}>
-      <section className="flex rounded flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
-        <MenuHeader
-          titleHeader="ABOUT ME"
-          onClick={() =>
-            setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
-          }
-        />
-        <FooterBar className="mt-[-0.5rem]" />
+      <section className="flex flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
         <section className="flex flex-col items-center  sm:flex-row">
           <div className={`${bigIMG ? "max-w-[21rem]" : "w-[12.5rem]"}`}>
             <img

@@ -2,11 +2,7 @@ import DefaultBtn from "../buttons/DefaultBtn";
 import { twMerge } from "tailwind-merge";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
-
-type TProfileMenu = {
-  className?: string;
-  isVisibleHeader?: string;
-};
+import { TProfileMenu } from "../../types/profileMenu";
 
 const ProfileMenu = (props: TProfileMenu) => {
   const { className, isVisibleHeader } = props;

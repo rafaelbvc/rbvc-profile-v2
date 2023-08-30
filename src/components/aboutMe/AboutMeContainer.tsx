@@ -1,12 +1,9 @@
 import { twMerge } from "tailwind-merge";
 import AboutMePdf from "./pdf/AboutMePdf";
 import AboutMeScreen from "./AboutMeScreen";
+import { TScreensPropsTypes } from "../../types/screensPropsType";
 
-type TAboutMeContainer = {
-  className?: string;
-};
-
-const AboutMeContainer = ({ className }: TAboutMeContainer) => {
+const AboutMeContainer = ({ className }: TScreensPropsTypes) => {
   return (
     <section className={twMerge(" ", className)}>
       <AboutMePdf />

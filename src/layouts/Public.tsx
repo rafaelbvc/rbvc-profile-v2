@@ -42,10 +42,10 @@ const Public = () => {
         <span className="h-[3.2rem] w-full" />
         <AboutMeContainer className={twMerge("mx-auto", isVisibleAboutMe)} />
         <PortifolioScreen
-          className={twMerge("mx-auto mt-[0.67rem]", isVisiblePortifolio)}
+          className={twMerge("mx-auto mt-[0.28rem]", isVisiblePortifolio)}
         />
-        <ContactScreen className={twMerge("mx-auto", isVisibleContact)} />
-        <HireScreen className={twMerge("mx-auto", isVisibleHireMe)} />
+        <ContactScreen className={twMerge("mx-auto mt-[0.28rem]", isVisibleContact)} />
+        <HireScreen className={twMerge("mx-auto mt-[0.28rem]", isVisibleHireMe)} />
       </section>
     </article>
   );

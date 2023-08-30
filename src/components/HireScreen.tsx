@@ -1,20 +1,16 @@
 import { twMerge } from "tailwind-merge";
 import { handleVisibility } from "../utils/handleVisible";
 import FooterBar from "./FooterBar";
-import MenuHeader, { IMenuHeader } from "./MenuHeader";
+import MenuHeader from "./MenuHeader";
 import { UseIsVisibleContext } from "./contexts/IsVisibleContext";
 import UnderConstructionSVG from "./svg/UnderConstructionSVG";
+import { TScreensPropsTypes } from "../types/screensPropsType";
 
-const HireScreen = ({ className }: IMenuHeader) => {
+const HireScreen = ({ className }: TScreensPropsTypes) => {
   const { setHireMeVisibilityState, isVisibleHireMe } = UseIsVisibleContext();
 
   return (
-    <article
-      className={twMerge(
-        "mt-[0.7rem]",
-        className
-      )}
-    >
+    <article className={twMerge("mt-[0.7rem]", className)}>
       <MenuHeader
         className=""
         titleHeader="HIRE ME"
@@ -22,14 +18,13 @@ const HireScreen = ({ className }: IMenuHeader) => {
           setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
         }
       />
-      <FooterBar className="mt-[-0.5rem]"/>
       <section className="flex flex-col mx-auto bg-lightGray rounded min-w-[21rem] max-w-[45rem] p-2">
-        <p className="text-right font-poppins text-mediumGray">
+        <p className="text-right text-mediumGray">
           Sorry, this area is under construction... <br /> Soon...
         </p>
-        <UnderConstructionSVG widthSVG="23rem"/>
+        <UnderConstructionSVG widthSVG="23rem" />
       </section>
-      <FooterBar className="mb-[2rem]"/>
+      <FooterBar className="mb-[2rem]" />
     </article>
   );
 };

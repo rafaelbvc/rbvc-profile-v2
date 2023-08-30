@@ -1,4 +1,4 @@
-import { TSVGPropsType } from "../types/svgPropsType";
+import { TSVGPropsType } from "../../types/svgPropsType";
 
 const NodeLogo = ({ width }: TSVGPropsType) => {
   return (
