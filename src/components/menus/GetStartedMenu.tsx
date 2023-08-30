@@ -12,7 +12,7 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
     <button
       {...props}
       className={twMerge(
-        "fixed   max-w-[22rem] py-1 right-2  menuOpenStyle ",
+        "fixed right-2 max-w-[22rem] py-1 menuOpenStyle ",
         className
       )}
     >

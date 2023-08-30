@@ -16,6 +16,8 @@ const ProfileMenu = (props: TProfileMenu) => {
     isVisibleProfile,
     setAboutMeVisibilityState,
     isVisibleAboutMe,
+    setPortifolioVisibilityState,
+    isVisiblePortifolio,
   } = UseIsVisibleContext();
 
   return (
@@ -45,7 +47,12 @@ const ProfileMenu = (props: TProfileMenu) => {
             setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
           }
         />
-        <DefaultBtn text="Portifolio" onClick={() => null} />
+        <DefaultBtn
+          text="Portifolio"
+          onClick={() =>
+            setPortifolioVisibilityState(handleVisibility(isVisiblePortifolio))
+          }
+        />
         <DefaultBtn text="Contact" onClick={() => null} />
         <DefaultBtn text="Hire" onClick={() => null} />
       </menu>

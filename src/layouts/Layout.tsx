@@ -3,7 +3,7 @@ import NavBar from "../components/navbar/NavBar";
 
 const Layout = () => {
   return (
-    <main className=" h-full mx-auto overflow-x-hidden lg:overflow-hidden">
+    <main id="layoutMain" className="min-h-screen h-full mx-auto">
       <h1 className="hidden">Main SPA Page</h1>
       <NavBar />
       <Outlet />

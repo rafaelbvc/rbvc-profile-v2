@@ -3,10 +3,16 @@ import GetStartedMenu from "../components/menus/GetStartedMenu";
 import { twMerge } from "tailwind-merge";
 import { UseIsVisibleContext } from "../components/contexts/IsVisibleContext";
 import AboutMeContainer from "../components/aboutMe/AboutMeContainer";
+import PortifolioScreen from "../components/portifolio/PortifolioScreen";
+
 
 const Public = () => {
-  const { isVisibleGetStarted, isVisibleProfile, isVisibleAboutMe } =
-    UseIsVisibleContext();
+  const {
+    isVisibleGetStarted,
+    isVisibleProfile,
+    isVisibleAboutMe,
+    isVisiblePortifolio,
+  } = UseIsVisibleContext();
 
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
@@ -19,7 +25,7 @@ const Public = () => {
       <menu className="flex bg-lightGray">
         <ProfileMenu
           className={twMerge(
-            "fixed  left-2 md:hidden mx-auto max-w-[22rem]  py-1 menuOpenStyle",
+            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle",
 
             isVisibleProfile
           )}
@@ -32,6 +38,7 @@ const Public = () => {
       {/* TODO */}
       <section className="flex mx-auto mt-[3rem]">
         <AboutMeContainer className={twMerge("mx-auto", isVisibleAboutMe)} />
+        <PortifolioScreen className={twMerge("mx-auto mt-[0.67rem]", isVisiblePortifolio)} />
       </section>
     </section>
   );
