@@ -1,6 +1,6 @@
 export type TSVGPropsType = {
-  width?: number;
+  width?: string;
   className?: string;
   fillColor?: string;
-  widthSVG?: string
+  widthSVG?: string;
 };

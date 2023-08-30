@@ -9,6 +9,32 @@ html {
   @apply whitespace-nowrap;
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-7%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes ping {
+  25%,
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.animate-ping {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 .vBtnStyle {
   @apply cursor-pointer text-sm md:text-base  md:text-mediumGray text-golden hover:underline  hover:underline-offset-1 hover:decoration-black md:hover:decoration-golden;
 }
@@ -24,4 +50,3 @@ html {
 .menuOpenStyle {
   @apply content-center  shadow-sm rounded-md w-[28rem];
 }
-
