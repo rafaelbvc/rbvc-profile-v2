@@ -24,7 +24,7 @@ const ProfileMenu = (props: TProfileMenu) => {
     <section className={className}>
       <header
         className={twMerge(
-          "flex flex-row justify-between px-3 max-w-[22rem] bg-lightGray",
+          "flex flex-row justify-between px-3 max-w-[22rem]",
           isVisibleHeader
         )}
       >
@@ -39,7 +39,7 @@ const ProfileMenu = (props: TProfileMenu) => {
         </button>
       </header>
 
-      <menu className="flex justify-between bg-lightGray">
+      <menu className="flex justify-between">
         <DefaultBtn text="Home" />
         <DefaultBtn
           text="About Me"
