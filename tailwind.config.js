@@ -7,7 +7,7 @@ export default {
         xxxs: ["0.46rem", "0.34rem"],
         xxs: ["0.55rem", "0.39rem"],
         xms: ["0.7rem", "0.9rem"],
-        sms: ["0.9rem","1.6rem"]
+        sms: ["0.9rem", "1.6rem"],
       },
       borderWidth: {
         "border-1": "1px",
@@ -18,7 +18,7 @@ export default {
       mediumGray: "#b6b6b6",
       black: "#000",
       white: "#FFFFFF",
-      lightGrayAlpha: "RGB(220,220,220, 0.05)",
+      lightGrayAlpha: "RGB(252,252,255, 0.3)",
       lightBGray: "#D9E2E5",
       golden: "#CAAA6C",
       goldenAlpha: "rgb(202,170,108, 0.4)",
