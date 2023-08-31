@@ -49,13 +49,17 @@ html {
 }
 
 .menusStyle {
-  @apply rounded-md shadow-sm bg-white mx-auto;
+  @apply rounded-md shadow-sm mx-auto;
 }
 
 .menuOpenStyle {
-  @apply content-center  shadow-sm rounded-md;
+  @apply content-center z-20 shadow-sm rounded-md;
 }
 
 .pDescription {
-  @apply text-center text-mediumGray text-sm
+  @apply text-center text-mediumGray text-sm;
+}
+
+.styleScreens {
+  @apply mx-auto mt-[0.28rem] z-10;
 }

@@ -28,7 +28,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
 
   return (
     <article ref={ref}>
-      <section className="flex flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1 bg-lightGray">
+      <section className="flex flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1">
         <section className="flex flex-col items-center  sm:flex-row">
           <div className={`${bigIMG ? "max-w-[21rem]" : "w-[12.5rem]"}`}>
             <img

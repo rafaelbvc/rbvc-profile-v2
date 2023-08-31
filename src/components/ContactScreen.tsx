@@ -23,7 +23,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           setContactVisibilityState(handleVisibility(isVisibleContact))
         }
       />
-      <section className="flex flex-col bg-lightGray  justify-between  min-w-[21rem] max-w-[45rem] p-1 px-4 gap-2">
+      <section className="flex flex-col  justify-between  min-w-[21rem] max-w-[45rem] p-1 px-4 gap-2">
         <a
           className="flex items-center justify-between"
           href="https://www.youtube.com/@rafaelvendramini2598"

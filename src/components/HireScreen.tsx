@@ -18,7 +18,7 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
           setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
         }
       />
-      <section className="flex flex-col mx-auto bg-lightGray rounded min-w-[21rem] max-w-[45rem] p-2">
+      <section className="flex flex-col mx-auto rounded min-w-[21rem] max-w-[45rem] p-2">
         <p className="text-right text-mediumGray">
           Sorry, this area is under construction... <br /> Soon...
         </p>

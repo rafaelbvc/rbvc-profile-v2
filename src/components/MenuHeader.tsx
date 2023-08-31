@@ -13,7 +13,7 @@ const MenuHeader = (props: IMenuHeader) => {
           CLOSE
         </button>
       </section>
-      <FooterBar className="mt-[-0.25rem]" />
+      <FooterBar className="mt-[-0.25rem] mx-1" />
     </header>
   );
 };

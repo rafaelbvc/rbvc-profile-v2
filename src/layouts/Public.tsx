@@ -6,6 +6,7 @@ import AboutMeContainer from "../components/aboutMe/AboutMeContainer";
 import PortifolioScreen from "../components/portifolio/PortifolioScreen";
 import ContactScreen from "../components/ContactScreen";
 import HireScreen from "../components/HireScreen";
+import { MotionDesign } from "../components/animatedBG/MotionDesign";
 
 const Public = () => {
   const {
@@ -24,11 +25,11 @@ const Public = () => {
   };
 
   return (
-    <article>
-      <menu className="flex bg-lightGray">
+    <article className="relative">
+      <menu className="flex">
         <ProfileMenu
           className={twMerge(
-            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-10",
+            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-20",
 
             isVisibleProfile
           )}
@@ -40,17 +41,16 @@ const Public = () => {
       </menu>
       <section className="flex flex-wrap mx-auto">
         <span className="h-[3.2rem] w-full" />
-        <AboutMeContainer className={twMerge("mx-auto", isVisibleAboutMe)} />
+        <AboutMeContainer className={twMerge("mx-auto z-10", isVisibleAboutMe)} />
         <PortifolioScreen
-          className={twMerge("mx-auto mt-[0.28rem]", isVisiblePortifolio)}
+          className={twMerge("styleScreens", isVisiblePortifolio)}
         />
-        <ContactScreen
-          className={twMerge("mx-auto mt-[0.28rem]", isVisibleContact)}
-        />
-        <HireScreen
-          className={twMerge("mx-auto mt-[0.28rem]", isVisibleHireMe)}
-        />
+        <ContactScreen className={twMerge("styleScreens", isVisibleContact)} />
+        <HireScreen className={twMerge("styleScreens", isVisibleHireMe)} />
       </section>
+      <div className="absolute w-full h-full min-h-screen top-0 left-0 ">
+        <MotionDesign />
+      </div>
     </article>
   );
 };
