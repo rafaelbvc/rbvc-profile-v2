@@ -44,8 +44,12 @@ const Public = () => {
         <PortifolioScreen
           className={twMerge("mx-auto mt-[0.28rem]", isVisiblePortifolio)}
         />
-        <ContactScreen className={twMerge("mx-auto mt-[0.28rem]", isVisibleContact)} />
-        <HireScreen className={twMerge("mx-auto mt-[0.28rem]", isVisibleHireMe)} />
+        <ContactScreen
+          className={twMerge("mx-auto mt-[0.28rem]", isVisibleContact)}
+        />
+        <HireScreen
+          className={twMerge("mx-auto mt-[0.28rem]", isVisibleHireMe)}
+        />
       </section>
     </article>
   );
