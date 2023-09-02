@@ -61,7 +61,7 @@ html {
 }
 
 .styleScreens {
-  @apply mx-auto mt-[0.28rem] z-10;
+  @apply mx-auto min-w-[21rem] mt-[0.28rem] z-10;
 }
 
 .pMenus {
@@ -73,7 +73,7 @@ html {
 }
 
 .vInputs {
-  @apply mx-1 px-1 border-1 border-dGoldenAlpha rounded;
+  @apply mx-1 px-1  border-goldenAlpha rounded;
 }
 
 
