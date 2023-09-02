@@ -1,21 +1,19 @@
 import { ForwardRefRenderFunction, forwardRef, useState } from "react";
-import JavaScriptLogo from "../svg/JavaScriptLogo";
-import MongoDBLogo from "../svg/MongoDBLogo";
-import NextLogo from "../svg/NextLogo";
-import NodeLogo from "../svg/NodeLogo";
-import ReactLogo from "../svg/ReactLogo";
-import TailwindCSSLogo from "../svg/TailwindCSSLogo";
-import TypeScriptLogo from "../svg/TypeScriptLogo";
-import PrismaLogo from "../svg/PrismaLogo";
-import FooterBar from "../FooterBar";
 import PhotoMyProfileA from "./PhotoMyProfileA.jpg";
+import JavaScriptLogo from "../../svg/JavaScriptLogo";
+import MongoDBLogo from "../../svg/MongoDBLogo";
+import NodeLogo from "../../svg/NodeLogo";
+import PrismaLogo from "../../svg/PrismaLogo";
+import NextLogo from "../../svg/NextLogo";
+import ReactLogo from "../../svg/ReactLogo";
+import TailwindCSSLogo from "../../svg/TailwindCSSLogo";
+import TypeScriptLogo from "../../svg/TypeScriptLogo";
+import FooterBar from "../../FooterBar";
 
 const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   props,
   ref
 ) => {
-  
-
   const [bigIMG, setBigIMG] = useState<boolean>(false);
 
   const handleBigImg = (v: boolean) => {

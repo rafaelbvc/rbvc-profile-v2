@@ -5,14 +5,18 @@ import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 
 const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
-  const { setGetStartedVisibilityState, isVisibleGetStarted } =
-    UseIsVisibleContext();
+  const {
+    setGetStartedVisibilityState,
+    isVisibleGetStarted,
+    setSignInVisibilityState,
+    isVisibleSignIn,
+  } = UseIsVisibleContext();
 
   return (
     <button
       {...props}
       className={twMerge(
-        "fixed right-2 max-w-[22rem] py-1 menuOpenStyle z-10",
+        "fixed right-2 max-w-[22rem] py-1 menuOpenStyle  z-10",
         className
       )}
     >
@@ -28,7 +32,12 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
         </button>
       </header>
       <menu className="flex justify-between">
-        <DefaultBtn text="Sign In" onClick={() => null} />
+        <DefaultBtn
+          text="Sign In"
+          onClick={() =>
+            setSignInVisibilityState(handleVisibility(isVisibleSignIn))
+          }
+        />
         <DefaultBtn text="Sign Up" onClick={() => null} />
         <DefaultBtn text="Profile" onClick={() => null} />
         <DefaultBtn text="Post" onClick={() => null} />

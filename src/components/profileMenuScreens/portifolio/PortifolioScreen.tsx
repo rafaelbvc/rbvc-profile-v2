@@ -1,9 +1,9 @@
 import { twMerge } from "tailwind-merge";
-import { TScreensPropsTypes } from "../../types/screensPropsType";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
-import MenuHeader from "../MenuHeader";
-import { handleVisibility } from "../../utils/handleVisible";
-import FooterBar from "../FooterBar";
+import { TScreensPropsTypes } from "../../../types/screensPropsType";
+import { UseIsVisibleContext } from "../../contexts/IsVisibleContext";
+import MenuHeader from "../../MenuHeader";
+import { handleVisibility } from "../../../utils/handleVisible";
+import FooterBar from "../../FooterBar";
 import FindYourMeal from "./FindYourMeal";
 
 const PortifolioScreen = ({ className }: TScreensPropsTypes) => {

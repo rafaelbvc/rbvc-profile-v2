@@ -63,3 +63,19 @@ html {
 .styleScreens {
   @apply mx-auto mt-[0.28rem] z-10;
 }
+
+.pMenus {
+  @apply border-b-[0.1rem] mb-1;
+}
+
+.vLabels {
+  @apply mx-1 mt-2 px-1 whitespace-nowrap text-xms;
+}
+
+.vInputs {
+  @apply mx-1 px-1 border-1 border-dGoldenAlpha rounded;
+}
+
+
+
+
