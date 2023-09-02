@@ -2,11 +2,12 @@ import ProfileMenu from "../components/menus/ProfileMenu";
 import GetStartedMenu from "../components/menus/GetStartedMenu";
 import { twMerge } from "tailwind-merge";
 import { UseIsVisibleContext } from "../components/contexts/IsVisibleContext";
-import AboutMeContainer from "../components/aboutMe/AboutMeContainer";
-import PortifolioScreen from "../components/portifolio/PortifolioScreen";
-import ContactScreen from "../components/ContactScreen";
-import HireScreen from "../components/HireScreen";
+import PortifolioScreen from "../components/profileMenuScreens/portifolio/PortifolioScreen";
+import ContactScreen from "../components/profileMenuScreens/ContactScreen";
+import HireScreen from "../components/profileMenuScreens/HireScreen";
 import { MotionDesign } from "../components/animatedBG/MotionDesign";
+import AboutMeContainer from "../components/profileMenuScreens/aboutMe/AboutMeContainer";
+import SignInScreen from "../components/getStartedMenuScreens/SignInScreen";
 
 const Public = () => {
   const {
@@ -16,6 +17,7 @@ const Public = () => {
     isVisiblePortifolio,
     isVisibleContact,
     isVisibleHireMe,
+    isVisibleSignIn,
   } = UseIsVisibleContext();
 
   const handleTopMenuOpen = () => {
@@ -41,14 +43,17 @@ const Public = () => {
       </menu>
       <section className="flex flex-wrap mx-auto">
         <span className="h-[3.2rem] w-full" />
-        <AboutMeContainer className={twMerge("mx-auto z-10", isVisibleAboutMe)} />
+        <AboutMeContainer
+          className={twMerge("mx-auto z-10", isVisibleAboutMe)}
+        />
         <PortifolioScreen
           className={twMerge("styleScreens", isVisiblePortifolio)}
         />
         <ContactScreen className={twMerge("styleScreens", isVisibleContact)} />
         <HireScreen className={twMerge("styleScreens", isVisibleHireMe)} />
+        <SignInScreen className={twMerge("stylescreens", isVisibleSignIn)} />
       </section>
-      <div className="absolute w-full h-full min-h-screen top-0 left-0 ">
+      <div className="absolute w-full h-full min-h-screen top-0 left-0">
         <MotionDesign />
       </div>
     </article>

@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import AboutMeScreen from "../AboutMeScreen";
-import MenuHeader from "../../MenuHeader";
-import { UseIsVisibleContext } from "../../contexts/IsVisibleContext";
-import { handleVisibility } from "../../../utils/handleVisible";
+import { UseIsVisibleContext } from "../../../contexts/IsVisibleContext";
+import { handleVisibility } from "../../../../utils/handleVisible";
+import MenuHeader from "../../../MenuHeader";
 
 const AboutMePdf = () => {
   const aboutMePdfRef = useRef(null);
@@ -29,7 +29,7 @@ const AboutMePdf = () => {
         trigger={() => (
           <menu>
             <button className="min-w-[21rem] max-w-[45rem] text-golden animate-ping pl-[45%] text-semibold text-xxs">
-             PRINT
+              PRINT
             </button>
           </menu>
         )}

@@ -1,15 +1,15 @@
 import { twMerge } from "tailwind-merge";
-import { handleVisibility } from "../utils/handleVisible";
-import FooterBar from "./FooterBar";
-import MenuHeader from "./MenuHeader";
-import { UseIsVisibleContext } from "./contexts/IsVisibleContext";
-import AdressLogo from "./svg/AdressLogo";
-import DiscordLogo from "./svg/DiscordLogo";
-import EmailLogo from "./svg/EmailLogo";
-import LinkedInLogo from "./svg/LinkedInLogo";
-import WhatsAppLogo from "./svg/WhatsAppLogo";
-import YoutubeLogo from "./svg/YoutubeLogo";
-import { TScreensPropsTypes } from "../types/screensPropsType";
+import { handleVisibility } from "../../utils/handleVisible";
+import FooterBar from "../FooterBar";
+import MenuHeader from "../MenuHeader";
+import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import AdressLogo from "../svg/AdressLogo";
+import DiscordLogo from "../svg/DiscordLogo";
+import EmailLogo from "../svg/EmailLogo";
+import LinkedInLogo from "../svg/LinkedInLogo";
+import WhatsAppLogo from "../svg/WhatsAppLogo";
+import YoutubeLogo from "../svg/YoutubeLogo";
+import { TScreensPropsTypes } from "../../types/screensPropsType";
 
 const ContactScreen = ({ className }: TScreensPropsTypes) => {
   const { setContactVisibilityState, isVisibleContact } = UseIsVisibleContext();

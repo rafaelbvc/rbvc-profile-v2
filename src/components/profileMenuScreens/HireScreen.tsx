@@ -1,10 +1,10 @@
 import { twMerge } from "tailwind-merge";
-import { handleVisibility } from "../utils/handleVisible";
-import FooterBar from "./FooterBar";
-import MenuHeader from "./MenuHeader";
-import { UseIsVisibleContext } from "./contexts/IsVisibleContext";
-import UnderConstructionSVG from "./svg/UnderConstructionSVG";
-import { TScreensPropsTypes } from "../types/screensPropsType";
+import { handleVisibility } from "../../utils/handleVisible";
+import FooterBar from "../FooterBar";
+import MenuHeader from "../MenuHeader";
+import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import UnderConstructionSVG from "../svg/UnderConstructionSVG";
+import { TScreensPropsTypes } from "../../types/screensPropsType";
 
 const HireScreen = ({ className }: TScreensPropsTypes) => {
   const { setHireMeVisibilityState, isVisibleHireMe } = UseIsVisibleContext();
