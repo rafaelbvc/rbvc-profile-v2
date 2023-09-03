@@ -24,14 +24,15 @@ interface IVisibilityProvider {
 export const VisibilityContext = createContext({} as IVisibleContext);
 
 export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
-  const [isVisibleProfile, setIsVisibleProfile] = useState<string>(" hidden");
+  const [isVisibleProfile, setIsVisibleProfile] = useState<string>(" ");
   const [isVisibleGetStarted, setIsVisibleGetStarted] =
     useState<string>(" hidden");
   const [isVisibleAboutMe, setIsVisibleAboutMe] = useState<string>(" ");
-  const [isVisiblePortifolio, setIsVisiblePortifolio] = useState<string>(" ");
+  const [isVisiblePortifolio, setIsVisiblePortifolio] =
+    useState<string>(" hidden");
   const [isVisibleContact, setIsVisibleContact] = useState<string>(" hidden");
   const [isVisibleHireMe, setIsVisibleHireMe] = useState<string>(" hidden");
-  const [isVisibleSignIn, setIsVisiblieSignIn] = useState<string>(" ");
+  const [isVisibleSignIn, setIsVisiblieSignIn] = useState<string>(" hidden");
 
   const setProfileVisibilityState = (isVisibleProfile: string) => {
     setIsVisibleProfile(isVisibleProfile);
