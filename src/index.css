@@ -69,13 +69,9 @@ html {
 }
 
 .vLabels {
-  @apply mx-1 mt-2 px-1 whitespace-nowrap text-xms;
+  @apply mx-1 mt-2 mb-[0.08rem] px-1 whitespace-nowrap text-xxs;
 }
 
 .vInputs {
-  @apply mx-1 px-1  border-goldenAlpha rounded;
+  @apply mx-1 px-1 border-border1 border-goldenAlpha rounded-sm;
 }
-
-
-
-

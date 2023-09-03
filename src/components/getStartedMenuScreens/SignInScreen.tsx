@@ -20,16 +20,60 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
       />
       {/* <p>fdffdf</p> */}
       <form>
+        <div className="flex">
+          <InputComponent
+            id="firstName"
+            htmlFor="firstName"
+            label="First Name"
+            className="vInputs"
+            classNameForm="flex flex-col"
+            type="text"
+          />
+          <InputComponent
+            id="phoneI"
+            htmlFor="phoneI"
+            label="Phone"
+            className="vInputs"
+            classNameForm="flex flex-col"
+            type="text"
+          />
+        </div>
         <InputComponent
-          id="firstName"
-          htmlFor="firstName"
-          label="First Name"
+          id="lastName"
+          htmlFor="lastName"
+          label="Last Name"
           className="vInputs"
-          classNameForm=""
+          classNameForm="flex flex-col"
           type="text"
         />
+        <InputComponent
+          id="emailI"
+          htmlFor="emailI"
+          label="E-Mail"
+          className="vInputs"
+          classNameForm="flex flex-col"
+          type="text"
+        />
+                <div className="flex">
+          <InputComponent
+            id="passwordI"
+            htmlFor="passwordI"
+            label="PASSWORD"
+            className="vInputs"
+            classNameForm="flex flex-col"
+            type="text"
+          />
+          <InputComponent
+            id="creationDate"
+            htmlFor="creationDate"
+            label="Creation Date"
+            className="vInputs"
+            classNameForm="flex flex-col"
+            type="text"
+          />
+        </div>
       </form>
-      <FooterBar className="mb-[2rem]" />
+      <FooterBar className="my-[2rem]" />
     </article>
   );
 };

@@ -10,7 +10,7 @@ export default {
         sms: ["0.9rem", "1.6rem"],
       },
       borderWidth: {
-        "border-1": 1,
+        border1: "1px",
       },
     },
     colors: {
