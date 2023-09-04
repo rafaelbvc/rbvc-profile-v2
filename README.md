@@ -55,9 +55,9 @@ The entire application is designed to be responsive, with breakpoints carefully 
     6.  PortifolioScreen [Done]
     7.  ContacteScreen [Done]
     8.  AboutMeScreen [Done]
-    9.  SignInScreen
+    9.  SignInScreen [Done]
     10. SignUpScreen
-    11. ProfileScreen (from GetStartedMenu)
+    11. ProfileScreen (from GetStartedMenu) [Done]
     12. PostScreen
     13. Home [Done]
   - Test funcionalites with useIsVisible custom hook, all break points

@@ -8,6 +8,7 @@ interface IVisibleContext {
   isVisibleContact: string;
   isVisibleHireMe: string;
   isVisibleSignIn: string;
+  isVisibleGetProfile: string;
   setProfileVisibilityState: (isVisibleProfile: string) => void;
   setGetStartedVisibilityState: (isVisibleGetStated: string) => void;
   setAboutMeVisibilityState: (isVisibleAboutMe: string) => void;
@@ -15,6 +16,7 @@ interface IVisibleContext {
   setContactVisibilityState: (isVisibleContact: string) => void;
   setHireMeVisibilityState: (isVisibleHireMe: string) => void;
   setSignInVisibilityState: (isVisibleSignIn: string) => void;
+  setGetProfileVisibilityState: (isVisibleGetProfile: string) => void;
 }
 
 interface IVisibilityProvider {
@@ -33,6 +35,7 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
   const [isVisibleContact, setIsVisibleContact] = useState<string>(" hidden");
   const [isVisibleHireMe, setIsVisibleHireMe] = useState<string>(" hidden");
   const [isVisibleSignIn, setIsVisiblieSignIn] = useState<string>(" hidden");
+  const [isVisibleGetProfile, setIsVisibleGetProfile] = useState<string>(" hidden");
 
   const setProfileVisibilityState = (isVisibleProfile: string) => {
     setIsVisibleProfile(isVisibleProfile);
@@ -62,6 +65,10 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
     setIsVisiblieSignIn(isVisibleSignIn);
   };
 
+  const setGetProfileVisibilityState = (isVisibleGetProfile: string) => {
+    setIsVisibleGetProfile(isVisibleGetProfile);
+  };
+
   return (
     <VisibilityContext.Provider
       value={{
@@ -72,6 +79,7 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
         isVisibleContact,
         isVisibleHireMe,
         isVisibleSignIn,
+        isVisibleGetProfile,
         setGetStartedVisibilityState,
         setProfileVisibilityState,
         setAboutMeVisibilityState,
@@ -79,6 +87,7 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
         setContactVisibilityState,
         setHireMeVisibilityState,
         setSignInVisibilityState,
+        setGetProfileVisibilityState,
       }}
     >
       {children}

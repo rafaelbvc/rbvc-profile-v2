@@ -10,6 +10,8 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
     isVisibleGetStarted,
     setSignInVisibilityState,
     isVisibleSignIn,
+    setGetProfileVisibilityState,
+    isVisibleGetProfile,
   } = UseIsVisibleContext();
 
   return (
@@ -39,7 +41,12 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
           }
         />
         <DefaultBtn text="Sign Up" onClick={() => null} />
-        <DefaultBtn text="Profile" onClick={() => null} />
+        <DefaultBtn
+          text="Profile"
+          onClick={() =>
+            setGetProfileVisibilityState(handleVisibility(isVisibleGetProfile))
+          }
+        />
         <DefaultBtn text="Post" onClick={() => null} />
       </menu>
     </button>
