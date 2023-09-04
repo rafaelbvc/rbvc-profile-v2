@@ -106,10 +106,20 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
             <label htmlFor="roles" className="vLabels">
               Roles
             </label>
-            <select className="px-1"  id="roles" {...register("roles", { required: true })}>
-              <option  value="Admin">Admin</option>
-              <option value="Visitor">Visitor</option>
-              <option value="Subscribed">Subscribed</option>
+            <select
+              className="vSelect min-h-[1.34rem]"
+              id="roles"
+              {...register("roles", { required: true })}
+            >
+              <option className="vSelect" value="Admin">
+                Admin
+              </option>
+              <option className="vSelect" value="Visitor">
+                Visitor
+              </option>
+              <option className="vSelect" value="Subscribed">
+                Subscribed
+              </option>
             </select>
           </div>
         </div>
