@@ -75,3 +75,7 @@ html {
 .vInputs {
   @apply mx-1 px-1 border-border1 border-goldenAlpha rounded-sm;
 }
+
+.vSelect {
+  @apply text-xms mx-1 px-1 text-golden border-border1 border-goldenAlpha rounded-sm
+}
