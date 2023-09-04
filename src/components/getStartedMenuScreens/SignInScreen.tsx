@@ -5,9 +5,15 @@ import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import InputComponent from "./InputComponent";
+import { useForm } from "react-hook-form";
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
+
+  const { watch } = useForm();
+
+  const formData = watch();
+  console.log(formData);
 
   return (
     <article className={twMerge(" styleScreens", className)}>
@@ -25,49 +31,64 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
             id="firstName"
             htmlFor="firstName"
             label="First Name"
-            className="vInputs"
+            className="max-w-[11.5rem] sm:max-w-none"
             classNameForm="flex flex-col"
             type="text"
+            isRequired={true}
+            min={3}
+            max={14}
           />
           <InputComponent
             id="phoneI"
             htmlFor="phoneI"
             label="Phone"
-            className="vInputs"
+            className="max-w-[11.5rem] sm:max-w-none"
             classNameForm="flex flex-col"
             type="text"
+            isRequired={false}
+            min={7}
+            max={14}
           />
         </div>
         <InputComponent
           id="lastName"
           htmlFor="lastName"
           label="Last Name"
-          className="vInputs"
+          className=""
           classNameForm="flex flex-col"
           type="text"
+          isRequired={true}
+          min={3}
+          max={30}
         />
         <InputComponent
           id="emailI"
           htmlFor="emailI"
           label="E-Mail"
-          className="vInputs"
+          className=""
           classNameForm="flex flex-col"
           type="text"
+          isRequired={true}
+          min={6}
+          max={40}
         />
-                <div className="flex">
+        <div className="flex">
           <InputComponent
             id="passwordI"
             htmlFor="passwordI"
-            label="PASSWORD"
-            className="vInputs"
+            label="Password"
+            className="max-w-[11.5rem] sm:max-w-none"
             classNameForm="flex flex-col"
             type="text"
+            isRequired={true}
+            min={8}
+            max={20}
           />
           <InputComponent
-            id="creationDate"
-            htmlFor="creationDate"
-            label="Creation Date"
-            className="vInputs"
+            id="rolesI"
+            htmlFor="Roles"
+            label="Roles"
+            className="max-w-[11.5rem] sm:max-w-none"
             classNameForm="flex flex-col"
             type="text"
           />
