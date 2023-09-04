@@ -3,7 +3,6 @@ import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
-
 export const MotionDesign = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
