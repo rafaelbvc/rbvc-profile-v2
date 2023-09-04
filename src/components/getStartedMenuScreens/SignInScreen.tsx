@@ -4,13 +4,12 @@ import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
-import InputComponent from "./InputComponent";
 import { useForm } from "react-hook-form";
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
 
-  const { watch } = useForm();
+  const { watch, register } = useForm();
 
   const formData = watch();
   console.log(formData);
@@ -24,74 +23,95 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
           setSignInVisibilityState(handleVisibility(isVisibleSignIn))
         }
       />
-      {/* <p>fdffdf</p> */}
-      <form>
-        <div className="flex">
-          <InputComponent
-            id="firstName"
-            htmlFor="firstName"
-            label="First Name"
-            className="max-w-[11.5rem] sm:max-w-none"
-            classNameForm="flex flex-col"
+      <form className="flex flex-col">
+        <div className="flex flex-row">
+          <div className="flex flex-col">
+            <label htmlFor="firstName" className="vLabels">
+              First Name
+            </label>
+            <input
+              id="firstName"
+              className="vInputs max-w-[11.5rem] sm:max-w-none"
+              type="text"
+              {...register("firstName", {
+                required: true,
+                minLength: 3,
+                maxLength: 14,
+              })}
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="phone" className="vLabels">
+              Phone
+            </label>
+            <input
+              id="phone"
+              className="vInputs max-w-[11.5rem] sm:max-w-none"
+              type="text"
+              {...register("phone", {
+                required: false,
+                minLength: 7,
+                maxLength: 14,
+              })}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="lastName" className="vLabels">
+            Last Name
+          </label>
+          <input
+            id="lastName"
+            className="vInputs"
             type="text"
-            isRequired={true}
-            min={3}
-            max={14}
-          />
-          <InputComponent
-            id="phoneI"
-            htmlFor="phoneI"
-            label="Phone"
-            className="max-w-[11.5rem] sm:max-w-none"
-            classNameForm="flex flex-col"
-            type="text"
-            isRequired={false}
-            min={7}
-            max={14}
+            {...register("lastName", {
+              required: false,
+              minLength: 3,
+              maxLength: 30,
+            })}
           />
         </div>
-        <InputComponent
-          id="lastName"
-          htmlFor="lastName"
-          label="Last Name"
-          className=""
-          classNameForm="flex flex-col"
-          type="text"
-          isRequired={true}
-          min={3}
-          max={30}
-        />
-        <InputComponent
-          id="emailI"
-          htmlFor="emailI"
-          label="E-Mail"
-          className=""
-          classNameForm="flex flex-col"
-          type="text"
-          isRequired={true}
-          min={6}
-          max={40}
-        />
-        <div className="flex">
-          <InputComponent
-            id="passwordI"
-            htmlFor="passwordI"
-            label="Password"
-            className="max-w-[11.5rem] sm:max-w-none"
-            classNameForm="flex flex-col"
+        <div className="flex flex-col">
+          <label htmlFor="email" className="vLabels">
+            E-Mail
+          </label>
+          <input
+            id="email"
+            className="vInputs"
             type="text"
-            isRequired={true}
-            min={8}
-            max={20}
+            {...register("email", {
+              required: false,
+              minLength: 6,
+              maxLength: 40,
+            })}
           />
-          <InputComponent
-            id="rolesI"
-            htmlFor="Roles"
-            label="Roles"
-            className="max-w-[11.5rem] sm:max-w-none"
-            classNameForm="flex flex-col"
-            type="text"
-          />
+        </div>
+        <div className="flex flex-row">
+          <div className="flex flex-col">
+            <label htmlFor="password" className="vLabels">
+              Password
+            </label>
+            <input
+              id="password"
+              className="vInputs max-w-[11.5rem] sm:max-w-none"
+              type="text"
+              {...register("password", {
+                required: true,
+                minLength: 8,
+                maxLength: 20,
+              })}
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="roles" className="vLabels">
+              Roles
+            </label>
+            <select className="px-1"  id="roles" {...register("roles", { required: true })}>
+              <option  value="Admin">Admin</option>
+              <option value="Visitor">Visitor</option>
+              <option value="Subscribed">Subscribed</option>
+            </select>
+          </div>
         </div>
       </form>
       <FooterBar className="my-[2rem]" />
