@@ -22,11 +22,13 @@ const Public = () => {
     isVisibleGetProfile,
   } = UseIsVisibleContext();
 
+
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
       return " top-[7rem] sm:top-[4rem]";
     } else return " ";
   };
+
 
   return (
     <article className="relative">
