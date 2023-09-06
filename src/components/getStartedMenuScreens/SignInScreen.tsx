@@ -9,10 +9,10 @@ import { useForm } from "react-hook-form";
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
 
-  const { watch, register } = useForm();
+  const { register } = useForm();
 
-  const formData = watch();
-  console.log(formData);
+  // const formData = watch();
+  // console.log(formData);
 
   return (
     <article className={twMerge(" styleScreens", className)}>

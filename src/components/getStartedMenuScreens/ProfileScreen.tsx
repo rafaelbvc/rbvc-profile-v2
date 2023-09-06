@@ -5,15 +5,17 @@ import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import { useForm } from "react-hook-form";
+import useUserQuery from "../../hooks/useUserQuery";
 
 const ProfileScreen = ({ className }: TScreensPropsTypes) => {
+  const { queryReturn } = useUserQuery();
+
+  console.log(queryReturn);
+
   const { setGetProfileVisibilityState, isVisibleGetProfile } =
     UseIsVisibleContext();
 
   const { register } = useForm();
-
-  // const formData = watch();
-  // console.log(formData);
 
   return (
     <article className={twMerge(" styleScreens", className)}>
