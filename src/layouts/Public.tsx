@@ -8,8 +8,7 @@ import HireScreen from "../components/profileMenuScreens/HireScreen";
 import { MotionDesign } from "../components/animatedBG/MotionDesign";
 import AboutMeContainer from "../components/profileMenuScreens/aboutMe/AboutMeContainer";
 import SignInScreen from "../components/getStartedMenuScreens/SignInScreen";
-import useUserQuery from "../hooks/useUserQuery";
-// import ProfileScreen from "../components/getStartedMenuScreens/ProfileScreen";
+import ShowProfileScreen from "../components/getStartedMenuScreens/ShowProfileScreen";
 
 const Public = () => {
   const {
@@ -20,10 +19,8 @@ const Public = () => {
     isVisibleContact,
     isVisibleHireMe,
     isVisibleSignIn,
-    // isVisibleGetProfile,
+    isVisibleGetProfile,
   } = UseIsVisibleContext();
-
-  const { queryReturn } = useUserQuery();
 
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
@@ -57,10 +54,9 @@ const Public = () => {
         <ContactScreen className={twMerge("styleScreens", isVisibleContact)} />
         <HireScreen className={twMerge("styleScreens", isVisibleHireMe)} />
         <SignInScreen className={twMerge("stylescreens", isVisibleSignIn)} />
-        {/* <ProfileScreen
-          className={twMerge("stylescreens", isVisibleGetProfile)}
-        /> */}
-        {queryReturn}
+        <ShowProfileScreen
+          className={twMerge("stylescreens z-10", isVisibleGetProfile)}
+        />
       </section>
       <div className="absolute w-full h-full min-h-screen top-0 left-0">
         <MotionDesign />

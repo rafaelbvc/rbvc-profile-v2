@@ -1,4 +1,3 @@
-import { twMerge } from "tailwind-merge";
 import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
@@ -16,8 +15,7 @@ interface IProfileScreen {
 }
 
 const ProfileScreen = (props: IProfileScreen) => {
-  const { firstName, lastName, phone, email, password, roles, className } =
-    props;
+  const { firstName, lastName, phone, email, password, roles } = props;
 
   const { setGetProfileVisibilityState, isVisibleGetProfile } =
     UseIsVisibleContext();
@@ -25,7 +23,7 @@ const ProfileScreen = (props: IProfileScreen) => {
   const { register } = useForm();
 
   return (
-    <article className={twMerge(" styleScreens", className)}>
+    <article className=" styleScreens">
       <MenuHeader
         className=""
         titleHeader="PROFILE"
