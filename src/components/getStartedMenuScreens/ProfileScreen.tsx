@@ -1,16 +1,23 @@
 import { twMerge } from "tailwind-merge";
-import { TScreensPropsTypes } from "../../types/screensPropsType";
 import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import { useForm } from "react-hook-form";
-import useUserQuery from "../../hooks/useUserQuery";
 
-const ProfileScreen = ({ className }: TScreensPropsTypes) => {
-  const { queryReturn } = useUserQuery();
+interface IProfileScreen {
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  email?: string;
+  password?: string;
+  className?: string;
+  roles?: Array<string>;
+}
 
-  console.log(queryReturn);
+const ProfileScreen = (props: IProfileScreen) => {
+  const { firstName, lastName, phone, email, password, roles, className } =
+    props;
 
   const { setGetProfileVisibilityState, isVisibleGetProfile } =
     UseIsVisibleContext();
@@ -36,7 +43,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
               id="firstName"
               className="vInputs max-w-[11.5rem] sm:max-w-none"
               type="text"
-              value={""}
+              value={firstName ? firstName : " "}
               {...register("firstName", {
                 required: true,
                 minLength: 3,
@@ -52,7 +59,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
               id="phone"
               className="vInputs max-w-[11.5rem] sm:max-w-none"
               type="text"
-              value={""}
+              value={phone ? phone : " "}
               {...register("phone", {
                 required: false,
                 minLength: 7,
@@ -69,7 +76,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
             id="lastName"
             className="vInputs"
             type="text"
-            value={""}
+            value={lastName ? lastName : " "}
             {...register("lastName", {
               required: false,
               minLength: 3,
@@ -85,7 +92,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
             id="email"
             className="vInputs"
             type="text"
-            value={""}
+            value={email ? email : " "}
             {...register("email", {
               required: false,
               minLength: 6,
@@ -102,7 +109,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
               id="password"
               className="vInputs max-w-[11.5rem] sm:max-w-none"
               type="text"
-              value={""}
+              value={password ? password : " "}
               {...register("password", {
                 required: true,
                 minLength: 8,
@@ -117,7 +124,7 @@ const ProfileScreen = ({ className }: TScreensPropsTypes) => {
             <select
               className="vSelect min-h-[1.34rem]"
               id="roles"
-              value={""}
+              value={roles ? roles : " "}
               {...register("roles", { required: true })}
             >
               <option className="vSelect" value="Admin">
