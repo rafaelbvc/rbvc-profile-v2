@@ -35,7 +35,7 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
   const [isVisibleContact, setIsVisibleContact] = useState<string>(" hidden");
   const [isVisibleHireMe, setIsVisibleHireMe] = useState<string>(" hidden");
   const [isVisibleSignIn, setIsVisiblieSignIn] = useState<string>(" hidden");
-  const [isVisibleGetProfile, setIsVisibleGetProfile] = useState<string>(" ");
+  const [isVisibleGetProfile, setIsVisibleGetProfile] = useState<string>(" hidden");
 
   const setProfileVisibilityState = (isVisibleProfile: string) => {
     setIsVisibleProfile(isVisibleProfile);

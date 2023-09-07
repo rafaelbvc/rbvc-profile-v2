@@ -16,14 +16,6 @@ const useUserQuery = () => {
     refetchOnWindowFocus: true,
   });
 
-  // } = useQuery<IUserData[]>({
-  //   queryKey: ["Users"],
-  //   queryFn: () =>
-  //     fetch("http://localhost:5090/users").then((res) => res.json()),
-  //   staleTime: 1000 * 60, // 1 minute
-  //   refetchOnWindowFocus: true,
-  // });
-
   let queryReturn: JSX.Element = <CircleLoader isLoading={isLoading} />;
 
   if (isLoading) {
