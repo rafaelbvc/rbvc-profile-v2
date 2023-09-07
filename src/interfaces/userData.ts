@@ -1,5 +1,5 @@
-export interface IUserData {
-  id?: string;
+export interface IUserData extends Element {
+  id: string;
   firstName: string;
   lastName: string;
   phone?: string;
