@@ -11,7 +11,7 @@ interface IProfileScreen {
   email?: string;
   password?: string;
   className?: string;
-  roles?: Array<string>;
+  roles?: string;
 }
 
 const ProfileScreen = (props: IProfileScreen) => {
@@ -44,8 +44,10 @@ const ProfileScreen = (props: IProfileScreen) => {
               value={firstName ? firstName : " "}
               {...register("firstName", {
                 required: true,
-                minLength: 3,
-                maxLength: 14,
+                pattern: {
+                  value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,14})$/,
+                  message: "Must contain between 3 and 14 characters",
+                },
               })}
             />
           </div>
@@ -62,6 +64,11 @@ const ProfileScreen = (props: IProfileScreen) => {
                 required: false,
                 minLength: 7,
                 maxLength: 14,
+                pattern: {
+                  value:
+                    /(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})/,
+                  message: "Invalid format +55 55 55555-5555",
+                },
               })}
             />
           </div>
@@ -77,8 +84,10 @@ const ProfileScreen = (props: IProfileScreen) => {
             value={lastName ? lastName : " "}
             {...register("lastName", {
               required: false,
-              minLength: 3,
-              maxLength: 30,
+              pattern: {
+                value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,30})$/,
+                message: "Must contain between 3 and 30 characters",
+              },
             })}
           />
         </div>
@@ -94,7 +103,10 @@ const ProfileScreen = (props: IProfileScreen) => {
             {...register("email", {
               required: false,
               minLength: 6,
-              maxLength: 40,
+              pattern: {
+                value: /[a-z\d]+([._]?[a-z\d]+)+@[a-z\d]+(\.[a-z]+)+/,
+                message: "Invalid email format!",
+              },
             })}
           />
         </div>
@@ -112,6 +124,11 @@ const ProfileScreen = (props: IProfileScreen) => {
                 required: true,
                 minLength: 8,
                 maxLength: 20,
+                pattern: {
+                  value: /^(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/,
+                  message:
+                    "Ensure that password is 8 to 64 characters long and contains a mix  of upper and lower case characters, one numeric and one special character",
+                },
               })}
             />
           </div>

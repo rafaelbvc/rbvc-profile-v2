@@ -12,8 +12,8 @@ const useUserQuery = () => {
     queryKey: ["Users"],
     queryFn: () =>
       fetch("http://localhost:5090/users").then((res) => res.json()),
-    staleTime: 1000 * 60, // 1 minute
-    refetchOnWindowFocus: true,
+    // staleTime: 1000 * 60 * 60, // 1 minute
+    // refetchOnWindowFocus: false,
   });
 
   let queryReturn: JSX.Element = <CircleLoader isLoading={isLoading} />;
