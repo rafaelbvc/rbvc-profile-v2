@@ -15,14 +15,14 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
   } = UseIsVisibleContext();
 
   return (
-    <button
+    <section
       {...props}
       className={twMerge(
         "fixed right-2 max-w-[22rem] py-1 menuOpenStyle  z-10",
         className
       )}
     >
-      <header className="flex flex-row  justify-between px-3 ">
+      <header className="flex flex-row justify-between px-3 ">
         <h3 className="smallTitles">GET STARTED</h3>
         <button
           className="smallTitles"
@@ -49,7 +49,7 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
         />
         <DefaultBtn text="Post" onClick={() => null} />
       </menu>
-    </button>
+    </section>
   );
 };
 

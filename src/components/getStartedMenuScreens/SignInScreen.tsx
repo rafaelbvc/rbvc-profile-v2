@@ -4,15 +4,26 @@ import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
+import axios from "axios";
+import { IUserData } from "../../interfaces/userData";
+// import DefaultBtn from "../buttons/DefaultBtn";
+import { ErrorMessage } from "@hookform/error-message";
+
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
+
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
 
-  const { register } = useForm();
-
-  // const formData = watch();
-  // console.log(formData);
+  const { handleSubmit, register, formState: { errors }
+  } = useForm<IUserData>();
+  const onSubmit: SubmitHandler<IUserData> = async (data) => {
+    await axios
+      .post("http://localhost:5090/users", data)
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error))
+    console.log(data)
+  };
 
   return (
     <article className={twMerge(" styleScreens", className)}>
@@ -23,7 +34,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
           setSignInVisibilityState(handleVisibility(isVisibleSignIn))
         }
       />
-      <form className="flex flex-col">
+      <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-row">
           <div className="flex flex-col">
             <label htmlFor="firstName" className="vLabels">
@@ -35,13 +46,15 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
               type="text"
               {...register("firstName", {
                 required: true,
-                minLength: 3,
-                maxLength: 14,
+                pattern: {
+                  value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,14})$/,
+                  message: "First name must contain between 3 and 14 characters",
+                },
               })}
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="phone" className="vLabels">
+            <label htmlFor="phoneI" className="vLabels">
               Phone
             </label>
             <input
@@ -52,6 +65,11 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
                 required: false,
                 minLength: 7,
                 maxLength: 14,
+                pattern: {
+                  value:
+                    /(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})/,
+                  message: "Invalid Phone format +55 55 55555-5555",
+                },
               })}
             />
           </div>
@@ -66,8 +84,10 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
             type="text"
             {...register("lastName", {
               required: false,
-              minLength: 3,
-              maxLength: 30,
+              pattern: {
+                value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,30})$/,
+                message: "Last name must contain between 3 and 30 characters",
+              },
             })}
           />
         </div>
@@ -82,11 +102,14 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
             {...register("email", {
               required: false,
               minLength: 6,
-              maxLength: 40,
+              pattern: {
+                value: /[a-z\d]+([._]?[a-z\d]+)+@[a-z\d]+(\.[a-z]+)+/,
+                message: "Invalid email format!",
+              },
             })}
           />
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-between">
           <div className="flex flex-col">
             <label htmlFor="password" className="vLabels">
               Password
@@ -99,6 +122,11 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
                 required: true,
                 minLength: 8,
                 maxLength: 20,
+                pattern: {
+                  value: /^(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/,
+                  message:
+                    "Ensure that password is 8 to 64 characters long and contains a mix  of upper and lower case characters, one numeric and one special character",
+                },
               })}
             />
           </div>
@@ -121,10 +149,40 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
                 Subscribed
               </option>
             </select>
+            
           </div>
+          <button type="submit" className="pt-[0.8rem] pr-3 text-sms hover:text-golden text-mediumGray">SUBMIT</button>
         </div>
+        <section className="p-2">
+          <ErrorMessage
+            errors={errors}
+            name="firstName"
+            render={({ message }) => <p className="vInputErrors">{message}</p>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="phone"
+            render={({ message }) => <p className="vInputErrors ">{message}</p>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="lastName"
+            render={({ message }) => <p className="vInputErrors ">{message}</p>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="email"
+            render={({ message }) => <p className="vInputErrors ">{message}</p>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="password"
+            render={({ message }) => <p className="vInputErrors ">{message}</p>}
+          />
+        </section>
       </form>
-      <FooterBar className="my-[2rem]" />
+
+      <FooterBar className="mb-[2rem]" />
     </article>
   );
 };

@@ -55,10 +55,10 @@ const Public = () => {
         <HireScreen className={twMerge("styleScreens", isVisibleHireMe)} />
         <SignInScreen className={twMerge("stylescreens", isVisibleSignIn)} />
         <ShowProfileScreen
-          className={twMerge("stylescreens z-10", isVisibleGetProfile)}
+          className={twMerge("styleScreens", isVisibleGetProfile)}
         />
       </section>
-      <div className="absolute w-full h-full min-h-screen top-0 left-0">
+      <div className="absolute top-0 left-0 w-full h-full min-h-screen">
         <MotionDesign />
       </div>
     </article>

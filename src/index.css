@@ -7,7 +7,7 @@ html {
   @apply font-poppins;
   @apply text-sm;
   @apply whitespace-nowrap;
-  @apply bg-gradient-to-t from-lightGray  to-mediumGray;
+  @apply bg-gradient-to-t from-lightGray to-mediumGray;
 }
 
 #layoutMain {
@@ -41,23 +41,23 @@ html {
 }
 
 .vBtnStyle {
-  @apply cursor-pointer text-sm md:text-base  md:text-mediumGray text-golden hover:underline  hover:underline-offset-1 hover:decoration-black md:hover:decoration-golden;
+  @apply text-sm cursor-pointer md:text-base md:text-mediumGray text-golden hover:underline hover:underline-offset-1 hover:decoration-black md:hover:decoration-golden;
 }
 
 .smallTitles {
-  @apply text-xxs py-1  text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
+  @apply py-1 text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
 }
 
 .menusStyle {
-  @apply rounded-md shadow-sm mx-auto;
+  @apply mx-auto rounded-md shadow-sm;
 }
 
 .menuOpenStyle {
-  @apply content-center bg-lightGrayAlpha z-20 shadow-sm rounded-md;
+  @apply z-20 content-center rounded-md shadow-sm bg-lightGrayAlpha;
 }
 
 .pDescription {
-  @apply text-center text-mediumGray text-sm;
+  @apply text-sm text-center text-mediumGray;
 }
 
 .styleScreens {
@@ -73,9 +73,13 @@ html {
 }
 
 .vInputs {
-  @apply mx-1 px-1 border-border1 border-goldenAlpha rounded-sm;
+  @apply px-1 mx-1 rounded-sm border-border1 border-goldenAlpha;
 }
 
 .vSelect {
-  @apply text-xms mx-1 px-1 text-golden border-border1 border-goldenAlpha rounded-sm
+  @apply px-1 mx-1 rounded-sm text-xms text-golden border-border1 border-goldenAlpha;
+}
+
+.vInputErrors {
+  @apply mx-auto whitespace-normal text-center text-sms text-red max-w-[24rem];
 }

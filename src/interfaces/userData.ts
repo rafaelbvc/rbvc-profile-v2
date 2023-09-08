@@ -1,4 +1,4 @@
-export interface IUserData extends Element {
+export interface IUserData {
   id: string;
   firstName: string;
   lastName: string;
