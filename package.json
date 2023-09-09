@@ -1,7 +1,7 @@
 {
   "name": "rbvcprofile-client",
   "private": true,
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,6 @@
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@types/react-router-dom": "5.3.3",
-    "dotenv": "^16.3.1",
     "intellisense": "^0.0.1",
     "latest": "^0.2.0",
     "react": "^18.2.0",
@@ -31,6 +30,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.6.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/react-query": "^1.2.9",
@@ -38,6 +38,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^1.0.5",
     "autoprefixer": "^10.4.15",
+    "dotenv": "^16.3.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
