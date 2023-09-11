@@ -5,5 +5,5 @@ export interface IUserData {
   phone?: string;
   email: string;
   password: string;
-  roles: Array<[]>;
+  roles: string;
 }
