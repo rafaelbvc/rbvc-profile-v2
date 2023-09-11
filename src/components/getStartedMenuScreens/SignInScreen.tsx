@@ -56,7 +56,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
                 {...register("firstName", {
                   required: true,
                   pattern: {
-                    value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,14})$/,
+                    value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]{3,14})$/,
                     message: "First name must contain between 3 and 14 characters",
                   },
                 })}
@@ -94,7 +94,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
               {...register("lastName", {
                 required: false,
                 pattern: {
-                  value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{3,30})$/,
+                  value: /(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]{3,30})$/,
                   message: "Last name must contain between 3 and 30 characters",
                 },
               })}
