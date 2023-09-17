@@ -5,11 +5,10 @@ import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import { SubmitHandler, useForm } from "react-hook-form";
-import axios from "axios";
 import { IUserData } from "../../interfaces/userData";
-// import DefaultBtn from "../buttons/DefaultBtn";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
@@ -17,12 +16,13 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
   const [responseStatus, setResponseStatus] = useState<any>()
 
-  const { handleSubmit, register, formState: { errors }, reset
+  // .post("http://localhost:5090/users", data)
+
+  const { watch, handleSubmit, register, formState: { errors }, reset
   } = useForm<IUserData>();
   const onSubmit: SubmitHandler<IUserData> = async (data) => {
     await axios
-      .post("https://rbvc-profile-v2-server.onrender.com/users", data)
-      // .post("http://localhost:5090/users", data)
+      .post("https://rbvc-profile-v2-server.onrender.com/createuser", data)
       .then((response) => {
         console.log(response)
         setResponseStatus(response)
@@ -30,6 +30,10 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
       .catch((error) => console.log(error)).finally(() => reset())
     console.log(data)
   };
+
+  const dataU = watch()
+
+  console.log(dataU, "dataU")
 
   useEffect(() => { }, [responseStatus])
 

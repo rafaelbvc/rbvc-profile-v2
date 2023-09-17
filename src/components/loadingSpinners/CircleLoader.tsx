@@ -11,10 +11,13 @@ const override: CSSProperties = {
 
 type TCircleLoader = {
   isLoading: boolean;
+  onClick?: () => void
 };
 
 const CircleLoader = (props: TCircleLoader) => {
-  const { isLoading } = props;
+
+
+  const { isLoading, onClick } = props;
 
   const [loading, setLoading] = useState<boolean>(isLoading);
   const [color] = useState("#00FF00");
@@ -33,7 +36,7 @@ const CircleLoader = (props: TCircleLoader) => {
 
   return (
     <div className="mt-4">
-      <MenuHeader className="" />
+      <MenuHeader className="" onClick={onClick} />
       <ClipLoader
         color={color}
         loading={loading}
@@ -42,7 +45,7 @@ const CircleLoader = (props: TCircleLoader) => {
         ara-label="Loading Spinner"
         data-testid="loader"
       />
-      <p className="text-center mt-2">Loading...</p>
+      <p className="mt-2 text-center">Loading...</p>
       <FooterBar />
     </div>
   );

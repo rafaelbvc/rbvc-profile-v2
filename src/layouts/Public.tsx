@@ -9,6 +9,7 @@ import { MotionDesign } from "../components/animatedBG/MotionDesign";
 import AboutMeContainer from "../components/profileMenuScreens/aboutMe/AboutMeContainer";
 import SignInScreen from "../components/getStartedMenuScreens/SignInScreen";
 import ShowProfileScreen from "../components/getStartedMenuScreens/ShowProfileScreen";
+import SignUpScreen from "../components/getStartedMenuScreens/SignUpScreen";
 
 const Public = () => {
   const {
@@ -20,6 +21,7 @@ const Public = () => {
     isVisibleHireMe,
     isVisibleSignIn,
     isVisibleGetProfile,
+    isVisibleSignUp
   } = UseIsVisibleContext();
 
   const handleTopMenuOpen = () => {
@@ -57,6 +59,7 @@ const Public = () => {
         <ShowProfileScreen
           className={twMerge("styleScreens", isVisibleGetProfile)}
         />
+        <SignUpScreen className={twMerge("stylescreens", isVisibleSignUp)} />
       </section>
       <div className="absolute top-0 left-0 w-full h-full min-h-screen">
         <MotionDesign />

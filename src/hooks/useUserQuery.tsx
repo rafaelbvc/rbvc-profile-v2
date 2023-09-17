@@ -4,14 +4,16 @@ import { IUserData } from "../interfaces/userData";
 import ProfileScreen from "../components/getStartedMenuScreens/ProfileScreen";
 
 const useUserQuery = () => {
+
+
   const {
     isLoading,
     error,
     data: userData,
   } = useQuery<IUserData[]>({
-    queryKey: ["Users"],
-    queryFn: () =>
-      fetch("http://localhost:5090/users").then((res) => res.json()),
+    // queryKey: ["Users"],
+    // queryFn: () =>
+    //   fetch("https://rbvc-profile-v2-server.onrender.com/users").then((res) => res.json()).catch((e) => console.log(e)),
     // staleTime: 1000 * 60 * 60, // 1 minute
     // refetchOnWindowFocus: false,
   });
