@@ -1,7 +1,7 @@
 {
   "name": "rbvcprofile-client",
   "private": true,
-  "version": "0.1.9",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,10 +13,12 @@
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@types/react-router-dom": "5.3.3",
+    "axios": "^1.5.0",
     "intellisense": "^0.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwt": "^0.2.0",
     "latest": "^0.2.0",
     "react": "^18.2.0",
-    "react-axios": "^2.0.6",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.0",
     "react-query": "^3.39.3",
@@ -29,7 +31,9 @@
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/node": "^20.6.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
