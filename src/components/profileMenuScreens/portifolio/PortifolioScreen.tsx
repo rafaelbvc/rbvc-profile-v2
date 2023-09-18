@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { TScreensPropsTypes } from "../../../types/screensPropsType";
-import { UseIsVisibleContext } from "../../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../../context/IsVisibleContext";
 import MenuHeader from "../../MenuHeader";
 import { handleVisibility } from "../../../utils/handleVisible";
 import FooterBar from "../../FooterBar";

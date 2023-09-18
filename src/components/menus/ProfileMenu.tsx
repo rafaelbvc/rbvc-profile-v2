@@ -1,6 +1,6 @@
 import DefaultBtn from "../buttons/DefaultBtn";
 import { twMerge } from "tailwind-merge";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import { TProfileMenu } from "../../types/profileMenu";
 

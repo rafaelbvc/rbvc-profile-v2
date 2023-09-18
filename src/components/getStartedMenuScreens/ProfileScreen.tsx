@@ -1,5 +1,5 @@
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import { useForm } from "react-hook-form";

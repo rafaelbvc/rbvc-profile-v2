@@ -1,7 +1,7 @@
 import ProfileMenu from "../components/menus/ProfileMenu";
 import GetStartedMenu from "../components/menus/GetStartedMenu";
 import { twMerge } from "tailwind-merge";
-import { UseIsVisibleContext } from "../components/contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../components/context/IsVisibleContext";
 import PortifolioScreen from "../components/profileMenuScreens/portifolio/PortifolioScreen";
 import ContactScreen from "../components/profileMenuScreens/ContactScreen";
 import HireScreen from "../components/profileMenuScreens/HireScreen";

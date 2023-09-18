@@ -23,7 +23,8 @@ type TAuthContextProviderProps = {
 type AuthContextType = {
     user: User | undefined;
     signIn: (props: TSignIn) => void;
-    signUp: () => void;
+    singOut: () => void;
+    signed: boolean
 }
 
 export const AuthContext = createContext({} as AuthContextType);
