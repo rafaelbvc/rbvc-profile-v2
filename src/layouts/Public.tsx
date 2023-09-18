@@ -12,6 +12,7 @@ import ShowProfileScreen from "../components/getStartedMenuScreens/ShowProfileSc
 import SignUpScreen from "../components/getStartedMenuScreens/SignUpScreen";
 
 const Public = () => {
+
   const {
     isVisibleGetStarted,
     isVisibleProfile,

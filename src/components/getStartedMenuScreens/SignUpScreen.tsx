@@ -1,22 +1,51 @@
 import MenuHeader from '../MenuHeader'
 import { UseIsVisibleContext } from '../contexts/IsVisibleContext'
 import { handleVisibility } from '../../utils/handleVisible'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import { TScreensPropsTypes } from '../../types/screensPropsType'
 import { twMerge } from 'tailwind-merge'
 import FooterBar from '../FooterBar'
+import axios from 'axios'
+import { baseURL } from '../../config/baseURL'
+import { useEffect, useState, } from 'react'
+// import { AuthContext } from '../contexts/AuthContext'
+
+
+type TSignUp = {
+    email: string,
+    password: string,
+}
+
 
 const SignUpScreen = ({ className }: TScreensPropsTypes) => {
 
     const { setSignUpVisibilityState, isVisibleSignUp } = UseIsVisibleContext()
+    const [responseStatus, setResponseStatus] = useState<any>(null)
+    // const { signIn, signed } = useContext(AuthContext)
 
-    const { register, formState: { errors } } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset, watch } = useForm<TSignUp>();
+
+    const onSubmit: SubmitHandler<TSignUp> = async (data, event) => {
+        event?.preventDefault()
+        await axios.post(`${baseURL}/auth`, data).then((response) => {
+            console.log(`${baseURL}/auth`);
+            console.log(response);
+            setResponseStatus(response)
+        }).catch((err) => console.log(err)).finally(() => reset())
+    }
+
+    const dataU = watch()
+
+    console.log(dataU, "dataU")
+
+    useEffect(() => { }, [responseStatus])
+
 
     return (
         <article className={twMerge("styleScreens", className)}>
             <MenuHeader titleHeader="SIGN IN" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} />
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="flex flex-col">
                     <label htmlFor="email" className="vLabels">
