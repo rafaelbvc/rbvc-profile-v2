@@ -9,27 +9,27 @@ import { IUserData } from "../../interfaces/userData";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { baseURL } from "../../config/baseURL";
 
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
 
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
-  const [responseStatus, setResponseStatus] = useState<any>()
-
-  // .post("http://localhost:5090/users", data)
+  const [responseStatus, setResponseStatus] = useState<any>(null)
 
   const { watch, handleSubmit, register, formState: { errors }, reset
   } = useForm<IUserData>();
   const onSubmit: SubmitHandler<IUserData> = async (data) => {
     await axios
-      .post("https://rbvc-profile-v2-server.onrender.com/createuser", data)
+      .post(`${baseURL}/createuser`, data)
       .then((response) => {
         console.log(response)
         setResponseStatus(response)
       })
       .catch((error) => console.log(error)).finally(() => reset())
-    console.log(data)
   };
+
+  console.log(`${baseURL}/createuser`, "fff")
 
   const dataU = watch()
 
