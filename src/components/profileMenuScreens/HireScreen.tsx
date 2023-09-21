@@ -17,6 +17,7 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
         onClick={() =>
           setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
         }
+        buttonText="TO TOP"
       />
       <section className="flex flex-col mx-auto rounded min-w-[21rem] max-w-[45rem] p-2">
         <p className="text-right text-mediumGray">

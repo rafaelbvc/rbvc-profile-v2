@@ -33,7 +33,7 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
 
     return (
         <article className={twMerge("styleScreens", className)}>
-            <MenuHeader titleHeader="SIGN IN" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} />
+            <MenuHeader titleHeader="SIGN IN" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} buttonText="CLOSE" />
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="flex flex-col">
@@ -76,7 +76,8 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
                 </div>
                 <menu className="flex justify-between mx-3 mt-2">
                     <button className="text-xms hover:text-golden text-mediumGray">CLEAR</button>
-                    <button type="submit" className="text-xms hover:text-golden text-mediumGray">SIGN UP</button></menu>
+                    <button type="submit" className="text-xms hover:text-golden text-mediumGray">SIGN UP</button>
+                </menu>
                 <section className="p-2">
                     <ErrorMessage
                         errors={errors}

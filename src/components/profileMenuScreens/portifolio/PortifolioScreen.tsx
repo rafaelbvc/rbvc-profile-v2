@@ -17,9 +17,10 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
         onClick={() =>
           setPortifolioVisibilityState(handleVisibility(isVisiblePortifolio))
         }
+        buttonText="TO TOP"
       />
       <section className="flex flex-col items-center  min-w-[21rem] max-w-[45rem] p-2">
-        <h4 className="text-right text-mediumGray mb-2">
+        <h4 className="mb-2 text-right text-mediumGray">
           Find Your Meal
         </h4>
         <FindYourMeal />

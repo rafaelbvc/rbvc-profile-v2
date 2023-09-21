@@ -30,6 +30,7 @@ const ProfileScreen = (props: IProfileScreen) => {
         onClick={() =>
           setGetProfileVisibilityState(handleVisibility(isVisibleGetProfile))
         }
+        buttonText="CLOSE"
       />
       <form className="flex flex-col">
         <div className="flex flex-row">

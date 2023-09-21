@@ -1,5 +1,6 @@
 export interface IMenuHeader {
-    onClick?: () => void;
-    titleHeader?: string;
-    className?: string;
-  }
+  onClick?: () => void;
+  titleHeader?: string;
+  className?: string;
+  buttonText?: string;
+}

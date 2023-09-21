@@ -1,4 +1,4 @@
-import { Api } from "../config/baseURL";
+import { Api } from "../api/baseURL";
 // import { IUserData } from "../interfaces/userData";
 
 const getUsers = () => {

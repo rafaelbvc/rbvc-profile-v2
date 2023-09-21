@@ -9,7 +9,7 @@ import { IUserData } from "../../interfaces/userData";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import { baseURL } from "../../config/baseURL";
+import { baseURL } from "../../api/baseURL";
 
 
 
@@ -42,6 +42,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
         onClick={() =>
           setSignInVisibilityState(handleVisibility(isVisibleSignIn))
         }
+        buttonText="CLOSE"
       />{!responseStatus ?
 
         <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>

@@ -36,7 +36,7 @@ const CircleLoader = (props: TCircleLoader) => {
 
   return (
     <div className="mt-4">
-      <MenuHeader className="" onClick={onClick} />
+      <MenuHeader onClick={onClick} />
       <ClipLoader
         color={color}
         loading={loading}
