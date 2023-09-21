@@ -9,6 +9,7 @@ import ReactLogo from "../../svg/ReactLogo";
 import TailwindCSSLogo from "../../svg/TailwindCSSLogo";
 import TypeScriptLogo from "../../svg/TypeScriptLogo";
 import FooterBar from "../../FooterBar";
+import Divisor from "../../Divisor";
 
 const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   props,
@@ -27,25 +28,24 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   return (
     <article ref={ref}>
       <section className="flex flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1">
-        <section className="flex flex-col items-center  sm:flex-row">
+        <section className="flex flex-col items-center sm:flex-row">
           <div className={`${bigIMG ? "max-w-[21rem]" : "w-[12.5rem]"}`}>
             <img
               src={PhotoMyProfileA}
               width={200}
               alt="MyProfileA"
-              className={`${
-                bigIMG
-                  ? "absolute border-[1px] border-golden min-w-[12.4rem]"
-                  : "rounded-full border-[1px] border-golden m-2 min-w-[12.6rem]"
-              }`}
+              className={`${bigIMG
+                ? "absolute border-[1px] border-golden min-w-[12.4rem]"
+                : "rounded-full border-[1px] border-golden m-2 min-w-[12.6rem]"
+                }`}
               onClick={() => handleBigImg(bigIMG)}
             />
 
-            <title className="mr-0 flex mb-1 justify-center">
-              <p className="  font-bold my-5">Skills &</p>
-              <p className="  text-golden font-bold my-5">&nbsp; Tools</p>
+            <title className="flex justify-center mb-1 mr-0">
+              <p className="my-5 font-bold ">Skills &</p>
+              <p className="my-5 font-bold text-golden">&nbsp; Tools</p>
             </title>
-            <div className="flex justify-center  flex-row flex-wrap gap-4">
+            <div className="flex flex-row flex-wrap justify-center gap-4">
               <JavaScriptLogo width={"5rem"} />
               <MongoDBLogo width={"5rem"} />
               <NextLogo width={"5rem"} />
@@ -57,12 +57,12 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             </div>
           </div>
           <section className="p-1 whitespace-normal">
-            <title className="mr-0 flex mb-1 justify-end">
-              <p className="  font-bold">Full Stack </p>
-              <p className="  text-golden font-bold">&nbsp; Developer</p>
+            <title className="flex justify-end mb-1 mr-0">
+              <p className="font-bold ">Full Stack </p>
+              <p className="font-bold text-golden">&nbsp; Developer</p>
             </title>
             <section>
-              <p className="text-justify  mt-2 px-1 ">
+              <p className="px-1 mt-2 text-justify ">
                 As a ReactJS, NodeJS and Next, Full-stack developer, I have a
                 strong background in building full-fledged web applications.
                 With advanced knowledge in React, I can create interactive and
@@ -83,12 +83,12 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 skills.
               </p>
             </section>
-            <title className="mr-0 flex mb-1 justify-end">
-              <p className="  font-bold">Work </p>
-              <p className="  text-golden font-bold">&nbsp; Experience</p>
+            <title className="flex justify-end mb-1 mr-0">
+              <p className="font-bold ">Work </p>
+              <p className="font-bold text-golden">&nbsp; Experience</p>
             </title>
             <section>
-              <p className="text-justify justify-end mt-2 px-1">
+              <p className="justify-end px-1 mt-2 text-justify">
                 RBVC Soluções Tecnológicas Freelance Web Developer | May 2023 -
                 Present (present)
                 <br /> • Web development using agile methodology
@@ -97,11 +97,11 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 <br />• Experience with Git and DevOps
               </p>
             </section>
-            <FooterBar />
+            <Divisor />
           </section>
         </section>
         <section>
-          <p className="text-justify justify-end mt-2 px-1 whitespace-normal">
+          <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
             MeuCompromisso Fullstack & Mobile Developer | May 2022 - May 2023 (1
             year 1 month)
             <br />• Front-end development using ReactJS and React Native
@@ -114,9 +114,9 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             Store
           </p>
         </section>
-        <FooterBar />
+        <Divisor />
         <section>
-          <p className="text-justify justify-end mt-2 px-1 whitespace-normal">
+          <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
             Cadmus Soluções em TI Software Developer | November 2021 - April
             2022 (6 months)
             <br />• Java development using SpringBoot
@@ -125,19 +125,21 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             <br />• Deployment and migration
           </p>
         </section>
-        <FooterBar />
+        <Divisor />
         <section>
-          <p className="text-justify justify-end mt-2 px-1 whitespace-normal">
+          <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
             Autonomous February 2015 - April 2018 (3 years 3 months)
             <br />• Banner design
             <br />• Creation of starter sites and digital banners
             <br />• Flash Action Script (older version)
           </p>
         </section>
-        <FooterBar className="mb-[2rem]" />
+
       </section>
+      <FooterBar className="mb-[2rem]" />
     </article>
   );
 };
+
 
 export default forwardRef(AboutMeScreen);

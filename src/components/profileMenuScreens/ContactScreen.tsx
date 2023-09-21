@@ -22,6 +22,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
         onClick={() =>
           setContactVisibilityState(handleVisibility(isVisibleContact))
         }
+        buttonText="TO TOP"
       />
       <section className="flex flex-col  justify-between  min-w-[21rem] max-w-[45rem] p-1 px-4 gap-2">
         <a
@@ -40,7 +41,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
         </a>
 
         <a
-          className="flex items-center    justify-between"
+          className="flex items-center justify-between"
           href="https://discord.com/channels/1137311403305349130/1137311404207112295 "
           target="_blank"
         >
@@ -57,7 +58,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           href="https://api.whatsapp.com/send?phone=1599825428"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center  justify-between"
+          className="flex items-center justify-between"
         >
           <WhatsAppLogo width="1.5rem" className="w-[2rem] self-center" />
           <p className="  w-[11.25rem] text-start">
@@ -69,7 +70,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
         </a>
 
         <a
-          className="flex items-center    justify-between"
+          className="flex items-center justify-between"
           href="https://www.linkedin.com/in/rafael-vendramini/"
           target="_blank"
           rel="noreferrer"
@@ -86,7 +87,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
 
         <a
           href="mailto:rafaelbvc@hotmail.com"
-          className="flex items-center    justify-between"
+          className="flex items-center justify-between"
         >
           <EmailLogo width="1.5rem" className="w-[2rem] self-center" />
           <p className=" w-[11.25rem] text-start">

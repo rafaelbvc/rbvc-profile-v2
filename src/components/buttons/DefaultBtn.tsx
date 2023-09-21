@@ -1,16 +1,8 @@
-import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+import { IDefaultBtn } from "../../interfaces/defaultBtn";
 
-interface IDefaultBtn {
-  text?: string;
-  onClick?: () => void;
-  className?: string;
-  type?: "button" | "submit" | "reset" | undefined;
-  disabled?: boolean
-  children?: ReactNode
-}
 
-const DefaultBtn = (props: IDefaultBtn,) => {
+const DefaultBtn = (props: IDefaultBtn) => {
   const { text, onClick, className, type, children, disabled } = props;
 
   return (

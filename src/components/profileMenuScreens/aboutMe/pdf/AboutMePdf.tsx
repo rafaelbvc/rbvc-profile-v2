@@ -28,7 +28,7 @@ const AboutMePdf = () => {
       <ReactToPrint
         trigger={() => (
           <menu>
-            <button className="min-w-[21rem] max-w-[45rem] text-golden animate-ping pl-[45%] text-semibold text-xxs">
+            <button className="text-golden animate-ping pl-[45%] text-semibold text-xxs">
               PRINT
             </button>
           </menu>
@@ -36,11 +36,12 @@ const AboutMePdf = () => {
         content={() => aboutMePdfRef.current}
       />
       <MenuHeader
-        className="flex mt-[-0.95rem] justify-between min-w-[21rem] max-w-[45rem]"
+        className="flex mt-[-0.95rem] justify-between"
         titleHeader="ABOUT ME"
         onClick={() =>
           setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
         }
+        buttonText="TO BOTTOM"
       />
       <style>
         {getPageMargins()}

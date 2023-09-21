@@ -4,15 +4,15 @@ type TFooterBar = {
   className?: string;
 };
 
-const FooterBar = ({ className }: TFooterBar) => {
+const Divisor = ({ className }: TFooterBar) => {
   return (
     <footer
       className={twMerge(
-        "bg-gradient-to-r from-black via-golden to-golden h-[1px] margins",
+        "bg-gradient-to-r from-black via-golden to-golden h-[1px]",
         className
       )}
     />
   );
 };
 
-export default FooterBar;
+export default Divisor;
