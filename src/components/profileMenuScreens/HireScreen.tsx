@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import UnderConstructionSVG from "../svg/UnderConstructionSVG";
 import { TScreensPropsTypes } from "../../types/screensPropsType";
 

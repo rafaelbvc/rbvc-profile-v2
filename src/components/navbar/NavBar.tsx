@@ -1,7 +1,7 @@
 import { handleVisibility } from "../../utils/handleVisible";
 import GetStartedBtn from "../buttons/GetStartedBtn";
 import RBVCLogoBtn from "../buttons/RBVCLogoBtn";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import ProfileMenu from "../menus/ProfileMenu";
 
 const NavBar = () => {

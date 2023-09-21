@@ -1,15 +1,13 @@
 import MenuHeader from '../MenuHeader'
-import { UseIsVisibleContext } from '../contexts/IsVisibleContext'
+import { UseIsVisibleContext } from '../context/IsVisibleContext'
 import { handleVisibility } from '../../utils/handleVisible'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import { TScreensPropsTypes } from '../../types/screensPropsType'
 import { twMerge } from 'tailwind-merge'
 import FooterBar from '../FooterBar'
-import axios from 'axios'
-import { baseURL } from '../../config/baseURL'
-import { useEffect, useState, } from 'react'
-// import { AuthContext } from '../contexts/AuthContext'
+import { useContext } from 'react'
+import { AuthContext } from '../context/AuthContext'
 
 
 type TSignUp = {
@@ -21,25 +19,16 @@ type TSignUp = {
 const SignUpScreen = ({ className }: TScreensPropsTypes) => {
 
     const { setSignUpVisibilityState, isVisibleSignUp } = UseIsVisibleContext()
-    const [responseStatus, setResponseStatus] = useState<any>(null)
-    // const { signIn, signed } = useContext(AuthContext)
+    const { signIn } = useContext(AuthContext)
 
-    const { register, formState: { errors }, handleSubmit, reset, watch } = useForm<TSignUp>();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm<TSignUp>();
 
     const onSubmit: SubmitHandler<TSignUp> = async (data, event) => {
         event?.preventDefault()
-        await axios.post(`${baseURL}/auth`, data).then((response) => {
-            console.log(`${baseURL}/auth`);
-            console.log(response);
-            setResponseStatus(response)
-        }).catch((err) => console.log(err)).finally(() => reset())
+        signIn(data)
+        reset()
     }
 
-    const dataU = watch()
-
-    console.log(dataU, "dataU")
-
-    useEffect(() => { }, [responseStatus])
 
 
     return (
@@ -55,7 +44,6 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
                         id="email"
                         className="vInputs"
                         type="text"
-                        value=""
                         {...register("email", {
                             required: false,
                             minLength: 6,
@@ -74,7 +62,6 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
                         id="password"
                         className="vInputs max-w-[11.5rem] sm:max-w-none"
                         type="text"
-                        value=""
                         {...register("password", {
                             required: true,
                             minLength: 8,
@@ -87,9 +74,9 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
                         })}
                     />
                 </div>
-                <menu className="flex justify-between mx-3 mt-2"><button className="text-sms hover:text-golden text-mediumGray">CLEAR</button>
-                    <button type="submit" className="text-sms hover:text-golden text-mediumGray">SIGN UP</button></menu>
-
+                <menu className="flex justify-between mx-3 mt-2">
+                    <button className="text-xms hover:text-golden text-mediumGray">CLEAR</button>
+                    <button type="submit" className="text-xms hover:text-golden text-mediumGray">SIGN UP</button></menu>
                 <section className="p-2">
                     <ErrorMessage
                         errors={errors}

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import AboutMeScreen from "../AboutMeScreen";
-import { UseIsVisibleContext } from "../../../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../../../context/IsVisibleContext";
 import { handleVisibility } from "../../../../utils/handleVisible";
 import MenuHeader from "../../../MenuHeader";
 

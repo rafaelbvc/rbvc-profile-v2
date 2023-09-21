@@ -1,39 +1,36 @@
 import { twMerge } from "tailwind-merge";
 import { TScreensPropsTypes } from "../../types/screensPropsType";
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IUserData } from "../../interfaces/userData";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { baseURL } from "../../config/baseURL";
+
 
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
 
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
-  const [responseStatus, setResponseStatus] = useState<any>(null)
+  const [responseStatus, setResponseStatus] = useState<AxiosResponse | null>(null)
 
-  const { watch, handleSubmit, register, formState: { errors }, reset
+  const { handleSubmit, register, formState: { errors }, reset
   } = useForm<IUserData>();
   const onSubmit: SubmitHandler<IUserData> = async (data) => {
     await axios
       .post(`${baseURL}/createuser`, data)
-      .then((response) => {
-        console.log(response)
-        setResponseStatus(response)
+      .then((response: AxiosResponse) => {
+        console.log(response.data)
+        setResponseStatus(response.data)
       })
       .catch((error) => console.log(error)).finally(() => reset())
   };
 
-  console.log(`${baseURL}/createuser`, "fff")
 
-  const dataU = watch()
-
-  console.log(dataU, "dataU")
 
   useEffect(() => { }, [responseStatus])
 
@@ -67,7 +64,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="phoneI" className="vLabels">
+              <label htmlFor="phone" className="vLabels">
                 Phone
               </label>
               <input

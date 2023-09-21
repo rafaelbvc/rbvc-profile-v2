@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../contexts/IsVisibleContext";
+import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import AdressLogo from "../svg/AdressLogo";
 import DiscordLogo from "../svg/DiscordLogo";
 import EmailLogo from "../svg/EmailLogo";
