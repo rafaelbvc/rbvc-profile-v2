@@ -44,6 +44,10 @@ html {
   @apply mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 2xl:mx-8
 }
 
+.paddingYScreens {
+  @apply py-1 sm:py-3 md:py-4 lg:py-5 xl:py-6 2xl:py-8
+}
+
 .vBtnStyle {
   @apply text-sm cursor-pointer md:text-base md:text-mediumGray text-golden hover:underline hover:underline-offset-1 hover:decoration-black md:hover:decoration-golden;
 }
