@@ -31,7 +31,6 @@ const Public = () => {
         <ProfileMenu
           className={twMerge(
             "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-20",
-
             isVisibleProfile
           )}
         />
@@ -40,8 +39,7 @@ const Public = () => {
           className={twMerge(handleTopMenuOpen(), isVisibleGetStarted)}
         />
       </menu>
-      <section className="flex flex-col mx-auto">
-        <span className="flex h-[3.2rem] w-full" />
+      <section className="flex flex-col mx-auto pt-[4.1rem]">
         <AboutMeContainer
           className="z-10"
         />
@@ -52,13 +50,6 @@ const Public = () => {
         />
         <HireScreen className="z-10"
         />
-        {/* <SignInScreen className="z-10"
-        />
-        <ShowProfileScreen
-          className="z-10"
-        />
-        <SignUpScreen className="z-10"
-        /> */}
       </section>
       <div className="absolute top-0 left-0 w-full h-full min-h-screen">
         <MotionDesign />

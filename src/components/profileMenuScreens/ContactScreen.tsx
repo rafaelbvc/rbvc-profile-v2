@@ -1,8 +1,6 @@
 import { twMerge } from "tailwind-merge";
-import { handleVisibility } from "../../utils/handleVisible";
 import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import AdressLogo from "../svg/AdressLogo";
 import DiscordLogo from "../svg/DiscordLogo";
 import EmailLogo from "../svg/EmailLogo";
@@ -12,19 +10,16 @@ import YoutubeLogo from "../svg/YoutubeLogo";
 import { TScreensPropsTypes } from "../../types/screensPropsType";
 
 const ContactScreen = ({ className }: TScreensPropsTypes) => {
-  const { setContactVisibilityState, isVisibleContact } = UseIsVisibleContext();
 
   return (
-    <article className={twMerge("mt-[0.7rem] ", className)}>
+    <article id="ContactScreen" className={twMerge("mt-[0.7rem] ", className)}>
       <MenuHeader
         className=""
         titleHeader="CONTACT"
-        onClick={() =>
-          setContactVisibilityState(handleVisibility(isVisibleContact))
-        }
         buttonText="TO TOP"
+        hRef="#AboutMe"
       />
-      <section className="flex flex-col  justify-between  min-w-[21rem] max-w-[45rem] p-1 px-4 gap-2">
+      <section className="flex flex-col justify-between gap-2 px-4 margins">
         <a
           className="flex items-center justify-between"
           href="https://www.youtube.com/@rafaelvendramini2598"
@@ -106,7 +101,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           </p>
         </div>
       </section>
-      <FooterBar className="mt-2 mb-[2rem]" />
+      <FooterBar  className="mb-[3rem]"/>
     </article>
   );
 };

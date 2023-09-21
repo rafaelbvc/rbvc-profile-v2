@@ -3,4 +3,5 @@ export interface IMenuHeader {
   titleHeader?: string;
   className?: string;
   buttonText?: string;
+  hRef?: string
 }

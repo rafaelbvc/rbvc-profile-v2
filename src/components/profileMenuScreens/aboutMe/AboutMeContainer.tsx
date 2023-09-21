@@ -6,7 +6,7 @@ import { TScreensPropsTypes } from "../../../types/screensPropsType";
 
 const AboutMeContainer = ({ className }: TScreensPropsTypes) => {
   return (
-    <section className={twMerge(" ", className)}>
+    <section id="AboutMe" className={twMerge(" ", className)}>
       <AboutMePdf />
       <AboutMeScreen />
     </section>
