@@ -13,6 +13,7 @@ import SignUpScreen from "../components/getStartedMenuScreens/SignUpScreen";
 
 const Public = () => {
 
+
   const {
     isVisibleGetStarted,
     isVisibleProfile,
@@ -25,11 +26,14 @@ const Public = () => {
     isVisibleSignUp
   } = UseIsVisibleContext();
 
+
+
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
       return " top-[7rem] sm:top-[4rem]";
     } else return " ";
   };
+
 
   return (
     <article className="relative">

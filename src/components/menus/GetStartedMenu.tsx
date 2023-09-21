@@ -3,8 +3,13 @@ import DefaultBtn from "../buttons/DefaultBtn";
 import { TBTNPropsType } from "../../types/btnPropsType";
 import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
+
+  const { signed } = useContext(AuthContext)
+
   const {
     setGetStartedVisibilityState,
     isVisibleGetStarted,
@@ -15,6 +20,8 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
     setSignUpVisibilityState,
     isVisibleSignUp
   } = UseIsVisibleContext();
+
+  useEffect(() => { }, [signed])
 
   return (
     <section
@@ -45,6 +52,7 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
         <DefaultBtn text="Sign Up" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} />
         <DefaultBtn
           text="Profile"
+          disabled={signed}
           onClick={() =>
             setGetProfileVisibilityState(handleVisibility(isVisibleGetProfile))
           }

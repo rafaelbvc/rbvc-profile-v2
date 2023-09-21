@@ -8,23 +8,24 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { IUserData } from "../../interfaces/userData";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { baseURL } from "../../config/baseURL";
+
 
 
 const SignInScreen = ({ className }: TScreensPropsTypes) => {
 
   const { setSignInVisibilityState, isVisibleSignIn } = UseIsVisibleContext();
-  const [responseStatus, setResponseStatus] = useState<any>(null)
+  const [responseStatus, setResponseStatus] = useState<AxiosResponse | null>(null)
 
   const { handleSubmit, register, formState: { errors }, reset
   } = useForm<IUserData>();
   const onSubmit: SubmitHandler<IUserData> = async (data) => {
     await axios
       .post(`${baseURL}/createuser`, data)
-      .then((response) => {
-        console.log(response)
-        setResponseStatus(response)
+      .then((response: AxiosResponse) => {
+        console.log(response.data)
+        setResponseStatus(response.data)
       })
       .catch((error) => console.log(error)).finally(() => reset())
   };

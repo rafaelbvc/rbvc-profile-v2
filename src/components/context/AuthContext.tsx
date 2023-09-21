@@ -1,36 +1,17 @@
 
-import { ReactNode, createContext } from "react";
+import { createContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Navigate } from "react-router-dom";
-import { baseURL } from "../../config/baseURL";
+import { useNavigate } from "react-router-dom";
+import { Api } from "../../config/baseURL";
+import { ApiResponse, AuthContextType, TAuthContextProviderProps, TSignIn, User } from "../../types/authContextType";
 
-type User = {
-    email: string
-}
-
-
-type TSignIn = {
-    email: string,
-    password: string
-}
-
-
-type TAuthContextProviderProps = {
-    children?: ReactNode | undefined
-}
-
-type AuthContextType = {
-    user: User | undefined;
-    signIn: (props: TSignIn) => void;
-    singOut: () => void;
-    signed: boolean
-}
 
 export const AuthContext = createContext({} as AuthContextType);
 
 export const AuthProvider = ({ children }: TAuthContextProviderProps) => {
-    const [user, setUser] = useState<any>();
+    const [user, setUser] = useState<User | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const loadingStoreData = () => {
@@ -38,43 +19,49 @@ export const AuthProvider = ({ children }: TAuthContextProviderProps) => {
             const storageToken = localStorage.getItem("@Auth:token");
 
             if (storageUser && storageToken) {
-                setUser(storageUser);
+                try {
+                    setUser(JSON.parse(storageUser));
+                } catch (error) {
+                    console.error("Erro ao analisar JSON:", error);
+                }
             }
-        };
+        }
         loadingStoreData();
     }, []);
 
     const signIn = async ({ email, password }: TSignIn) => {
         try {
-            const response = await baseURL.post("/auth", { email, password });
-            if (response.data.error) {
+            const response = await Api.post<ApiResponse>("/auth", { email, password });
+            if (response.data?.error) {
                 alert(response.data.error);
             } else {
-                setUser(response.data);
-                baseURL.defaults.headers.common[
-                    "Authorization"
-                ] = `Bearer ${response.data.token}`;
-
-                localStorage.setItem("@Auth:user", JSON.stringify(response.data.user));
-                localStorage.setItem("@Auth:token", response.data.token);
+                const userData = response.data?.data;
+                console.log(userData)
+                if (userData) {
+                    setUser(userData);
+                    Api.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
+                    localStorage.setItem("@Auth:user", JSON.stringify(userData));
+                    localStorage.setItem("@Auth:token", response.data.token ?? "");
+                }
             }
         } catch (error) {
-            console.log(error);
+            console.error(error);
         }
     };
 
-    const singOut = () => {
+    const signOut = () => {
         localStorage.clear();
         setUser(null);
-        return <Navigate to="/" />;
+        navigate("/");
     };
+
 
     return (
         <AuthContext.Provider
             value={{
                 user,
                 signIn,
-                singOut,
+                signOut,
                 signed: !!user,
             }}
         >

@@ -6,9 +6,7 @@ import { ErrorMessage } from '@hookform/error-message'
 import { TScreensPropsTypes } from '../../types/screensPropsType'
 import { twMerge } from 'tailwind-merge'
 import FooterBar from '../FooterBar'
-import axios from 'axios'
-import { baseURL } from '../../config/baseURL'
-import { useEffect, useState, useContext } from 'react'
+import { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
 
 
@@ -21,23 +19,16 @@ type TSignUp = {
 const SignUpScreen = ({ className }: TScreensPropsTypes) => {
 
     const { setSignUpVisibilityState, isVisibleSignUp } = UseIsVisibleContext()
-    const [responseStatus, setResponseStatus] = useState<any>(null)
-    const { signed, user } = useContext(AuthContext)
-
-    console.log(signed, user, "dsfdfsdfsdfsdf")
+    const { signIn } = useContext(AuthContext)
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm<TSignUp>();
 
     const onSubmit: SubmitHandler<TSignUp> = async (data, event) => {
         event?.preventDefault()
-        await axios.post(`${baseURL}/auth`, data).then((response) => {
-            console.log(response);
-            setResponseStatus(response)
-        }).catch((err) => console.log(err)).finally(() => reset())
+        signIn(data)
+        reset()
     }
 
-
-    useEffect(() => { }, [responseStatus])
 
 
     return (
