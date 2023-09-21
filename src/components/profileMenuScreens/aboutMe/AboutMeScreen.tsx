@@ -26,17 +26,17 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   };
 
   return (
-    <article ref={ref}>
-      <section className="flex flex-col min-w-[21rem] max-w-[45rem] mb-1  p-1">
+    <article  ref={ref}>
+      <section className="flex flex-col p-1 mb-1 margins">
         <section className="flex flex-col items-center sm:flex-row">
-          <div className={`${bigIMG ? "max-w-[21rem]" : "w-[12.5rem]"}`}>
+          <section>
             <img
               src={PhotoMyProfileA}
               width={200}
               alt="MyProfileA"
               className={`${bigIMG
-                ? "absolute border-[1px] border-golden min-w-[12.4rem]"
-                : "rounded-full border-[1px] border-golden m-2 min-w-[12.6rem]"
+                ? "absolute border-[1px] border-golden w-[18rem] "
+                : "rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem]"
                 }`}
               onClick={() => handleBigImg(bigIMG)}
             />
@@ -55,7 +55,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
               <TailwindCSSLogo width={"5rem"} />
               <TypeScriptLogo width={"5rem"} />
             </div>
-          </div>
+          </section>
           <section className="p-1 whitespace-normal">
             <title className="flex justify-end mb-1 mr-0">
               <p className="font-bold ">Full Stack </p>
@@ -136,7 +136,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
         </section>
 
       </section>
-      <FooterBar className="mb-[2rem]" />
+      <FooterBar className="mb-[3rem]"/>
     </article>
   );
 };

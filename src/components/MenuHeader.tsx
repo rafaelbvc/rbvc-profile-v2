@@ -3,17 +3,19 @@ import FooterBar from "./FooterBar";
 import { IMenuHeader } from "../interfaces/menuHeader";
 
 const MenuHeader = (props: IMenuHeader) => {
-  const { titleHeader, onClick, className, buttonText } = props;
+  const { titleHeader, onClick, className, buttonText, hRef } = props;
 
   return (
     <header>
       <section className={twMerge("flex justify-between px-2 margins", className)}>
-        <h3 className="smallTitles">{titleHeader}</h3>
-        <button className="smallTitles" onClick={onClick}>
-          {buttonText}
-        </button>
+        <h3 className="smallTitles mb-[-0.05rem]">{titleHeader}</h3>
+        <a href={`${hRef}`} className="mb-[-0.3rem]">
+          <button className="smallTitles" onClick={onClick}>
+            {buttonText}
+          </button>
+        </a>
       </section>
-      <FooterBar className="mt-[-0.25rem]" />
+      <FooterBar />
     </header>
   );
 };

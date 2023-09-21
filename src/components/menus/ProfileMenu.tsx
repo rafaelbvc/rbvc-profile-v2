@@ -12,12 +12,6 @@ const ProfileMenu = (props: TProfileMenu) => {
     isVisibleProfile,
     setAboutMeVisibilityState,
     isVisibleAboutMe,
-    setPortifolioVisibilityState,
-    isVisiblePortifolio,
-    setContactVisibilityState,
-    isVisibleContact,
-    setHireMeVisibilityState,
-    isVisibleHireMe,
   } = UseIsVisibleContext();
 
   return (
@@ -40,31 +34,28 @@ const ProfileMenu = (props: TProfileMenu) => {
       </header>
 
       <menu className="flex justify-between">
-        <DefaultBtn text="Home" />
-        <DefaultBtn
-          text="About Me"
-          onClick={() =>
-            setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
-          }
-        />
-        <DefaultBtn
-          text="Portifolio"
-          onClick={() =>
-            setPortifolioVisibilityState(handleVisibility(isVisiblePortifolio))
-          }
-        />
-        <DefaultBtn
-          text="Contact"
-          onClick={() =>
-            setContactVisibilityState(handleVisibility(isVisibleContact))
-          }
-        />
-        <DefaultBtn
-          text="Hire"
-          onClick={() =>
-            setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
-          }
-        />
+        <a href="#ToHome">
+          <DefaultBtn text="Home" />
+        </a>
+        <a href="#AboutMe">
+          <DefaultBtn
+            text="About Me"
+            onClick={() =>
+              setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
+            }
+          /></a>
+        <a href="#PortifolioScreen">
+          <DefaultBtn
+            text="Portifolio"
+          /></a>
+        <a href="#ContactScreen">
+          <DefaultBtn
+            text="Contact"
+          /></a>
+        <a href="#HireScreen">
+          <DefaultBtn
+            text="Hire"
+          /></a>
       </menu>
     </section>
   );

@@ -49,7 +49,7 @@ html {
 }
 
 .smallTitles {
-  @apply py-1 text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
+  @apply  self-end text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
 }
 
 .menusStyle {
