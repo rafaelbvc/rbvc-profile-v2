@@ -1,7 +1,7 @@
 import { useState, CSSProperties, useEffect, useCallback } from "react";
 import ClipLoader from "react-spinners/CircleLoader";
-import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
+import Divisor from "../Divisor";
 
 const override: CSSProperties = {
   display: "block",
@@ -36,7 +36,7 @@ const CircleLoader = (props: TCircleLoader) => {
 
   return (
     <div className="mt-4">
-      <MenuHeader className="" onClick={onClick} />
+      <MenuHeader onClick={onClick} />
       <ClipLoader
         color={color}
         loading={loading}
@@ -46,7 +46,7 @@ const CircleLoader = (props: TCircleLoader) => {
         data-testid="loader"
       />
       <p className="mt-2 text-center">Loading...</p>
-      <FooterBar />
+      <Divisor />
     </div>
   );
 };

@@ -36,8 +36,25 @@ html {
     opacity: 0;
   }
 }
+
 .animate-ping {
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.contactScreen {
+  @apply flex flex-row items-center justify-between sm:flex-col sm:gap-2 sm:p-1;
+}
+
+.svgContactScreen {
+  @apply flex w-[3rem] h-[3rem] items-center;
+}
+
+.margins {
+  @apply mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 2xl:mx-8;
+}
+
+.paddingYScreens {
+  @apply py-1 sm:py-3 md:py-4 lg:py-5 xl:py-6 2xl:py-8;
 }
 
 .vBtnStyle {
@@ -45,7 +62,7 @@ html {
 }
 
 .smallTitles {
-  @apply py-1 text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
+  @apply self-end text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
 }
 
 .menusStyle {
@@ -53,11 +70,11 @@ html {
 }
 
 .menuOpenStyle {
-  @apply z-20 content-center rounded-md shadow-sm bg-lightGrayAlpha;
+  @apply z-20 content-center rounded-md shadow-sm bg-lightGray;
 }
 
 .pDescription {
-  @apply text-sm text-center text-mediumGray;
+  @apply text-sm text-center whitespace-normal text-mediumGray;
 }
 
 .styleScreens {

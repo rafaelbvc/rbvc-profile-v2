@@ -6,7 +6,7 @@ export default {
       fontSize: {
         xxxs: ["0.46rem", "0.34rem"],
         xxs: ["0.55rem", "0.39rem"],
-        xms: ["0.7rem", "0.9rem"],
+        xms: ["0.7rem", "1.2rem"],
         sms: ["0.9rem", "1.6rem"],
       },
       borderWidth: {

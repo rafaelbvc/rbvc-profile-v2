@@ -1,13 +1,11 @@
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import AboutMeScreen from "../AboutMeScreen";
-import { UseIsVisibleContext } from "../../../context/IsVisibleContext";
-import { handleVisibility } from "../../../../utils/handleVisible";
 import MenuHeader from "../../../MenuHeader";
 
 const AboutMePdf = () => {
   const aboutMePdfRef = useRef(null);
-  const { setAboutMeVisibilityState, isVisibleAboutMe } = UseIsVisibleContext();
+
 
   const marginTop = "20mm";
   const marginRight = "20mm";
@@ -27,8 +25,8 @@ const AboutMePdf = () => {
     <article>
       <ReactToPrint
         trigger={() => (
-          <menu>
-            <button className="min-w-[21rem] max-w-[45rem] text-golden animate-ping pl-[45%] text-semibold text-xxs">
+          <menu className="mb-[-1.3rem]">
+            <button className="text-golden animate-ping pl-[45%] text-semibold text-xxs">
               PRINT
             </button>
           </menu>
@@ -36,11 +34,10 @@ const AboutMePdf = () => {
         content={() => aboutMePdfRef.current}
       />
       <MenuHeader
-        className="flex mt-[-0.95rem] justify-between min-w-[21rem] max-w-[45rem]"
+        className="flex mt-[-0.95rem] justify-between"
         titleHeader="ABOUT ME"
-        onClick={() =>
-          setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
-        }
+        buttonText="TO BOTTOM"
+        hRef="#HireScreen"
       />
       <style>
         {getPageMargins()}

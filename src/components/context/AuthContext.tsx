@@ -3,7 +3,7 @@ import { createContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Api } from "../../config/baseURL";
+import { Api } from "../../api/baseURL";
 import { ApiResponse, AuthContextType, TAuthContextProviderProps, TSignIn, User } from "../../types/authContextType";
 
 

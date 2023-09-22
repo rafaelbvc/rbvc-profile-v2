@@ -4,7 +4,7 @@ type TFooterBar = {
   className?: string;
 };
 
-const FooterBar = ({ className }: TFooterBar) => {
+const Divisor = ({ className }: TFooterBar) => {
   return (
     <footer
       className={twMerge(
@@ -15,4 +15,4 @@ const FooterBar = ({ className }: TFooterBar) => {
   );
 };
 
-export default FooterBar;
+export default Divisor;

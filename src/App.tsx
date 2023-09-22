@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import VisibilityProvider from "./components/context/IsVisibleContext";
-import Public from "./layouts/Public";
+import Public from "./pages/Public";
 import { queryClient } from "./services/queryClient";
 import { QueryClientProvider } from "react-query";
 import { AuthProvider } from "./components/context/AuthContext";

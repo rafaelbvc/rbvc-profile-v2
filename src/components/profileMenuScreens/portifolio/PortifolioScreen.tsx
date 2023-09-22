@@ -1,37 +1,35 @@
 import { twMerge } from "tailwind-merge";
 import { TScreensPropsTypes } from "../../../types/screensPropsType";
-import { UseIsVisibleContext } from "../../context/IsVisibleContext";
 import MenuHeader from "../../MenuHeader";
-import { handleVisibility } from "../../../utils/handleVisible";
-import FooterBar from "../../FooterBar";
 import FindYourMeal from "./FindYourMeal";
 
 const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
-  const { setPortifolioVisibilityState, isVisiblePortifolio } =
-    UseIsVisibleContext();
+
 
   return (
-    <article className={twMerge(" ", className)}>
+    <article id="PortifolioScreen" className={twMerge(" ", className)}>
       <MenuHeader
         titleHeader="PORTIFOLIO"
-        onClick={() =>
-          setPortifolioVisibilityState(handleVisibility(isVisiblePortifolio))
-        }
+        buttonText="TO TOP"
+        hRef="#AboutMe"
       />
-      <section className="flex flex-col items-center  min-w-[21rem] max-w-[45rem] p-2">
-        <h4 className="text-right text-mediumGray mb-2">
-          Find Your Meal
-        </h4>
-        <FindYourMeal />
+      <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap lg:flex-nowrap">
+        <section className="flex flex-col items-center p-2 lg:w-1/2 margins">
+          <h4 className="mb-2 text-right text-mediumGray">
+            Find Your Meal
+          </h4>
+          <FindYourMeal className="mb-[2rem] lg:mb-0"/>
+        </section>
+        <section className="flex flex-col items-center p-2 margins">
+          <p className="pDescription">
+            Important: Exclusively this project, for desktops only!
+          </p>
+          <br/>
+          <p className="pDescription">Project for NextJs13 certification</p>
+          <br/>
+          <p className="pDescription ">...more projects soon...</p>
+        </section>
       </section>
-      <FooterBar />
-      <p className="pDescription">
-        Important: Exclusively this project, for desktops only!
-      </p>
-      <p className="pDescription">Project for NextJs13 certification</p>
-      <FooterBar/>
-      <p className="pDescription ">...more projects soon...</p>
-      <FooterBar className="mb-[2rem]"/>
     </article>
   );
 };

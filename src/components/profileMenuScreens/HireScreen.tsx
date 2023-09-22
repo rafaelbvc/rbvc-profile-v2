@@ -1,32 +1,33 @@
 import { twMerge } from "tailwind-merge";
-import { handleVisibility } from "../../utils/handleVisible";
-import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
-import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import UnderConstructionSVG from "../svg/UnderConstructionSVG";
 import { TScreensPropsTypes } from "../../types/screensPropsType";
 
 const HireScreen = ({ className }: TScreensPropsTypes) => {
-  const { setHireMeVisibilityState, isVisibleHireMe } = UseIsVisibleContext();
 
   return (
-    <article className={twMerge("mt-[0.7rem]", className)}>
+    <article id="HireScreen" className={twMerge("mt-[0.7rem] scroll-smooth", className)}>
       <MenuHeader
         className=""
         titleHeader="HIRE ME"
-        onClick={() =>
-          setHireMeVisibilityState(handleVisibility(isVisibleHireMe))
-        }
+        buttonText="TO TOP"
+        hRef="#AboutMe"
       />
-      <section className="flex flex-col mx-auto rounded min-w-[21rem] max-w-[45rem] p-2">
-        <p className="text-right text-mediumGray">
-          Sorry, this area is under construction... <br /> Soon...
-        </p>
-        <UnderConstructionSVG widthSVG="23rem" />
+      <section className="flex justify-center paddingYScreens">
+        <div className="flex flex-col p-2 sm:flex-row margins ">
+          <span className="p-3">
+            <p className="text-right text-mediumGray">
+              Sorry, this area is under construction... <br /> Soon...
+            </p>
+          </span>
+          <div className="p-3">
+            <UnderConstructionSVG widthSVG="23rem self-center" />
+          </div>
+        </div>
       </section>
-      <FooterBar className="mb-[2rem]" />
     </article>
   );
 };
 
 export default HireScreen;
+
