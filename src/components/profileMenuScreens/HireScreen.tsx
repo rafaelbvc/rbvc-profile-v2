@@ -1,5 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
 import UnderConstructionSVG from "../svg/UnderConstructionSVG";
 import { TScreensPropsTypes } from "../../types/screensPropsType";
@@ -26,7 +25,6 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
           </div>
         </div>
       </section>
-      <FooterBar className="mb-[3rem]" />
     </article>
   );
 };

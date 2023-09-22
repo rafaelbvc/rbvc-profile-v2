@@ -3,13 +3,13 @@ import { TScreensPropsTypes } from "../../types/screensPropsType";
 import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
-import FooterBar from "../FooterBar";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IUserData } from "../../interfaces/userData";
 import { ErrorMessage } from "@hookform/error-message";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import { baseURL } from "../../api/baseURL";
+import Divisor from "../Divisor";
 
 
 
@@ -193,7 +193,7 @@ const SignInScreen = ({ className }: TScreensPropsTypes) => {
           </section>
         </form> : <p className="ml-[2rem] mt-[2rem] h-[5rem] w-content text-green">{responseStatus?.data.message}</p>}
 
-      <FooterBar className="mb-[2rem]" />
+      <Divisor className="mb-[2rem]" />
     </article>
   );
 };

@@ -1,5 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
 import AdressLogo from "../svg/AdressLogo";
 import DiscordLogo from "../svg/DiscordLogo";
@@ -19,7 +18,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
         hRef="#AboutMe"
       />
       <section className="flex justify-center paddingYScreens">
-        <section className="flex flex-col justify-between gap-2 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6  py-3 sm:flex-wrap margins sm:flex-row  max-w-[50rem]">
+        <section className="flex flex-col justify-between gap-2 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6  py-3 sm:flex-wrap margins sm:flex-row  max-w-[48rem]">
           <a
             className="contactScreen"
             href="https://www.youtube.com/@rafaelvendramini2598"
@@ -52,13 +51,13 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
 
           <a
             className="contactScreen"
-            href="https://api.whatsapp.com/send?phone=1599825428"
+            href="https://api.whatsapp.com/send?phone=15998254287"
             target="_blank"
             rel="noreferrer"
           >
             <WhatsAppLogo className="svgContactScreen" />
             <p className="  w-[11.25rem] text-center">
-              (+55) 15 99825-4287
+              (+55) 15 9982542-87
             </p>
             <p className=" text-golden w-[4.1rem] text-center">
               Mobile
@@ -103,7 +102,6 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           </div>
         </section>
       </section>
-      <FooterBar className="mb-[3rem]" />
     </article>
   );
 };
