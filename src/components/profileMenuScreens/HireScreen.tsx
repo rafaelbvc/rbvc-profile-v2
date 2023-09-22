@@ -15,7 +15,7 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
         hRef="#AboutMe"
       />
       <section className="flex justify-center paddingYScreens">
-        <div className="flex flex-col p-2 rounded sm:flex-row margins ">
+        <div className="flex flex-col p-2 sm:flex-row margins ">
           <span className="p-3">
             <p className="text-right text-mediumGray">
               Sorry, this area is under construction... <br /> Soon...

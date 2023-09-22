@@ -1,10 +1,9 @@
 import { TSVGPropsType } from "../../types/svgPropsType";
 
-const YoutubeLogo = ({ width, className }: TSVGPropsType) => {
+const YoutubeLogo = ({  className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg
-        width={width}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 333333 333333"
         shapeRendering="geometricPrecision"

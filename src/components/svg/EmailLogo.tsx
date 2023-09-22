@@ -1,11 +1,10 @@
 import { TSVGPropsType } from "../../types/svgPropsType";
 
 
-const EmailLogo = ({ width, className }: TSVGPropsType) => {
+const EmailLogo = ({ className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg
-        width={width}
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"

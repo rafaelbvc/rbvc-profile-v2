@@ -14,20 +14,24 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
         buttonText="TO TOP"
         hRef="#AboutMe"
       />
-      <section className="flex flex-col items-center p-2 margins">
-        <h4 className="mb-2 text-right text-mediumGray">
-          Find Your Meal
-        </h4>
-        <FindYourMeal />
+      <section className="flex justify-center paddingYScreens max-w-[100rem]">
+        <section className="flex flex-col items-center p-2 margins">
+          <h4 className="mb-2 text-right text-mediumGray">
+            Find Your Meal
+          </h4>
+          <FindYourMeal />
+        </section>
+        <section className="flex flex-col items-center p-2 margins">
+          <FooterBar />
+          <p className="pDescription">
+            Important: Exclusively this project, for desktops only!
+          </p>
+          <p className="pDescription">Project for NextJs13 certification</p>
+          <FooterBar />
+          <p className="pDescription ">...more projects soon...</p>
+          <FooterBar className="mb-[3rem]" />
+        </section>
       </section>
-      <FooterBar />
-      <p className="pDescription">
-        Important: Exclusively this project, for desktops only!
-      </p>
-      <p className="pDescription">Project for NextJs13 certification</p>
-      <FooterBar/>
-      <p className="pDescription ">...more projects soon...</p>
-      <FooterBar className="mb-[3rem]"/>
     </article>
   );
 };
