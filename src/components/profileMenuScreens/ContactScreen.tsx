@@ -42,7 +42,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
             target="_blank"
           >
             <DiscordLogo className="svgContactScreen" />
-            <p className="  w-[11.25rem] text-center">
+            <p className=" w-[11.25rem] text-center">
               rafaelvendramini
             </p>
             <p className="text-golden w-[4.1rem] text-center">
