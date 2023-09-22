@@ -1,5 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import FooterBar from "../FooterBar";
 import MenuHeader from "../MenuHeader";
 import AdressLogo from "../svg/AdressLogo";
 import DiscordLogo from "../svg/DiscordLogo";
@@ -103,7 +102,6 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           </div>
         </section>
       </section>
-      <FooterBar className="mb-[3rem]" />
     </article>
   );
 };

@@ -40,6 +40,7 @@ const Public = () => {
         />
       </menu>
       <section className="flex flex-col mx-auto pt-[2.6rem]">
+        <p className="z-10 pDescription">Under Construction</p>
         <AboutMeContainer
           className="z-10"
         />

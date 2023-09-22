@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import FooterBar from "./FooterBar";
+import Divisor from "./Divisor";
 import { IMenuHeader } from "../interfaces/menuHeader";
 
 const MenuHeader = (props: IMenuHeader) => {
@@ -15,7 +15,7 @@ const MenuHeader = (props: IMenuHeader) => {
           </button>
         </a>
       </section>
-      <FooterBar />
+      <Divisor className="margins" />
     </header>
   );
 };
