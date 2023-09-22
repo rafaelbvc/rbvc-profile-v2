@@ -39,7 +39,7 @@ const Public = () => {
           className={twMerge(handleTopMenuOpen(), isVisibleGetStarted)}
         />
       </menu>
-      <section className="flex flex-col mx-auto pt-[4.1rem]">
+      <section className="flex flex-col mx-auto pt-[2.6rem]">
         <AboutMeContainer
           className="z-10"
         />
