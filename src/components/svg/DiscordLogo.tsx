@@ -1,11 +1,10 @@
 import { TSVGPropsType } from "../../types/svgPropsType";
 
 
-const DiscordLogo = ({ width, className }: TSVGPropsType) => {
+const DiscordLogo = ({ className }: TSVGPropsType) => {
   return (
     <div className={className}>
       <svg
-        width={width}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 294334 333333"
         shapeRendering="geometricPrecision"
