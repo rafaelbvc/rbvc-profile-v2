@@ -13,12 +13,12 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
         buttonText="TO TOP"
         hRef="#AboutMe"
       />
-      <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap md:flex-nowrap">
-        <section className="flex flex-col items-center p-2 margins">
+      <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap lg:flex-nowrap">
+        <section className="flex flex-col items-center p-2 lg:w-1/2 margins">
           <h4 className="mb-2 text-right text-mediumGray">
             Find Your Meal
           </h4>
-          <FindYourMeal />
+          <FindYourMeal className="mb-[2rem] lg:mb-0"/>
         </section>
         <section className="flex flex-col items-center p-2 margins">
           <p className="pDescription">

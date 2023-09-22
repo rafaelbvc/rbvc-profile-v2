@@ -74,7 +74,7 @@ html {
 }
 
 .pDescription {
-  @apply text-sm text-center text-mediumGray;
+  @apply text-sm text-center whitespace-normal text-mediumGray;
 }
 
 .styleScreens {

@@ -1,8 +1,8 @@
 import MenuHeader from "../MenuHeader";
 import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
-import FooterBar from "../FooterBar";
 import { useForm } from "react-hook-form";
+import Divisor from "../Divisor";
 
 interface IProfileScreen {
   firstName?: string;
@@ -156,7 +156,7 @@ const ProfileScreen = (props: IProfileScreen) => {
           </div>
         </div>
       </form>
-      <FooterBar className="my-[2rem]" />
+      <Divisor className="my-[2rem]" />
     </article>
   );
 };

@@ -5,9 +5,9 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import { TScreensPropsTypes } from '../../types/screensPropsType'
 import { twMerge } from 'tailwind-merge'
-import FooterBar from '../FooterBar'
 import { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
+import Divisor from '../Divisor'
 
 
 type TSignUp = {
@@ -91,7 +91,7 @@ const SignUpScreen = ({ className }: TScreensPropsTypes) => {
                     />
                 </section>
             </form>
-            <FooterBar className="mb-[2rem]" />
+            <Divisor className="mb-[2rem]" />
         </article>
     )
 }

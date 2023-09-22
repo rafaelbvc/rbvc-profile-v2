@@ -26,7 +26,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
 
   return (
     <article ref={ref}>
-      <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap md:flex-nowrap">
+      <section className="flex justify-center mx-auto paddingYScreens max-w-[60rem] flex-wrap md:flex-nowrap">
         <section className="flex flex-col p-1 mb-1 margins">
           <section className="flex flex-col items-center sm:flex-row">
             <section>
@@ -56,7 +56,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 <TypeScriptLogo width={"5rem"} />
               </div>
             </section>
-            <section className="p-1 whitespace-normal">
+            <section className="flex flex-col p-1 whitespace-normal">
               <title className="flex justify-end mb-1 mr-0">
                 <p className="font-bold ">Full Stack </p>
                 <p className="font-bold text-golden">&nbsp; Developer</p>

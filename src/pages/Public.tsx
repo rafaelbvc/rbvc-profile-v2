@@ -9,7 +9,6 @@ import GetStartedMenu from "../components/menus/GetStartedMenu";
 import { UseIsVisibleContext } from "../components/context/IsVisibleContext";
 
 
-
 const Public = () => {
 
   const {
@@ -20,7 +19,7 @@ const Public = () => {
 
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
-      return " top-[7rem] sm:top-[4rem]";
+      return " top-[6.5rem] sm:top-[4rem]";
     } else return " ";
   };
 
