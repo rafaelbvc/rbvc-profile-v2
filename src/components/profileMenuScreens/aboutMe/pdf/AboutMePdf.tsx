@@ -22,23 +22,22 @@ const AboutMePdf = () => {
   };
 
   return (
-    <article>
+    <article >
       <ReactToPrint
         trigger={() => (
-          <menu className="mb-[-1.3rem]">
-            <button className="text-golden animate-ping pl-[45%] text-semibold text-xxs">
-              PRINT
-            </button>
-          </menu>
+          <button className="animate-ping pl-[45%] smallTitles">
+            PRINT
+          </button>
         )}
         content={() => aboutMePdfRef.current}
       />
       <MenuHeader
-        className="flex mt-[-0.95rem] justify-between"
+        className="flex mt-[-2.1rem] justify-between"
         titleHeader="ABOUT ME"
         buttonText="TO BOTTOM"
         hRef="#HireScreen"
       />
+
       <style>
         {getPageMargins()}
         <AboutMeScreen ref={aboutMePdfRef} />

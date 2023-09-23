@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import Divisor from "./Divisor";
+// import Divisor from "./Divisor";
 import { IMenuHeader } from "../interfaces/menuHeader";
 
 const MenuHeader = (props: IMenuHeader) => {
@@ -7,15 +7,15 @@ const MenuHeader = (props: IMenuHeader) => {
 
   return (
     <header>
-      <section className={twMerge("flex justify-between px-2 margins", className)}>
-        <h3 className="smallTitles mb-[-0.05rem]">{titleHeader}</h3>
-        <a href={`${hRef}`} className="mb-[-0.3rem]">
-          <button className="smallTitles" onClick={onClick}>
+      <section className={twMerge("flex justify-between  bg-lightGray shadow-sm h-[3rem] rounded z-30 px-4", className)}>
+        <h3 className="self-center smallTitles">{titleHeader}</h3>
+        <a href={hRef} className="self-center">
+          <button className="self-center smallTitles" onClick={onClick}>
             {buttonText}
           </button>
         </a>
       </section>
-      <Divisor className="margins" />
+      {/* <Divisor className="margins" /> */}
     </header>
   );
 };

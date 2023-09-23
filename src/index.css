@@ -62,7 +62,7 @@ html {
 }
 
 .smallTitles {
-  @apply self-end text-xxs text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
+  @apply text-xms text-mediumGray hover:text-golden md:hover:text-mediumGray md:text-golden;
 }
 
 .menusStyle {
