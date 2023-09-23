@@ -1,10 +1,7 @@
 import { twMerge } from "tailwind-merge";
+import { TScreensPropsTypes } from "../types/screensPropsType";
 
-type TFooterBar = {
-  className?: string;
-};
-
-const Divisor = ({ className }: TFooterBar) => {
+const Divisor = ({ className }: TScreensPropsTypes) => {
   return (
     <footer
       className={twMerge(

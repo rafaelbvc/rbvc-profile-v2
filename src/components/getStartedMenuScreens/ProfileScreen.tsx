@@ -3,16 +3,9 @@ import { UseIsVisibleContext } from "../context/IsVisibleContext";
 import { handleVisibility } from "../../utils/handleVisible";
 import { useForm } from "react-hook-form";
 import Divisor from "../Divisor";
+import { IProfileScreen } from "../../interfaces/profileScreen";
 
-interface IProfileScreen {
-  firstName?: string;
-  lastName?: string;
-  phone?: string;
-  email?: string;
-  password?: string;
-  className?: string;
-  roles?: string;
-}
+
 
 const ProfileScreen = (props: IProfileScreen) => {
   const { firstName, lastName, phone, email, password, roles } = props;

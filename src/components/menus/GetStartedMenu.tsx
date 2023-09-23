@@ -13,10 +13,10 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
   const {
     setGetStartedVisibilityState,
     isVisibleGetStarted,
-    setSignInVisibilityState,
-    isVisibleSignIn,
     setGetProfileVisibilityState,
     isVisibleGetProfile,
+    setSignInVisibilityState,
+    isVisibleSignIn,
     setSignUpVisibilityState,
     isVisibleSignUp
   } = UseIsVisibleContext();
@@ -32,9 +32,9 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
       )}
     >
       <header className="flex flex-row justify-between px-3 ">
-        <h3 className="smallTitles">GET STARTED</h3>
+        <h3 className="self-end smallTitles">GET STARTED</h3>
         <button
-          className="smallTitles"
+          className="self-end smallTitles"
           onClick={() =>
             setGetStartedVisibilityState(handleVisibility(isVisibleGetStarted))
           }

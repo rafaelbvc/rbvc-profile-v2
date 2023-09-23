@@ -10,8 +10,6 @@ const ProfileMenu = (props: TProfileMenu) => {
   const {
     setProfileVisibilityState,
     isVisibleProfile,
-    setAboutMeVisibilityState,
-    isVisibleAboutMe,
   } = UseIsVisibleContext();
 
   return (
@@ -22,12 +20,12 @@ const ProfileMenu = (props: TProfileMenu) => {
           isVisibleHeader
         )}
       >
-        <h3 className="smallTitles">PROFILE</h3>
+        <h3 className="self-end smallTitles">PROFILE</h3>
         <button
           onClick={() =>
             setProfileVisibilityState(handleVisibility(isVisibleProfile))
           }
-          className="smallTitles"
+          className="self-end smallTitles"
         >
           CLOSE
         </button>
@@ -40,9 +38,6 @@ const ProfileMenu = (props: TProfileMenu) => {
         <a href="#AboutMe">
           <DefaultBtn
             text="About Me"
-            onClick={() =>
-              setAboutMeVisibilityState(handleVisibility(isVisibleAboutMe))
-            }
           /></a>
         <a href="#PortifolioScreen">
           <DefaultBtn
