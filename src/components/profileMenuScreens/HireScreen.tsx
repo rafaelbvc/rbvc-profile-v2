@@ -11,7 +11,9 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
         className=""
         titleHeader="HIRE ME"
         buttonText="TO TOP"
-        hRef="#AboutMe"
+        hrefUp="#AboutMe"
+        classArrowDown="hidden"
+        classNameArrows="justify-end"
       />
       <section className="flex justify-center paddingYScreens">
         <div className="flex flex-col p-2 sm:flex-row margins ">

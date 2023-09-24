@@ -15,7 +15,9 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
       <MenuHeader
         titleHeader="CONTACT"
         buttonText="TO TOP"
-        hRef="#AboutMe"
+        hrefUp="#AboutMe"
+        hrefDown="#HireScreen"
+
       />
       <section className="flex justify-center paddingYScreens">
         <section className="flex flex-col justify-between gap-2 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6  py-3 sm:flex-wrap margins sm:flex-row  max-w-[48rem]">

@@ -3,5 +3,10 @@ export interface IMenuHeader {
   titleHeader?: string;
   className?: string;
   buttonText?: string;
-  hRef?: string
+  hRef?: string;
+  hrefDown?: string;
+  hrefUp?: string;
+  classArrowUp?: string;
+  classArrowDown?: string;
+  classNameArrows?: string;
 }
