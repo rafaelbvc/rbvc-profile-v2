@@ -12,7 +12,7 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
         titleHeader="PORTIFOLIO"
         buttonText="TO TOP"
         hrefUp="#AboutMe"
-        hrefDown="#HireScreen"
+        hrefDown="#ContactScreen"
       />
       <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap lg:flex-nowrap">
         <section className="flex flex-col items-center p-2 lg:w-1/2 margins">
