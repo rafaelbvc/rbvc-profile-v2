@@ -15,7 +15,7 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
       <MenuHeader
         titleHeader="CONTACT"
         buttonText="TO TOP"
-        hrefUp="#AboutMe"
+        hrefUp="#PortifolioScreen"
         hrefDown="#HireScreen"
 
       />
