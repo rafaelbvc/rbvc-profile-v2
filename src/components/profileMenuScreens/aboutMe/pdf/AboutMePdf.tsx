@@ -25,7 +25,7 @@ const AboutMePdf = () => {
     <article >
       <ReactToPrint
         trigger={() => (
-          <button className="animate-ping pl-[25%] smallTitles">
+          <button className="animate-ping pl-[49%] smallTitles">
             PRINT
           </button>
         )}
