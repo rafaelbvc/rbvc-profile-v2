@@ -25,17 +25,19 @@ const AboutMePdf = () => {
     <article >
       <ReactToPrint
         trigger={() => (
-          <button className="animate-ping pl-[45%] smallTitles">
+          <button className="animate-ping pl-[25%] smallTitles">
             PRINT
           </button>
         )}
         content={() => aboutMePdfRef.current}
       />
       <MenuHeader
-        className="flex mt-[-2.1rem] justify-between"
+        className="flex mt-[-2.3rem] justify-between"
         titleHeader="ABOUT ME"
         buttonText="TO BOTTOM"
-        hRef="#HireScreen"
+        hrefDown="#HireScreen"
+        classArrowUp="hidden"
+        classNameArrows="justify-end"
       />
 
       <style>

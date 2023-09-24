@@ -11,7 +11,8 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
       <MenuHeader
         titleHeader="PORTIFOLIO"
         buttonText="TO TOP"
-        hRef="#AboutMe"
+        hrefUp="#AboutMe"
+        hrefDown="#HireScreen"
       />
       <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap lg:flex-nowrap">
         <section className="flex flex-col items-center p-2 lg:w-1/2 margins">
