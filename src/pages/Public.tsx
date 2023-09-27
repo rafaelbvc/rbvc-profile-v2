@@ -19,7 +19,7 @@ const Public = () => {
 
   const handleTopMenuOpen = () => {
     if (isVisibleProfile === " ") {
-      return " top-[6.5rem] sm:top-[4rem]";
+      return " top-[7.5rem] sm:top-[4rem]";
     } else return " ";
   };
 
@@ -29,7 +29,7 @@ const Public = () => {
       <menu className="flex">
         <ProfileMenu
           className={twMerge(
-            "fixed  left-2 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-20",
+            "fixed  left-0 md:hidden mx-auto max-w-[45rem]  py-1 menuOpenStyle z-30",
             isVisibleProfile
           )}
         />
@@ -38,7 +38,7 @@ const Public = () => {
         />
       </menu>
       <section className="flex flex-col mx-auto ">
-        <p className="z-20 text-xl text-center whitespace-normal bg-lightGray text-mediumGray h-[5rem] mb-[-1rem] pt-[2rem]">Under Construction</p>
+        <p className="z-10 text-xl text-center whitespace-normal bg-lightGray text-mediumGray h-[5rem] mb-[-1rem] pt-[2rem]">Under Construction</p>
         <AboutMeContainer
           className="z-10 mt-[1rem]"
         />
