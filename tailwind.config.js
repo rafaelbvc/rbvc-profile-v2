@@ -12,6 +12,9 @@ export default {
       borderWidth: {
         border1: "1px",
       },
+      screens: {
+       "3xl": {"min": "1800px"}
+      }
     },
     colors: {
       lightGray: "#FCFCFF",

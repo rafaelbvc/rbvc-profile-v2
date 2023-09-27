@@ -6,7 +6,7 @@ import { TScreensPropsTypes } from "../../types/screensPropsType";
 const HireScreen = ({ className }: TScreensPropsTypes) => {
 
   return (
-    <article id="HireScreen" className={twMerge("mt-[0.7rem] scroll-smooth", className)}>
+    <article id="HireScreen" className={twMerge("mt-[0.7rem] scroll-smooth ", className)}>
       <MenuHeader
         className=""
         titleHeader="HIRE ME"
@@ -15,7 +15,7 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
         classArrowDown="hidden"
         classNameArrows="justify-end"
       />
-      <section className="flex justify-center paddingYScreens">
+      <section className="flex justify-center paddingYScreens ">
         <div className="flex flex-col p-2 sm:flex-row margins ">
           <span className="p-3">
             <p className="text-right text-mediumGray">
@@ -23,7 +23,7 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
             </p>
           </span>
           <div className="p-3">
-            <UnderConstructionSVG widthSVG="23rem self-center" />
+            <UnderConstructionSVG widthSVG="self-center" />
           </div>
         </div>
       </section>

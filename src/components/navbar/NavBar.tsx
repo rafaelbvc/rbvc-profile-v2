@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <nav id="NavBar" className="sticky bg-lightGray top-0 px-1 shadow-md grid grid-cols-3 justify-between h-[4rem] z-40 rounded-b-sm">
       <h2 className="hidden">NavBar</h2>
-      <menu className="self-center">
+      <menu className="self-center cursor-pointer">
         <RBVCLogoBtn
           onClick={() =>
             setProfileVisibilityState(handleVisibility(isVisibleProfile))
