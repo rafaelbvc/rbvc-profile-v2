@@ -40,10 +40,9 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                   }`}
                 onClick={() => handleBigImg(bigIMG)}
               />
-
               <title className="flex justify-center mb-1 mr-0">
-                <p className="my-5 font-bold ">Skills &</p>
-                <p className="my-5 font-bold text-golden">&nbsp; Tools</p>
+                <p className="my-5 font-bold bounceTitles">Skills &</p>
+                <p className="my-5 font-bold text-golden bounceTitlesDelay">&nbsp; Tools</p>
               </title>
               <div className="flex flex-row flex-wrap justify-center gap-4">
                 <JavaScriptLogo width={"5rem"} />
@@ -56,13 +55,13 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 <TypeScriptLogo width={"5rem"} />
               </div>
             </section>
-            <section className="flex flex-col p-1 whitespace-normal">
+            <section className="flex flex-col p-1 whitespace-normal ">
               <title className="flex justify-end mb-1 mr-0">
-                <p className="font-bold ">Full Stack </p>
-                <p className="font-bold text-golden">&nbsp; Developer</p>
+                <p className="font-bold bounceTitles">Full Stack </p>
+                <p className="font-bold text-golden bounceTitlesDelay">&nbsp; Developer</p>
               </title>
-              <section>
-                <p className="px-1 mt-2 text-justify ">
+              <section className="">
+                <p className="px-1 mt-2 overflow-hidden text-justify">
                   As a ReactJS, NodeJS and Next, Full-stack developer, I have a
                   strong background in building full-fledged web applications.
                   With advanced knowledge in React, I can create interactive and
@@ -84,8 +83,8 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 </p>
               </section>
               <title className="flex justify-end mb-1 mr-0">
-                <p className="font-bold ">Work </p>
-                <p className="font-bold text-golden">&nbsp; Experience</p>
+                <p className="font-bold bounceTitles">Work </p>
+                <p className="font-bold text-golden bounceTitlesDelay">&nbsp; Experience</p>
               </title>
               <section>
                 <p className="justify-end px-1 mt-2 text-justify">
@@ -97,7 +96,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                   <br />• Experience with Git and DevOps
                 </p>
               </section>
-              <Divisor className="mt-4"/>
+              <Divisor className="mt-4" />
             </section>
           </section>
           <section>
@@ -142,3 +141,5 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
 
 
 export default forwardRef(AboutMeScreen);
+
+

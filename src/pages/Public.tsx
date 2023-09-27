@@ -33,13 +33,12 @@ const Public = () => {
             isVisibleProfile
           )}
         />
-
         <GetStartedMenu
           className={twMerge(handleTopMenuOpen(), isVisibleGetStarted)}
         />
       </menu>
-      <section className="flex  flex-col mx-auto pt-[2.6rem]">
-        <p className="z-40 text-xl text-center whitespace-normal text-mediumGray">Under Construction</p>
+      <section className="flex flex-col mx-auto ">
+        <p className="z-20 text-xl text-center whitespace-normal bg-lightGray text-mediumGray h-[5rem] mb-[-1rem] pt-[2rem]">Under Construction</p>
         <AboutMeContainer
           className="z-10 mt-[1rem]"
         />

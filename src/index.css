@@ -29,6 +29,30 @@ html {
   animation: bounce 1s infinite;
 }
 
+@keyframes bounceTitles {
+  0%,
+  50% {
+    transform: translateY(-70%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.bounceTitles {
+  animation: bounceTitles 900ms;
+}
+
+.bounceTitlesDelay {
+  animation: bounceTitles 1050ms;
+}
+
+.animate-ping {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 @keyframes ping {
   25%,
   50% {
@@ -55,6 +79,14 @@ html {
 
 .paddingYScreens {
   @apply py-1 sm:py-3 md:py-4 lg:py-5 xl:py-6 2xl:py-8;
+}
+
+.paddingLScreens {
+  @apply lg:pl-2 xl:pl-6 2xl:pl-[10rem] 3xl:pl-[30rem];
+}
+
+.paddingRScreens {
+  @apply lg:pr-2 xl:pr-6 2xl:pr-[10rem] 3xl:pr-[30rem];
 }
 
 .vBtnStyle {

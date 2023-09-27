@@ -10,8 +10,8 @@ const MenuHeader = (props: IMenuHeader) => {
   return (
     <header>
       <section className={twMerge("flex justify-between  bg-lightGray shadow-sm h-[3rem] rounded z-30 px-4", className)}>
-        <h3 className="self-center smallTitles">{titleHeader}</h3>
-        <menu className={twMerge("flex items-center justify-between w-[3.2rem]  h-[3rem]", classNameArrows)}>
+        <h3 className="self-center smallTitles paddingLScreens">{titleHeader}</h3>
+        <menu className={twMerge("flex items-center paddingRScreens justify-between w-[3.2rem]  h-[3rem]", classNameArrows)}>
           <a href={hrefUp} className={classArrowUp}>
             <ArrowUp width="20" />
           </a>
