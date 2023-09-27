@@ -27,7 +27,7 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
     <section
       {...props}
       className={twMerge(
-        "fixed right-2 max-w-[22rem] py-1 menuOpenStyle  z-10",
+        "fixed right-0 max-w-[22rem] py-1 menuOpenStyle  z-10",
         className
       )}
     >
@@ -44,20 +44,20 @@ const GetStartedMenu = ({ className, ...props }: TBTNPropsType) => {
       </header>
       <menu className="flex justify-between">
         <DefaultBtn
-          text="Sign In"
+          text="SIGN IN"
           onClick={() =>
             setSignInVisibilityState(handleVisibility(isVisibleSignIn))
           }
         />
-        <DefaultBtn text="Sign Up" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} />
+        <DefaultBtn text="SIGN UP" onClick={() => setSignUpVisibilityState(handleVisibility(isVisibleSignUp))} />
         <DefaultBtn
-          text="Profile"
+          text="PROFILE"
           disabled={signed}
           onClick={() =>
             setGetProfileVisibilityState(handleVisibility(isVisibleGetProfile))
           }
         />
-        <DefaultBtn text="Post" onClick={() => null} />
+        <DefaultBtn text="POST" onClick={() => null} />
       </menu>
     </section>
   );
