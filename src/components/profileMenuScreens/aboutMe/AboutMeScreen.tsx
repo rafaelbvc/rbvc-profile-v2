@@ -1,4 +1,4 @@
-import { ForwardRefRenderFunction, forwardRef, useState } from "react";
+import { ForwardRefRenderFunction, forwardRef } from "react";
 import PhotoMyProfileA from "./PhotoMyProfileA.jpg";
 import JavaScriptLogo from "../../svg/JavaScriptLogo";
 import MongoDBLogo from "../../svg/MongoDBLogo";
@@ -9,20 +9,16 @@ import ReactLogo from "../../svg/ReactLogo";
 import TailwindCSSLogo from "../../svg/TailwindCSSLogo";
 import TypeScriptLogo from "../../svg/TypeScriptLogo";
 import Divisor from "../../Divisor";
+import { UseIsVisibleContext } from "../../context/IsVisibleContext";
+import { handleVisibility } from "../../../utils/handleVisible";
 
 const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   props,
   ref
 ) => {
-  const [bigIMG, setBigIMG] = useState<boolean>(false);
 
-  const handleBigImg = (v: boolean) => {
-    if (v) {
-      setBigIMG(false);
-    } else {
-      return setBigIMG(true);
-    }
-  };
+  const { isVisiblePhotosModal, setPhotosModalVisibilityState } = UseIsVisibleContext()
+
 
   return (
     <article ref={ref}>
@@ -34,11 +30,8 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 src={PhotoMyProfileA}
                 width={200}
                 alt="MyProfileA"
-                className={`${bigIMG
-                  ? "absolute border-[1px] border-golden w-[18rem] "
-                  : "rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem]"
-                  }`}
-                onClick={() => handleBigImg(bigIMG)}
+                className="rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem] cursor-pointer"
+                onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))}
               />
               <title className="flex justify-center mb-1 mr-0">
                 <p className="my-5 font-bold bounceTitles">Skills &</p>
