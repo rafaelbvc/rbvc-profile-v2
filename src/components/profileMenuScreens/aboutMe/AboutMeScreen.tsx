@@ -26,16 +26,16 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
         <section className="flex flex-col p-1 mb-1 margins">
           <section className="flex flex-col items-center sm:flex-row">
             <section className="animate-pingIMG">
-              <div className="">
-                <p className="absolute ml-[40%] sm:ml-[4rem] mt-[13.6rem] text-golden text-bold cursor-pointer">OPEN GALLERY</p>
-                <img
-                  src={PhotoMyProfileA}
-                  width={200}
-                  alt="MyProfileA"
-                  className="rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem] cursor-pointer"
-                  onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))}
-                />
-              </div>
+
+
+              <img
+                src={PhotoMyProfileA}
+                width={200}
+                alt="MyProfileA"
+                className="rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem] cursor-pointer"
+                onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))}
+              />
+
               <title className="flex justify-center mb-1 mr-0">
                 <p className="my-5 font-bold bounceTitles">Skills &</p>
                 <p className="my-5 font-bold text-golden bounceTitlesDelay">&nbsp; Tools</p>
