@@ -1,8 +1,8 @@
 import { TSVGPropsType } from "../../types/svgPropsType"
 
-const ArrowLeft = ({ width }: TSVGPropsType) => {
+const ArrowLeft = ({ width, className }: TSVGPropsType) => {
     return (
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width={width} viewBox="0 0 81 128" enableBackground="new 0 0 81 128" xmlSpace="preserve">
             <g>
                 <path fillRule="evenodd" clipRule="evenodd" d="M80.398,64.248c0,17.607-0.04,35.214,0.029,52.82

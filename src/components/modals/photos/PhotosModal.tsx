@@ -11,15 +11,13 @@ const PhotosModal = () => {
 
   return (
     <article className={`${isVisiblePhotosModal}  absolute flex justify-center z-40 w-screen h-screen bg-blackAlpha animate-pingIMG`}>
-      <section className="flex items-center flex-col mt-[4rem] w-[21rem] h-[36rem] bg-lightGray rounded-lg shadow-md p-4">
+      <section className="flex items-center justify-between flex-col mt-[4rem] w-[21rem] h-[36rem] bg-[url('/src/components/modals/photos/profile1.jpg')] rounded-lg shadow-md p-4">
         <header className="flex justify-end w-[21rem] px-4">
-          <button onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))} className="text-xl text-golden text-bold">X</button>
+          <button onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))} className="text-3xl text-golden text-bold">X</button>
         </header>
-        <p className="text-sm">PHOTOS</p>
-        <div className="my-2 w-[19rem] h-[28rem] bg-black rounded-md"></div>
         <menu className="flex justify-between w-[21rem] mt-1  px-6">
-          <ArrowLeft width="14" />
-          <ArrowRight width="14" />
+          <ArrowLeft width="16" className="cursor-pointer" />
+          <ArrowRight width="16" className="cursor-pointer" />
         </menu>
       </section>
     </article>
