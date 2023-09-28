@@ -13,13 +13,14 @@ export default {
         border1: "1px",
       },
       screens: {
-       "3xl": {"min": "1800px"}
-      }
+        "3xl": { min: "1800px" },
+      },
     },
     colors: {
       lightGray: "#FCFCFF",
       mediumGray: "#b6b6b6",
       black: "#000",
+      blackAlpha: "rgb(0,0,0, 0.4)",
       white: "#FFFFFF",
       lightGrayAlpha: "RGB(252,252,255, 0.4)",
       lightBGray: "#D9E2E5",

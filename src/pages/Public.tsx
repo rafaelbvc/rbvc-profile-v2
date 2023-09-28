@@ -7,6 +7,7 @@ import AboutMeContainer from "../components/profileMenuScreens/aboutMe/AboutMeCo
 import PortifolioScreen from "../components/profileMenuScreens/portifolio/PortifolioScreen";
 import GetStartedMenu from "../components/menus/GetStartedMenu";
 import { UseIsVisibleContext } from "../components/context/IsVisibleContext";
+import PhotosModal from "../components/modals/photos/PhotosModal";
 
 
 const Public = () => {
@@ -38,6 +39,7 @@ const Public = () => {
         />
       </menu>
       <section className="flex flex-col mx-auto ">
+        <PhotosModal />
         <p className="z-10 text-xl text-center whitespace-normal bg-lightGray text-mediumGray h-[4rem] mb-[-1rem] pt-[2rem]">Under Construction</p>
         <AboutMeContainer
           className="z-10 mt-[1rem]"

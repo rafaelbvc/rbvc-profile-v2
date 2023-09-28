@@ -6,11 +6,13 @@ interface IVisibleContext {
   isVisibleGetStarted: string;
   isVisibleSignIn: string;
   isVisibleSignUp: string;
+  isVisiblePhotosModal: string;
   setProfileVisibilityState: (isVisibleProfile: string) => void;
   setGetProfileVisibilityState: (isVisibleGetProfile: string) => void;
   setGetStartedVisibilityState: (setGetStartedVisibilityState: string) => void;
   setSignInVisibilityState: (isVisibleSignIn: string) => void;
   setSignUpVisibilityState: (isVisibleSignUp: string) => void;
+  setPhotosModalVisibilityState: (isVisiblePhotosModal: string) => void;
 }
 
 interface IVisibilityProvider {
@@ -25,6 +27,7 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
   const [isVisibleGetStarted, setIsVisibleGetStarted] = useState<string>(" hidden");
   const [isVisibleSignIn, setIsVisibleSignIn] = useState<string>(" hidden");
   const [isVisibleSignUp, setIsVisibleSignUp] = useState<string>(" hidden");
+  const [isVisiblePhotosModal, setIsVisiblePhotosModal] = useState<string>(" hidden");
 
 
   const setProfileVisibilityState = (isVisibleProfile: string) => {
@@ -47,6 +50,10 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
     setIsVisibleSignUp(isVisibleSignUp)
   }
 
+  const setPhotosModalVisibilityState = (isVisiblePhotosModal: string) => {
+    setIsVisiblePhotosModal(isVisiblePhotosModal)
+  }
+
   return (
     <VisibilityContext.Provider
       value={{
@@ -55,11 +62,13 @@ export const VisibilityProvider = ({ children }: IVisibilityProvider) => {
         isVisibleGetStarted,
         isVisibleSignIn,
         isVisibleSignUp,
+        isVisiblePhotosModal,
         setProfileVisibilityState,
         setGetProfileVisibilityState,
         setGetStartedVisibilityState,
         setSignInVisibilityState,
-        setSignUpVisibilityState
+        setSignUpVisibilityState,
+        setPhotosModalVisibilityState
       }}
     >
       {children}
