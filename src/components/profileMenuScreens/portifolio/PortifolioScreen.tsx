@@ -16,10 +16,10 @@ const PortifolioScreen = ({ className }: TScreensPropsTypes) => {
       />
       <section className="flex justify-center mx-auto paddingYScreens max-w-[80rem] flex-wrap lg:flex-nowrap">
         <section className="flex flex-col items-center p-2 lg:w-1/2 margins">
-          <h4 className="mb-2 text-right text-mediumGray">
+          <h4 className="mb-2 text-right text-mediumGray bounceTitles">
             Find Your Meal
           </h4>
-          <FindYourMeal className="mb-[2rem] lg:mb-0"/>
+          <FindYourMeal className="mb-[2rem] lg:mb-0 animate-pingIMG"/>
         </section>
         <section className="flex flex-col items-center p-2 margins">
           <p className="pDescription">

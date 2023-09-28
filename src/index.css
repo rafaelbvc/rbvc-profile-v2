@@ -8,10 +8,25 @@ html {
   @apply text-sm;
   @apply whitespace-nowrap;
   @apply bg-gradient-to-t from-lightGray to-mediumGray;
+  @apply scroll-smooth
 }
 
 #layoutMain {
   @apply bg-lightGray;
+}
+
+@keyframes ping {
+  75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+.animate-pingText {
+  animation: ping 4s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.animate-pingIMG {
+  animation: ping 3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 @keyframes bounce {
@@ -70,7 +85,7 @@ html {
 }
 
 .svgContactScreen {
-  @apply flex w-[3rem] h-[3rem] items-center;
+  @apply flex w-[3rem] h-[3rem] items-center animate-pingIMG;
 }
 
 .margins {
@@ -106,7 +121,7 @@ html {
 }
 
 .pDescription {
-  @apply text-sm text-center whitespace-normal text-mediumGray;
+  @apply text-sm text-center whitespace-normal text-mediumGray animate-pingText;
 }
 
 .styleScreens {

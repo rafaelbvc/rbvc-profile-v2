@@ -29,7 +29,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
       <section className="flex justify-center mx-auto paddingYScreens max-w-[60rem] flex-wrap md:flex-nowrap">
         <section className="flex flex-col p-1 mb-1 margins">
           <section className="flex flex-col items-center sm:flex-row">
-            <section>
+            <section className="animate-pingIMG">
               <img
                 src={PhotoMyProfileA}
                 width={200}
@@ -60,7 +60,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 <p className="font-bold bounceTitles">Full Stack </p>
                 <p className="font-bold text-golden bounceTitlesDelay">&nbsp; Developer</p>
               </title>
-              <section className="">
+              <section className="animate-pingText">
                 <p className="px-1 mt-2 overflow-hidden text-justify">
                   As a ReactJS, NodeJS and Next, Full-stack developer, I have a
                   strong background in building full-fledged web applications.
@@ -86,7 +86,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
                 <p className="font-bold bounceTitles">Work </p>
                 <p className="font-bold text-golden bounceTitlesDelay">&nbsp; Experience</p>
               </title>
-              <section>
+              <section className="animate-pingText">
                 <p className="justify-end px-1 mt-2 text-justify">
                   RBVC Soluções Tecnológicas Freelance Web Developer | May 2023 -
                   Present (present)
@@ -99,7 +99,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
               <Divisor className="mt-4" />
             </section>
           </section>
-          <section>
+          <section className="animate-pingText">
             <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
               MeuCompromisso Fullstack & Mobile Developer | May 2022 - May 2023 (1
               year 1 month)
@@ -114,7 +114,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             </p>
           </section>
           <Divisor />
-          <section>
+          <section className="animate-pingText">
             <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
               Cadmus Soluções em TI Software Developer | November 2021 - April
               2022 (6 months)
@@ -125,7 +125,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
             </p>
           </section>
           <Divisor />
-          <section>
+          <section className="animate-pingText">
             <p className="justify-end px-1 mt-2 text-justify whitespace-normal">
               Autonomous February 2015 - April 2018 (3 years 3 months)
               <br />• Banner design

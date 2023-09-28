@@ -18,11 +18,11 @@ const HireScreen = ({ className }: TScreensPropsTypes) => {
       <section className="flex justify-center paddingYScreens ">
         <div className="flex flex-col p-2 sm:flex-row margins ">
           <span className="p-3">
-            <p className="text-right text-mediumGray">
+            <p className="text-right text-mediumGray animate-pingText">
               Sorry, this area is under construction... <br /> Soon...
             </p>
           </span>
-          <div className="p-3">
+          <div className="p-3 animate-pingIMG">
             <UnderConstructionSVG widthSVG="self-center" />
           </div>
         </div>
