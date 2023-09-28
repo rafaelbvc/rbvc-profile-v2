@@ -34,7 +34,7 @@ const ProfileMenu = (props: TProfileMenu) => {
       <menu className="flex justify-between">
         <a href="#AboutMe">
           <DefaultBtn
-            text="ABOUT"
+            text="ABOUT ME"
           /></a>
         <a href="#PortifolioScreen">
           <DefaultBtn
