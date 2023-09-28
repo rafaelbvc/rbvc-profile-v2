@@ -29,10 +29,10 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
 
             <YoutubeLogo className="svgContactScreen" />
 
-            <p className="w-[11.25rem] text-center">
+            <p className="w-[11.25rem] text-center animate-pingText">
               @rafaelvendramini2598
             </p>
-            <p className=" text-golden w-[4.1rem] text-center">
+            <p className=" text-golden w-[4.1rem] text-center animate-pingText">
               Youtube
             </p>
           </a>
@@ -43,10 +43,10 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
             target="_blank"
           >
             <DiscordLogo className="svgContactScreen" />
-            <p className=" w-[11.25rem] text-center">
+            <p className=" w-[11.25rem] text-center animate-pingText">
               rafaelvendramini
             </p>
-            <p className="text-golden w-[4.1rem] text-center">
+            <p className="text-golden w-[4.1rem] text-center animate-pingText">
               Discord
             </p>
           </a>
@@ -58,10 +58,10 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
             rel="noreferrer"
           >
             <WhatsAppLogo className="svgContactScreen" />
-            <p className="  w-[11.25rem] text-center">
+            <p className="  w-[11.25rem] text-center animate-pingText">
               (+55) 15 9982542-87
             </p>
-            <p className=" text-golden w-[4.1rem] text-center">
+            <p className=" text-golden w-[4.1rem] text-center animate-pingText">
               Mobile
             </p>
           </a>
@@ -74,10 +74,10 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
           >
             <LinkedInLogo className="svgContactScreen" />
 
-            <p className="  w-[11.25rem] text-center">
+            <p className="  w-[11.25rem] text-center animate-pingText">
               /rafael-vendramini/
             </p>
-            <p className=" text-golden w-[4.1rem] text-center">
+            <p className=" text-golden w-[4.1rem] text-center animate-pingText">
               Linked In
             </p>
           </a>
@@ -87,18 +87,18 @@ const ContactScreen = ({ className }: TScreensPropsTypes) => {
             href="mailto:rafaelbvc@hotmail.com"
           >
             <EmailLogo className="svgContactScreen" />
-            <p className=" w-[11.25rem] text-center">
+            <p className=" w-[11.25rem] text-center animate-pingText">
               rafaelbvc@hotmail.com
             </p>
-            <p className=" text-golden w-[4.1rem] text-center">
+            <p className=" text-golden w-[4.1rem] text-center animate-pingText">
               E-mail
             </p>
           </a>
 
           <div className="contactScreen">
             <AdressLogo className="svgContactScreen" />
-            <p className=" w-[11.25rem] text-center">São Paulo</p>
-            <p className=" text-golden w-[4.1rem] text-center">
+            <p className=" w-[11.25rem] text-center animate-pingText">São Paulo</p>
+            <p className=" text-golden w-[4.1rem] text-center animate-pingText">
               &nbsp; Brazil
             </p>
           </div>
