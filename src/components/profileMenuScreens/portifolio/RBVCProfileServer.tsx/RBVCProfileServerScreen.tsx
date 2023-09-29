@@ -1,6 +1,6 @@
-import RBVCProfile from "./RBVCProfile";
+import RBVCProfileServer from "./RBVCProfileServer";
 
-const RBVCProfileScreen = () => {
+const RBVCProfileServerScreen = () => {
 
 
   return (
@@ -9,27 +9,29 @@ const RBVCProfileScreen = () => {
         <h4 className="mb-2 text-right text-bold bounceTitles">
           Rafael Vendramini - Profile
         </h4>
-        <RBVCProfile className="mb-[2rem] lg:mb-0 animate-pingIMG" />
+        <RBVCProfileServer className="mb-[2rem] lg:mb-0 animate-pingIMG" />
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
-        <p className="text-center text-bold">
-          Client Side - Host (Netlify)
+        <p className="text-center whitespace-normal text-bold">
+          Server Side - Host (Render) uses Cold Start (first access may take a few seconds to start)
         </p>
         <br /><br /><br />
         <p>Project developed from scratch
           <br /><br />
-          •	React<br />
+          •	Node<br />
           •	TypeScript<br />
-          •	Tailwindcss<br /><br />
+          •	Mongo(Atlas for Prod) local for Dev<br />
+          •	Express<br /><br />
           •	Private and Public Routes<br />
           •	Error handling<br />
           •	Authentication<br />
+          •	Access level<br />
           •	Middleware, Hashers and Json Web Tokens<br />
-          •	Context API - isAuth / isVisible<br /><br />
+          •	ErrorLog<br /><br />
         </p>
       </section>
     </section>
   );
 };
 
-export default RBVCProfileScreen;
+export default RBVCProfileServerScreen;

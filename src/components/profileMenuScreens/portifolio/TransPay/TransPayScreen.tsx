@@ -13,7 +13,7 @@ const TransPayScreen = () => {
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
         <p className="text-center whitespace-normal text-bold">
-          Important: This project was a sample for a freelance!
+          The project was a sample for a freelance!
         </p>
         <br /><br /><br />
         <p>Project design provided by customer
