@@ -133,7 +133,8 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   );
 };
 
+const AboutMeRef = forwardRef(AboutMeScreen)
 
-export default forwardRef(AboutMeScreen);
+export default AboutMeRef;
 
 

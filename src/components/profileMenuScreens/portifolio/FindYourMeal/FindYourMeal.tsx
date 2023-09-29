@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import findYourMeal from "./FindYourMeal.jpg";
-import { TScreensPropsTypes } from "../../../types/screensPropsType";
+import { TScreensPropsTypes } from "../../../../types/screensPropsType";
 
 const FindYourMeal = ({ className }: TScreensPropsTypes) => {
   return (

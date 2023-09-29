@@ -8,7 +8,7 @@ html {
   @apply text-sm;
   @apply whitespace-nowrap;
   @apply bg-gradient-to-t from-lightGray to-mediumGray;
-  @apply scroll-smooth
+  @apply scroll-smooth;
 }
 
 #layoutMain {
@@ -16,9 +16,10 @@ html {
 }
 
 @keyframes ping {
-  75%, 100% {
-      transform: scale(2);
-      opacity: 0;
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 .animate-pingText {
@@ -94,6 +95,10 @@ html {
 
 .paddingYScreens {
   @apply py-1 sm:py-3 md:py-4 lg:py-5 xl:py-6 2xl:py-8;
+}
+
+.paddingTScreens {
+  @apply pt-1 sm:pt-3 md:pt-4 lg:pt-5 xl:pt-6 2xl:pt-8;
 }
 
 .paddingLScreens {
