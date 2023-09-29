@@ -8,6 +8,7 @@ import { RxDotFilled } from "react-icons/rx"
 import ArrowRight from "../../svg/ArrowRight"
 import TransPayScreen from "./TransPay/TransPayScreen"
 import RBVCProfileScreen from "./RBVCProfile/RBVCProfileScreen"
+import RBVCProfileServerScreen from "./RBVCProfileServer.tsx/RBVCProfileServerScreen"
 
 
 const projectComponent = [
@@ -19,6 +20,9 @@ const projectComponent = [
     },
     {
         component: <RBVCProfileScreen />
+    },
+    {
+        component: <RBVCProfileServerScreen />
     }
 ]
 
