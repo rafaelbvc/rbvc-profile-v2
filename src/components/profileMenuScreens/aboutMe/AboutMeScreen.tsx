@@ -14,8 +14,9 @@ import { handleVisibility } from "../../../utils/handleVisible";
 
 const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement> = (
   props,
-  ref
+  ref,
 ) => {
+
 
   const { isVisiblePhotosModal, setPhotosModalVisibilityState } = UseIsVisibleContext()
 
