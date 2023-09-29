@@ -35,7 +35,7 @@ const AboutMePdf = () => {
         className="flex mt-[-2.3rem] justify-between"
         titleHeader="ABOUT ME"
         buttonText="TO BOTTOM"
-        hrefDown="#HireScreen"
+        hrefDown="#PortifolioScreen"
         classArrowUp="hidden"
         classNameArrows="justify-end"
       />
