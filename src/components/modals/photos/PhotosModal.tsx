@@ -39,13 +39,17 @@ const PhotosModal = () => {
       url: 'bg-[url(/src/components/modals/photos/profile2.jpg)]'
     },
     {
-      url: 'bg-[url(/src/components/modals/photos/profile1.jpg)]'
+      url: 'bg-[url(/src/components/modals/photos/profile3.jpg)]'
     }, {
-      url: 'bg-[url(/src/components/modals/photos/profile2.jpg)]'
+      url: 'bg-[url(/src/components/modals/photos/profile4.jpg)]'
     }, {
-      url: 'bg-[url(/src/components/modals/photos/profile1.jpg)]'
+      url: 'bg-[url(/src/components/modals/photos/profile5.jpg)]'
     }, {
-      url: 'bg-[url(/src/components/modals/photos/profile2.jpg)]'
+      url: 'bg-[url(/src/components/modals/photos/profile6.jpg)]'
+    }, {
+      url: 'bg-[url(/src/components/modals/photos/profile7.jpg)]'
+    }, {
+      url: 'bg-[url(/src/components/modals/photos/profile8.jpg)]'
     }
   ]
 
