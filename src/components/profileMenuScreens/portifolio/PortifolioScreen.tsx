@@ -7,6 +7,7 @@ import ArrowLeft from "../../svg/ArrowLeft"
 import { RxDotFilled } from "react-icons/rx"
 import ArrowRight from "../../svg/ArrowRight"
 import TransPayScreen from "./TransPay/TransPayScreen"
+import RBVCProfileScreen from "./RBVCProfile/RBVCProfileScreen"
 
 
 const projectComponent = [
@@ -17,7 +18,7 @@ const projectComponent = [
         component: <TransPayScreen />
     },
     {
-        component: null
+        component: <RBVCProfileScreen />
     }
 ]
 
