@@ -12,7 +12,7 @@ const FindYourMealScreen = () => {
         <FindYourMeal className="mb-[2rem] lg:mb-0 animate-pingIMG" />
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
-        <p className="text-bold">
+        <p className="text-center whitespace-normal text-bold">
           Important: Exclusively this project, for desktops only or landscape orientation!
         </p>
         <br /><br /><br />
