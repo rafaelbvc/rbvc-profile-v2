@@ -1,4 +1,5 @@
-import RBVCProfileServer from "./RBVCProfileServer";
+import PortifolioPhotoContainer from "../PortifolioPhotoContainer";
+import rbvcProfileServer from "./RBVCProfileServer.jpg";
 
 const RBVCProfileServerScreen = () => {
 
@@ -9,7 +10,7 @@ const RBVCProfileServerScreen = () => {
         <h4 className="mb-2 text-right text-bold bounceTitles">
           Rafael Vendramini - Profile
         </h4>
-        <RBVCProfileServer className="mb-[2rem] lg:mb-0 animate-pingIMG" />
+        <PortifolioPhotoContainer className="mb-[2rem] lg:mb-0 animate-pingIMG " href="https://rbvc-profile-v2-server.onrender.com/" src={rbvcProfileServer} alt="Rafael Vendramini - Profile" />
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
         <p className="text-center whitespace-normal text-bold">

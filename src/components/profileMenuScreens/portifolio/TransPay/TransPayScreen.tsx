@@ -1,4 +1,5 @@
-import TransPay from "./TransPay";
+import PortifolioPhotoContainer from "../PortifolioPhotoContainer";
+import transPay from "./TransPayIMG.jpg";
 
 const TransPayScreen = () => {
 
@@ -9,7 +10,7 @@ const TransPayScreen = () => {
         <h4 className="mb-2 text-right text-bold bounceTitles">
           Trans Pay
         </h4>
-        <TransPay className="mb-[2rem] lg:mb-0 animate-pingIMG" />
+        <PortifolioPhotoContainer className="mb-[2rem] lg:mb-0 animate-pingIMG" src={transPay} alt="Trans Pay - Rafael Vendramini" href="https://rbvctranspay.netlify.app/" />
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
         <p className="text-center whitespace-normal text-bold">
