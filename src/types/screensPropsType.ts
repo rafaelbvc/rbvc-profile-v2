@@ -3,4 +3,5 @@ export type TScreensPropsTypes = {
   href?: string;
   src?: string;
   alt?: string;
+  animated?: string
 };

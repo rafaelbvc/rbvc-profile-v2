@@ -19,6 +19,7 @@ const RBVCProfileServerScreen = () => {
         <br /><br /><br />
         <p>Project developed from scratch
           <br /><br />
+          •	JavaScript<br />
           •	Node<br />
           •	TypeScript<br />
           •	Mongo(Atlas for Prod) local for Dev<br />

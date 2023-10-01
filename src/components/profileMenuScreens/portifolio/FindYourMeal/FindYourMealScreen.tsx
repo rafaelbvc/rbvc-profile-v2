@@ -19,6 +19,7 @@ const FindYourMealScreen = () => {
         <br /><br /><br />
         <p>Restaurant Reservation Application
           <br /><br />
+          •	JavaScript<br />
           •	NextJs 13<br />
           •	TypeScript<br />
           •	Prisma (ORM)<br />

@@ -19,6 +19,7 @@ const RBVCProfileScreen = () => {
         <br /><br /><br />
         <p>Project developed from scratch
           <br /><br />
+          •	JavaScript<br />
           •	React<br />
           •	TypeScript<br />
           •	Tailwindcss<br /><br />

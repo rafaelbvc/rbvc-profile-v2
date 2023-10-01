@@ -4,7 +4,10 @@ import AboutMeScreen from "../AboutMeScreen";
 import MenuHeader from "../../../MenuHeader";
 
 const AboutMePdf = () => {
+
+
   const aboutMePdfRef = useRef(null);
+
 
 
   const marginTop = "20mm";
