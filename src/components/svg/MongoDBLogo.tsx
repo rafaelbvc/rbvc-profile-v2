@@ -3,13 +3,14 @@ import { TSVGPropsType } from "../../types/svgPropsType";
 
 
 
-const MongoDBLogo = ({ width }: TSVGPropsType) => {
+const MongoDBLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
       id="mongodb"
       width={width}
+      className={className}
     >
       <path
         fill="#94795D"

@@ -1,11 +1,13 @@
+import { twMerge } from "tailwind-merge";
 import { TSVGPropsType } from "../../types/svgPropsType";
 
-const TailwindCSSLogo = ({width}: TSVGPropsType) => {
+const TailwindCSSLogo = ({ width, className }: TSVGPropsType) => {
   return (
     <svg
       viewBox="0 0 248 31"
-      className="text-slate-900 dark:text-white w-auto h-5"
+      className={twMerge("w-auto h-5 text-slate-900 dark:text-white", className)}
       width={width}
+
     >
       <path
         fillRule="evenodd"
