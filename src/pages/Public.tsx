@@ -42,7 +42,7 @@ const Public = () => {
         <PhotosModal />
         <p className="z-10 text-xl text-center whitespace-normal bg-lightGray text-mediumGray h-[4rem] mb-[-1rem] pt-[2rem]">Under Construction</p>
         <AboutMeContainer
-          className="z-10 mt-[1rem]"
+          className="z-10 mt-[1rem]" animated="animate-pingText"
         />
         <PortifolioScreen
           className="z-10"

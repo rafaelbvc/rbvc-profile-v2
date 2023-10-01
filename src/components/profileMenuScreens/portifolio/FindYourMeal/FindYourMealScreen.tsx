@@ -1,4 +1,5 @@
-import FindYourMeal from "./FindYourMeal";
+import PortifolioPhotoContainer from "../PortifolioPhotoContainer";
+import findYourMeal from "./FindYourMeal.jpg";
 
 const FindYourMealScreen = () => {
 
@@ -9,7 +10,7 @@ const FindYourMealScreen = () => {
         <h4 className="mb-2 text-right text-bold bounceTitles">
           Find Your Meal
         </h4>
-        <FindYourMeal className="mb-[2rem] lg:mb-0 animate-pingIMG" />
+        <PortifolioPhotoContainer className="mb-[2rem] lg:mb-0 animate-pingIMG" alt="Find Your Meal - Rafael Vendramini" href="https://findyourmeal-rbvc.vercel.app/" src={findYourMeal} />
       </section>
       <section className="flex flex-col p-2 items-left margins animate-pingText">
         <p className="text-center whitespace-normal text-bold">
@@ -18,6 +19,7 @@ const FindYourMealScreen = () => {
         <br /><br /><br />
         <p>Restaurant Reservation Application
           <br /><br />
+          •	JavaScript<br />
           •	NextJs 13<br />
           •	TypeScript<br />
           •	Prisma (ORM)<br />

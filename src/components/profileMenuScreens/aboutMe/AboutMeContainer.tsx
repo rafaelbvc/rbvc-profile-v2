@@ -4,11 +4,12 @@ import AboutMeScreen from "./AboutMeScreen";
 import { TScreensPropsTypes } from "../../../types/screensPropsType";
 
 
-const AboutMeContainer = ({ className }: TScreensPropsTypes) => {
+const AboutMeContainer = ({ className, animated }: TScreensPropsTypes) => {
+
   return (
     <section id="AboutMe" className={twMerge(" ", className)}>
       <AboutMePdf />
-      <AboutMeScreen />
+      <AboutMeScreen animated={animated } />
     </section>
   );
 };
