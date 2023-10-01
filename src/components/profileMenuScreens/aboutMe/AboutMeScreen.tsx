@@ -22,7 +22,7 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement, TAnimate> = (
   ref,
 ) => {
 
-  const { animated   } = props
+  const { animated } = props
 
   const [isAnimated] = useState<string | undefined>(animated)
 
@@ -35,12 +35,12 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement, TAnimate> = (
       <section className="flex justify-center mx-auto paddingYScreens max-w-[60rem] flex-wrap md:flex-nowrap">
         <section className="flex flex-col p-1 mb-1 margins">
           <section className="flex flex-col items-center sm:flex-row">
-            <section className={`${isAnimated === undefined ? "animated-pingText" : " "}`}>
+            <section  >
               <img
                 src={PhotoMyProfileA}
                 width={200}
                 alt="MyProfileA"
-                className="rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem] cursor-pointer"
+                className={`rounded-full border-[1px] border-golden my-2 mx-auto min-w-[16rem] cursor-pointer ${isAnimated ? " animate-pingIMG" : " "}`}
                 onClick={() => setPhotosModalVisibilityState(handleVisibility(isVisiblePhotosModal))}
               />
               <title className="flex justify-center mb-1 mr-0">
@@ -48,14 +48,14 @@ const AboutMeScreen: ForwardRefRenderFunction<HTMLDivElement, TAnimate> = (
                 <p className="my-5 font-bold text-golden bounceTitlesDelay">&nbsp; Tools</p>
               </title>
               <div className="flex flex-row flex-wrap justify-center gap-4">
-                <JavaScriptLogo width={"5rem"} />
-                <MongoDBLogo width={"5rem"} />
-                <NextLogo width={"5rem"} />
-                <NodeLogo width={"5rem"} />
-                <PrismaLogo width={"5rem"} />
-                <ReactLogo width={"5rem"} />
-                <TailwindCSSLogo width={"5rem"} />
-                <TypeScriptLogo width={"5rem"} />
+                <JavaScriptLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <MongoDBLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <NextLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <NodeLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <PrismaLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <ReactLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <TailwindCSSLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
+                <TypeScriptLogo width={"5rem"} className={isAnimated ? isAnimated : " "} />
               </div>
             </section>
             <section className="flex flex-col p-1 whitespace-normal ">

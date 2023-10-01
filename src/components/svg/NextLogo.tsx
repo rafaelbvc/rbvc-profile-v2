@@ -1,12 +1,13 @@
 import { TSVGPropsType } from "../../types/svgPropsType";
 
-const NextLogo = ({width}: TSVGPropsType) => {
+const NextLogo = ({width, className}: TSVGPropsType) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 394 80"
       width={width}
+      className={className}
     >
       <path
         fill="#000"
